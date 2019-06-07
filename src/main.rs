@@ -52,7 +52,7 @@ struct JsonConfig {
 fn create_bsaber_map() -> std::io::Result<()> {
 	fs::remove_file("src/song/ExpertPlus.json")?;
 	let mut file = File::create("src/song/ExpertPlus.json")?;
-	
+
 	//read info.json
 	let mut config_file = File::open("src/song/info.json").unwrap();
 	let mut config_data = String::new();
@@ -223,7 +223,7 @@ fn generate_walls(
 	//id index
 	let mut id = 0;
 	//track the start time of a wall, we'll want it to start at the first quiet part
-	let mut start_time = 0.0;
+	let mut start_time: f64 = 0.0;
 	//flag if we've found a wall start or not
 	let mut found_start = false;
 	//iterate over the wall times (including the last time added manually)
@@ -239,35 +239,45 @@ fn generate_walls(
 		//if it's quiet and we need a wall start
 		if pitch < MIN_PITCH && !found_start {
 			//silence is starting
-			//track the start time with a buffer
-			start_time = peak_time + WALL_SPACING;
+			//track the start time
+			start_time = *peak_time;
 			found_start = true;
-		} else if found_start {
+			println!("start pitch:{}", pitch);
+		} else if found_start &&  pitch >= MIN_PITCH {
 			//peak occured so we can figure out the distance of the wall
-			//this is our wall end time, minus a buffer
-			let end_time = peak_time - WALL_SPACING;
+			//this is our wall end time
+			let end_time = peak_time;
 			//convert to beats (from seconds)
 			let time_beats = (start_time / 60.0) * beats_per_minute;
-			//println!("time_beats:{}", time_beats);
+			let end_time_beats = (end_time / 60.0) * beats_per_minute;
 			//specs for our wall
 			let mut line_index = 0;
 			let wall_type = 0; //0 vertical 1 horizontal?
 			let width = 0.5;
 			//calculate duration in number of beats (not seconds)
-			let duration = ((end_time - start_time) / 60.0) * beats_per_minute;
-			//println!("duration (beats):{}", duration);
+			let duration = end_time_beats - time_beats - (WALL_SPACING * 2.0);
+
 			//only make a wall if it's reasonably sized
-			if duration >= WALL_SPACING * 2.0 {
+			if duration >= WALL_SPACING * 3.0 {
+				println!("wall added");
+				println!("end pitch:{}", pitch);
+				println!("time_beats:{}", time_beats);
+				println!("end_time_beats:{}", end_time_beats);
+				println!("duration (beats):{}", duration);
 				//make left side wall
 				let wall: String = format!(
 					"{{
-							\"_time\": {},
-							\"_lineIndex\": {},
-							\"_type\": {},
-							\"_duration\": {},
-							\"_width\": {}
-						}},",
-					time_beats, line_index, wall_type, duration, width,
+						\"_time\": {},
+						\"_lineIndex\": {},
+						\"_type\": {},
+						\"_duration\": {},
+						\"_width\": {}
+					}},",
+					time_beats + WALL_SPACING,
+					line_index,
+					wall_type,
+					duration,
+					width,
 				)
 				.to_owned();
 				//add to obstacles
@@ -276,20 +286,26 @@ fn generate_walls(
 				line_index = 3;
 				let wall2: String = format!(
 					"{{
-							\"_time\": {},
-							\"_lineIndex\": {},
-							\"_type\": {},
-							\"_duration\": {},
-							\"_width\": {}
-						}},",
-					time_beats, line_index, wall_type, duration, width,
+						\"_time\": {},
+						\"_lineIndex\": {},
+						\"_type\": {},
+						\"_duration\": {},
+						\"_width\": {}
+					}},",
+					time_beats + WALL_SPACING,
+					line_index,
+					wall_type,
+					duration,
+					width,
 				)
 				.to_owned();
 				//add to obstacles
 				obstacles.push_str(&wall2);
-				//now free us to find another wall start position
-				found_start = false;
 			}
+			//now free us to find another wall start position
+			//may not have found a space large enough for a wall but we still start over
+			found_start = false;
+			start_time = 0.0;
 		}
 	}
 

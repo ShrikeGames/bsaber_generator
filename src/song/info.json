@@ -1,6 +1,7 @@
 {
-	"songName": "Breezeblocks - Alt-J [Auto-generated][ShrikeG]",
-	"songSubName": "Breezeblocks",
+	"songName": "Breezeblocks - Alt-J",
+	"songSubName": "Alt-J [ShrikeGames/AutoGen]",
+	"description": "Generated using https://github.com/ShrikeGames/bsaber_generator",
 	"authorName": "Shrike",
 	"beatsPerMinute": 150.0,
 	"beatsPerBar": 15.0,
