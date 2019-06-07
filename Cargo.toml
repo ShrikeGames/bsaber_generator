@@ -1,0 +1,11 @@
+[package]
+name = "bsaber_generator"
+version = "0.1.0"
+authors = ["Matthew Thomas <shrikegames@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+zip = "0.5.2"
+rand = "0.6"
+ogg = "0.7.0"
+smoothed_z_score = "0.1"

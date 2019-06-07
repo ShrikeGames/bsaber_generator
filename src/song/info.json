@@ -1,0 +1,23 @@
+{
+	"songName": "Breezeblocks - Alt-J [Auto-generated][ShrikeG]",
+	"songSubName": "Breezeblocks",
+	"authorName": "Shrike",
+	"beatsPerMinute": 150,
+	"previewStartTime": 0,
+	"previewDuration": 15,
+	"coverImagePath": "cover.jpg",
+	"environmentName": "DefaultEnvironment",
+	"songTimeOffset":0,
+	"oneSaber": false,
+	"difficultyLevels": [
+		{
+			"difficulty": "ExpertPlus",
+			"difficultyRank": 5,
+			"audioPath": "song.ogg",
+			"jsonPath": "ExpertPlus.json",
+			"offset": 0,
+			"oldOffset": 0,
+			"chromaToggle": "Off"
+		}
+	]
+}

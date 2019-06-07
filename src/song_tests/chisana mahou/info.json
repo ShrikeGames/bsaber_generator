@@ -1,0 +1,23 @@
+{
+	"songName": "Chisana Mahou - STEREOPONY [Auto-generated]",
+	"songSubName": "Chisana Mahou",
+	"authorName": "Shrike",
+	"beatsPerMinute": 130,
+	"previewStartTime": 210,
+	"previewDuration": 15,
+	"coverImagePath": "cover.jpg",
+	"environmentName": "DefaultEnvironment",
+	"songTimeOffset":0,
+	"oneSaber": false,
+	"difficultyLevels": [
+		{
+			"difficulty": "ExpertPlus",
+			"difficultyRank": 5,
+			"audioPath": "song.ogg",
+			"jsonPath": "ExpertPlus.json",
+			"offset": 0,
+			"oldOffset": 0,
+			"chromaToggle": "Off"
+		}
+	]
+}
