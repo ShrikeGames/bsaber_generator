@@ -14,7 +14,8 @@ use zip::result::ZipResult;
 use zip::write::{FileOptions, ZipWriter};
 const WALL_SPACING: f64 = 0.5;
 const MIN_PITCH: f64 = 10.0;
-
+const NUMBER_OF_PATTERNS: i64 = 6;
+const PATTERN_CHANCE: i64 = 10;
 fn main() -> std::io::Result<()> {
 	println!("Start map creation");
 
@@ -46,6 +47,20 @@ struct JsonConfig {
 	duration_seconds: f64,
 }
 
+#[derive(Serialize, Deserialize)]
+#[allow(non_snake_case)] //they're not snake case in the json
+struct PatternNotes {
+	notes: Vec<PatternNote>,
+}
+
+#[derive(Serialize, Deserialize)]
+#[allow(non_snake_case)] //they're not snake case in the json
+struct PatternNote {
+	x: i64,
+	y: i64,
+	cut_direction: i64,
+	note_type: i64,
+}
 /*
 *
 */
@@ -59,6 +74,20 @@ fn create_bsaber_map() -> std::io::Result<()> {
 	config_file.read_to_string(&mut config_data).unwrap();
 	let config_json: JsonConfig = serde_json::from_str(&config_data[..])?;
 
+	let mut patterns = Vec::new();
+	//load pattern json?
+	for pattern_id in 1..NUMBER_OF_PATTERNS {
+		let mut pattern_file =
+			File::open(format!("src/patterns/pattern_{}.json", pattern_id)).unwrap();
+		let mut pattern_json = String::new();
+		pattern_file.read_to_string(&mut pattern_json).unwrap();
+	
+		let pattern_notes: PatternNotes = serde_json::from_str(&pattern_json[..])?;
+		
+		patterns.push(pattern_notes);
+	}
+	
+	
 	let version = "1.0.0";
 	//get configs from info.json
 	let beats_per_minute: f64 = config_json.beatsPerMinute;
@@ -121,6 +150,7 @@ fn create_bsaber_map() -> std::io::Result<()> {
 		&peak_times,
 		&wall_times,
 		&peak_pitches,
+		&patterns, 
 		highest_pitch,
 		beats_per_minute,
 		time,
@@ -133,11 +163,13 @@ fn create_bsaber_map() -> std::io::Result<()> {
 /*
 * Generate a bsaber map using the information provided
 */
+#[allow(clippy::too_many_arguments)]
 fn generate_map(
 	mut contents: String,
 	peak_times: &[f64],
 	wall_times: &[f64],
 	peak_pitches: &[f64],
+	patterns: &[PatternNotes],
 	highest_pitch: f64,
 	beats_per_minute: f64,
 	time: f64,
@@ -161,45 +193,88 @@ fn generate_map(
 		id += 1;
 		//if the pitch is high enough
 		if peak_pitch >= MIN_PITCH {
-			//value information:
-			//index = left  0-4  right
-			//layer = bottom  0-4  top
-			//note type = 0 left, 1 right, 2 bomb
-			//cut_direction = 0 up, 1 down, 2 left, 3 right, 4 NW, 5 NE, 6 SW, 7 SE, 8 omni-directional
-			//get information for a new note
-			let (time_beats, x, y, note_type, cut_direction, lrx, lry, lrxl, lryl, lrxr, lryr) =
-				get_note_information(
+			let use_pattern = rand::thread_rng().gen_range(0, 100);
+			if use_pattern <= PATTERN_CHANCE {
+				let pattern_id = rand::thread_rng().gen_range(0, patterns.len());
+				let pattern_notes = &patterns[pattern_id];
+				let note_type = rand::thread_rng().gen_range(0, 2);
+				for pattern_note in &pattern_notes.notes  {
+					let pattern_x = pattern_note.x;
+					let pattern_y = pattern_note.y;
+					let mut pattern_note_type = pattern_note.note_type;
+					if pattern_note_type < 0 {
+						pattern_note_type = note_type;
+					}
+					let pattern_cut_direction = pattern_note.cut_direction;
+					last_x = pattern_x;
+					last_y = pattern_y;
+					if pattern_note_type == 0{
+						last_xl = pattern_x;
+						last_yl = pattern_y;
+					}else if pattern_note_type == 1{
+						last_xr = pattern_x;
+						last_yr = pattern_y;
+					}
+					let time_beats = (peak_time / 60.0) * beats_per_minute;
+					//create the note using the values we calculated
+					let note: String = create_note_json(
+						id,
+						*peak_time,
+						highest_pitch,//highest pitch, not really using it but don't want it to spawn walls
+						time_beats,
+						pattern_x,
+						pattern_y,
+						pattern_note_type,
+						pattern_cut_direction,
+					);
+					//add the note pattern to the json string
+					contents.push_str(&note);
+				}
+
+				
+			} else {
+				//value information:
+				//index = left  0-4  right
+				//layer = bottom  0-4  top
+				//note type = 0 left, 1 right, 2 bomb
+				//cut_direction = 0 up, 1 down, 2 left, 3 right, 4 NW, 5 NE, 6 SW, 7 SE, 8 omni-directional
+				//get information for a new note
+				let (time_beats, x, y, note_type, cut_direction, lrx, lry, lrxl, lryl, lrxr, lryr) =
+					get_note_information(
+						*peak_time,
+						peak_pitch,
+						highest_pitch,
+						beats_per_minute,
+						&last_x,
+						&last_y,
+						&last_xl,
+						&last_yl,
+						&last_xr,
+						&last_yr,
+					);
+				//update the last placed block positions
+				last_x = lrx;
+				last_y = lry;
+				last_xl = lrxl;
+				last_yl = lryl;
+				last_xr = lrxr;
+				last_yr = lryr;
+				//create the note using the values we calculated
+				let note: String = create_note_json(
+					id,
 					*peak_time,
 					peak_pitch,
-					highest_pitch,
-					beats_per_minute,
-					&last_x,
-					&last_y,
-					&last_xl,
-					&last_yl,
-					&last_xr,
-					&last_yr,
+					time_beats,
+					x,
+					y,
+					note_type,
+					cut_direction,
 				);
-			//update the last placed block positions
-			last_x = lrx;
-			last_y = lry;
-			last_xl = lrxl;
-			last_yl = lryl;
-			last_xr = lrxr;
-			last_yr = lryr;
-			//create the note using the values we calculated
-			let note: String = create_note_json(
-				id,
-				*peak_time,
-				peak_pitch,
-				time_beats,
-				x,
-				y,
-				note_type,
-				cut_direction,
-			);
-			//add the note to the json string
-			contents.push_str(&note);
+				
+				//add the note to the json string
+				contents.push_str(&note);
+			}
+
 		}
 	}
 	//generate walls
@@ -243,7 +318,7 @@ fn generate_walls(
 			start_time = *peak_time;
 			found_start = true;
 			println!("start pitch:{}", pitch);
-		} else if found_start &&  pitch >= MIN_PITCH {
+		} else if found_start && pitch >= MIN_PITCH {
 			//peak occured so we can figure out the distance of the wall
 			//this is our wall end time
 			let end_time = peak_time;
@@ -382,14 +457,6 @@ fn get_note_information(
 	last_xr: &i64,
 	last_yr: &i64,
 ) -> (f64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64) {
-	//TODOs
-	// Rewrite to use specific patterns
-	// first time a unique pitch is found assign it a random pattern
-	// keep a map of pitch->pattern
-	// if a pitch is found again use the same pattern
-	
-	
-	
 	//pick randomly between left and right saber
 	let note_type = rand::thread_rng().gen_range(0, 2);
 	let mut cut_direction = 8;
@@ -408,6 +475,13 @@ fn get_note_information(
 	//4 vertical rows
 	//TODO make 4 a constant
 	let mut y = ((peak_pitch / highest_pitch) * f64::from(4)) as i64;
+
+	//TODOs
+	// Rewrite to use specific patterns
+	// first time a unique pitch is found assign it a random pattern
+	// keep a map of pitch->pattern
+	// if a pitch is found again use the same pattern
+
 	//if we randomly picked the same coordinates as our last block (either saber)
 	//then we're going to adjust its position
 	while x == *last_x && y == *last_y {

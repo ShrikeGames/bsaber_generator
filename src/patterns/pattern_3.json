@@ -1,0 +1,18 @@
+{
+	"notes": [
+		{
+			"x": 2,
+			"y": 1,
+			"note_type": -1,
+			"cut_direction": 2,
+			"description": "Horizontal line WEST"
+		},
+		{
+			"x": 1,
+			"y": 1,
+			"note_type": -1,
+			"cut_direction": 2,
+			"description": "Horizontal line WEST"
+		}
+	]
+}

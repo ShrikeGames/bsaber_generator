@@ -1,0 +1,25 @@
+{
+	"notes": [
+		{
+			"x": 1,
+			"y": 2,
+			"note_type": -1,
+			"cut_direction": 0,
+			"description": "Vertical line S"
+		},
+		{
+			"x": 1,
+			"y": 1,
+			"note_type": -1,
+			"cut_direction": 0,
+			"description": "Vertical line S"
+		},
+		{
+			"x": 1,
+			"y": 0,
+			"note_type": -1,
+			"cut_direction": 0,
+			"description": "Vertical line S"
+		}
+	]
+}

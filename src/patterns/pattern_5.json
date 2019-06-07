@@ -1,0 +1,18 @@
+{
+	"notes": [
+		{
+			"x": 2,
+			"y": 3,
+			"note_type": 0,
+			"cut_direction": 1,
+			"description": "Vertical pair S"
+		},
+		{
+			"x": 3,
+			"y": 3,
+			"note_type": 1,
+			"cut_direction": 1,
+			"description": "Vertical pair S"
+		}
+	]
+}
