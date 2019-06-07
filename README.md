@@ -13,6 +13,11 @@ BeatSaber Custom Map Auto-Generator
 
 * python peaks-detection.py
 
+* Python requires:
+librosa, numpy, pydub
+
 * Run the Rust program with:
 
 * cargo run
+
+* Rust will download its requirements automatically.
