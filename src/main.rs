@@ -66,7 +66,7 @@ fn create_bsaber_map() -> std::io::Result<()> {
 	let note_jump_speed = config_json.noteJumpSpeed;
 	let shuffle = config_json.shuffle;
 	let shuffle_period = config_json.shufflePeriod;
-	let time: f64 = config_json.duration_seconds;
+	let time: f64 = (config_json.duration_seconds / 60.0) * beats_per_minute;;
 
 	//start of ExperPlus.json
 	let mut contents: String = format!(
@@ -382,6 +382,14 @@ fn get_note_information(
 	last_xr: &i64,
 	last_yr: &i64,
 ) -> (f64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64) {
+	//TODOs
+	// Rewrite to use specific patterns
+	// first time a unique pitch is found assign it a random pattern
+	// keep a map of pitch->pattern
+	// if a pitch is found again use the same pattern
+	
+	
+	
 	//pick randomly between left and right saber
 	let note_type = rand::thread_rng().gen_range(0, 2);
 	let mut cut_direction = 8;
