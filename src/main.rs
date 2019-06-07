@@ -3,10 +3,12 @@ extern crate rand;
 extern crate zip;
 
 use rand::Rng;
+use serde::{Deserialize, Serialize};
 use std::fs;
 use std::fs::File;
 use std::io::BufRead;
 use std::io::BufReader;
+use std::io::Read;
 use std::io::{Seek, Write};
 use zip::result::ZipResult;
 use zip::write::{FileOptions, ZipWriter};
@@ -14,44 +16,58 @@ const WALL_SPACING: f64 = 0.5;
 const MIN_PITCH: f64 = 10.0;
 
 fn main() -> std::io::Result<()> {
-	//	let mut file = File::open("src/song/ExpertPlus.json")?;
-	//	let mut contents = String::new();
-	//	file.read_to_string(&mut contents)?;
-	//	println!("{}", contents);
-
 	println!("Start map creation");
 
 	match create_bsaber_map() {
 		Ok(_) => {
 			println!("Map created");
-			println!("Start zipping");
-			fs::remove_file("/home/matt/Games/beatsaver-viewer-master/song.zip")?;
-			let mut file = File::create("/home/matt/Games/beatsaver-viewer-master/song.zip")
-				.expect("Couldn't create file");
-			create_zip_archive(&mut file).expect("Couldn't create archive");
-			println!("Finished zipping");
 		}
 		Err(e) => {
 			println!("Failed to create map. Error: {}", e);
 		}
 	}
+	println!("Start zipping");
+	//fs::remove_file("output/song.zip")?;
+	let mut file = File::create("output/song.zip").expect("Couldn't create file");
+	create_zip_archive(&mut file).expect("Couldn't create archive");
+	println!("Finished zipping");
 
 	Ok(())
 }
+
+#[derive(Serialize, Deserialize)]
+#[allow(non_snake_case)] //they're not snake case in the json
+struct JsonConfig {
+	beatsPerMinute: f64,
+	beatsPerBar: f64,
+	noteJumpSpeed: f64,
+	shuffle: f64,
+	shufflePeriod: f64,
+	duration_seconds: f64,
+}
+
 /*
-* 
+*
 */
 fn create_bsaber_map() -> std::io::Result<()> {
 	fs::remove_file("src/song/ExpertPlus.json")?;
 	let mut file = File::create("src/song/ExpertPlus.json")?;
-	//TODO read from config or info.json
+	
+	//read info.json
+	let mut config_file = File::open("src/song/info.json").unwrap();
+	let mut config_data = String::new();
+	config_file.read_to_string(&mut config_data).unwrap();
+	let config_json: JsonConfig = serde_json::from_str(&config_data[..])?;
+
 	let version = "1.0.0";
-	let beats_per_minute: f64 = 150.0;
-	let beats_per_bar = 16;
-	let note_jump_speed = 15;
-	let shuffle = 1;
-	let shuffle_period = 0.1;
-	let time: f64 = 227.0;
+	//get configs from info.json
+	let beats_per_minute: f64 = config_json.beatsPerMinute;
+	let beats_per_bar = config_json.beatsPerBar;
+	let note_jump_speed = config_json.noteJumpSpeed;
+	let shuffle = config_json.shuffle;
+	let shuffle_period = config_json.shufflePeriod;
+	let time: f64 = config_json.duration_seconds;
+
 	//start of ExperPlus.json
 	let mut contents: String = format!(
 		"{{\"_version\": \"{}\",
@@ -164,7 +180,7 @@ fn generate_map(
 					&last_xr,
 					&last_yr,
 				);
-			//update the last placed block positions	
+			//update the last placed block positions
 			last_x = lrx;
 			last_y = lry;
 			last_xl = lrxl;
@@ -188,8 +204,7 @@ fn generate_map(
 	}
 	//generate walls
 	contents = generate_walls(contents, wall_times, &peak_pitches, beats_per_minute, time);
-	
-	
+
 	//return the completed json string
 	(contents)
 }
@@ -222,7 +237,7 @@ fn generate_walls(
 		//increment the id index
 		id += 1;
 		//if it's quiet and we need a wall start
-		if pitch < MIN_PITCH && !found_start{
+		if pitch < MIN_PITCH && !found_start {
 			//silence is starting
 			//track the start time with a buffer
 			start_time = peak_time + WALL_SPACING;
@@ -236,13 +251,13 @@ fn generate_walls(
 			//println!("time_beats:{}", time_beats);
 			//specs for our wall
 			let mut line_index = 0;
-			let wall_type = 0;//0 vertical 1 horizontal?
+			let wall_type = 0; //0 vertical 1 horizontal?
 			let width = 0.5;
 			//calculate duration in number of beats (not seconds)
 			let duration = ((end_time - start_time) / 60.0) * beats_per_minute;
 			//println!("duration (beats):{}", duration);
 			//only make a wall if it's reasonably sized
-			if duration >= WALL_SPACING*2.0 {
+			if duration >= WALL_SPACING * 2.0 {
 				//make left side wall
 				let wall: String = format!(
 					"{{
@@ -274,12 +289,10 @@ fn generate_walls(
 				obstacles.push_str(&wall2);
 				//now free us to find another wall start position
 				found_start = false;
-				
 			}
 		}
 	}
-	
-	
+
 	//the end of the json file contents
 	//note adding an extra obstacle with no size so we don't have a hanging comma
 	let contents_end: String = format!(
@@ -357,7 +370,7 @@ fn get_note_information(
 	let note_type = rand::thread_rng().gen_range(0, 2);
 	let mut cut_direction = 8;
 	let mut x: i64 = 0;
-	
+
 	if note_type == 0 {
 		//left
 		//start the note on the two left columns (randomly)
@@ -448,26 +461,25 @@ fn get_note_information(
 	//change the direction of the block based on our relative position
 	//if to the right point us in some right-ward cut direction
 	if x > lx {
-		
 		if y > ly {
-			cut_direction = 5;//NE
+			cut_direction = 5; //NE
 		} else if y < ly {
-			cut_direction = 7;//SE
+			cut_direction = 7; //SE
 		} else {
-			cut_direction = 3;//E
+			cut_direction = 3; //E
 		}
 	} else if x < lx {
 		if y > ly {
-			cut_direction = 4;//NW
+			cut_direction = 4; //NW
 		} else if y < ly {
-			cut_direction = 6;//SW
+			cut_direction = 6; //SW
 		} else {
-			cut_direction = 2;//W
+			cut_direction = 2; //W
 		}
 	} else if y > ly {
-		cut_direction = 0;//N
+		cut_direction = 0; //N
 	} else if y < ly {
-		cut_direction = 1;//S
+		cut_direction = 1; //S
 	}
 
 	//NOTE _time is IN BEATS, NOT SECONDS
@@ -479,7 +491,7 @@ fn get_note_information(
 	let mut last_yl_return = last_yl;
 	let mut last_xr_return = last_xr;
 	let mut last_yr_return = last_yr;
-	
+
 	if note_type == 0 {
 		last_xl_return = &x;
 		last_yl_return = &y;
@@ -487,7 +499,7 @@ fn get_note_information(
 		last_xr_return = &x;
 		last_yr_return = &y;
 	}
-	
+
 	(
 		time_beats,
 		x,
@@ -529,4 +541,3 @@ fn create_zip_archive<T: Seek + Write>(buf: &mut T) -> ZipResult<()> {
 	writer.finish()?;
 	Ok(())
 }
-

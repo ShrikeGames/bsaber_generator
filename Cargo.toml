@@ -9,3 +9,5 @@ zip = "0.5.2"
 rand = "0.6"
 ogg = "0.7.0"
 smoothed_z_score = "0.1"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
