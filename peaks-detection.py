@@ -12,6 +12,10 @@ y, sr = librosa.load('src/song/song.ogg')
 # Get file duration in seconds
 duration = librosa.get_duration(y)
 
+bpm = librosa.beat.tempo(y=y, sr=sr, hop_length=512, ac_size=8.0, max_tempo=320.0)
+print("BPM: ", bpm);
+print("duration: ", duration);
+
 # Print duration to console
 print("File duration(s): ", str(datetime.timedelta(seconds=duration)))
 

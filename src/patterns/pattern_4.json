@@ -1,25 +1,23 @@
 {
+	"duration": 0.5,
+	"description": "Random Pairs Together",
 	"notes": [
 		{
-			"x": 1,
-			"y": 0,
-			"note_type": -1,
-			"cut_direction": 0,
-			"description": "Vertical line N"
-		},
-		{
-			"x": 1,
+			"x": -1,
 			"y": 1,
-			"note_type": -1,
-			"cut_direction": 0,
-			"description": "Vertical line N"
+			"beat_time_rel": 0.0,
+			"note_type": 0,
+			"cut_direction": -1,
+			"description": "Random Pair"
 		},
 		{
-			"x": 1,
+			"x": -1,
 			"y": 2,
-			"note_type": -1,
-			"cut_direction": 0,
-			"description": "Vertical line N"
+			"note_type": 1,
+			"beat_time_rel": 0.0,
+			"cut_direction": -1,
+			"description": "Random Pair"
 		}
+		
 	]
 }

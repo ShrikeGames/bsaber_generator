@@ -15,22 +15,27 @@ use zip::write::{FileOptions, ZipWriter};
 const WALL_SPACING: f64 = 0.5;
 const MIN_PITCH: f64 = 10.0;
 const NUMBER_OF_PATTERNS: i64 = 6;
-const PATTERN_CHANCE: i64 = 10;
+const PATTERN_CHANCE: i64 = 3;
+const CUT_UP: i64 = 0;
+const CUT_DOWN: i64 = 1;
+const CUT_LEFT: i64 = 2;
+const CUT_RIGHT: i64 = 3;
+const CUT_NW: i64 = 4;
+const CUT_NE: i64 = 5;
+const CUT_SW: i64 = 6;
+const CUT_SE: i64 = 7;
+const CUT_OMNI: i64 = 8;
+
 fn main() -> std::io::Result<()> {
 	println!("Start map creation");
 
-	match create_bsaber_map() {
-		Ok(_) => {
-			println!("Map created");
-		}
-		Err(e) => {
-			println!("Failed to create map. Error: {}", e);
-		}
-	}
+	let map_string: String = create_bsaber_map();
 	println!("Start zipping");
 	//fs::remove_file("output/song.zip")?;
-	let mut file = File::create("output/song.zip").expect("Couldn't create file");
-	create_zip_archive(&mut file).expect("Couldn't create archive");
+	let output_folder = "/home/matt/Games/beatsaver-viewer-master/song.zip";
+	//let output_folder = "output/song.zip";
+	let mut file = File::create(output_folder).expect("Couldn't create file");
+	create_zip_archive(&mut file, map_string).expect("Couldn't create archive");
 	println!("Finished zipping");
 
 	Ok(())
@@ -50,6 +55,7 @@ struct JsonConfig {
 #[derive(Serialize, Deserialize)]
 #[allow(non_snake_case)] //they're not snake case in the json
 struct PatternNotes {
+	duration: f64,
 	notes: Vec<PatternNote>,
 }
 
@@ -60,34 +66,42 @@ struct PatternNote {
 	y: i64,
 	cut_direction: i64,
 	note_type: i64,
+	beat_time_rel: f64,
+	description: String,
+}
+fn get_config_file() -> JsonConfig {
+	let mut config_file = File::open("src/song/info.json").unwrap();
+	let mut config_data = String::new();
+	config_file.read_to_string(&mut config_data).unwrap();
+	let config_json: JsonConfig =
+		serde_json::from_str(&config_data[..]).expect("Could not read config file");
+	(config_json)
 }
 /*
 *
 */
-fn create_bsaber_map() -> std::io::Result<()> {
-	fs::remove_file("src/song/ExpertPlus.json")?;
-	let mut file = File::create("src/song/ExpertPlus.json")?;
+fn create_bsaber_map() -> String {
+	fs::remove_file("src/song/ExpertPlus.json").expect("Could not remove song json");
+	let mut file =
+		File::create("src/song/ExpertPlus.json").expect("Could not create song json file");
 
 	//read info.json
-	let mut config_file = File::open("src/song/info.json").unwrap();
-	let mut config_data = String::new();
-	config_file.read_to_string(&mut config_data).unwrap();
-	let config_json: JsonConfig = serde_json::from_str(&config_data[..])?;
+	let config_json = get_config_file();
 
 	let mut patterns = Vec::new();
 	//load pattern json?
-	for pattern_id in 1..NUMBER_OF_PATTERNS {
+	for pattern_id in 0..NUMBER_OF_PATTERNS {
 		let mut pattern_file =
 			File::open(format!("src/patterns/pattern_{}.json", pattern_id)).unwrap();
 		let mut pattern_json = String::new();
 		pattern_file.read_to_string(&mut pattern_json).unwrap();
-	
-		let pattern_notes: PatternNotes = serde_json::from_str(&pattern_json[..])?;
-		
+
+		let pattern_notes: PatternNotes =
+			serde_json::from_str(&pattern_json[..]).expect("Could not read pattern note json");
+
 		patterns.push(pattern_notes);
 	}
-	
-	
+
 	let version = "1.0.0";
 	//get configs from info.json
 	let beats_per_minute: f64 = config_json.beatsPerMinute;
@@ -105,7 +119,7 @@ fn create_bsaber_map() -> std::io::Result<()> {
 			\"_noteJumpSpeed\": {},
 			\"_shuffle\": {},
 			\"_shufflePeriod\": {},
-			\"_time'\": {},
+			\"_time\": {},
 			\"_songTimeOffset\": 0.0,
 			\"_notes\": [",
 		version, beats_per_minute, beats_per_bar, note_jump_speed, shuffle, shuffle_period, time
@@ -113,7 +127,8 @@ fn create_bsaber_map() -> std::io::Result<()> {
 	.to_owned();
 
 	//read the peak times and pitches
-	let peak_times_file = File::open("src/song/peak_times.txt")?;
+	let peak_times_file =
+		File::open("src/song/peak_times.txt").expect("Could not read peak times file");
 	let peak_times_buffer = BufReader::new(&peak_times_file);
 	//we'll keep track of times for the peaks and where walls might go
 	let mut peak_times = Vec::new();
@@ -144,21 +159,25 @@ fn create_bsaber_map() -> std::io::Result<()> {
 	}
 	//ensure the wall times always have the song time (length/duration)
 	wall_times.push(time);
+
+	let mut processed_notes = Vec::new();
 	//generate the map
 	contents = generate_map(
 		contents,
 		&peak_times,
 		&wall_times,
 		&peak_pitches,
-		&patterns, 
+		&patterns,
 		highest_pitch,
 		beats_per_minute,
 		time,
+		&mut processed_notes,
 	);
 	//write it all out to file
-	file.write_all(contents.as_bytes())?;
+	file.write_all(contents.as_bytes())
+		.expect("Could not write song json to file");
 	drop(file);
-	Ok(())
+	(contents)
 }
 /*
 * Generate a bsaber map using the information provided
@@ -173,18 +192,12 @@ fn generate_map(
 	highest_pitch: f64,
 	beats_per_minute: f64,
 	time: f64,
+	processed_notes: &mut Vec<PatternNote>,
 ) -> String {
 	//track which beat were on using an id
 	let mut id: usize = 0;
-	//track where we last placed any block
-	let mut last_x = 0;
-	let mut last_y = 0;
-	//track where we last placed a LEFT SABER block
-	let mut last_xl = 0;
-	let mut last_yl = 0;
-	//trakc where we last place a RIGHT saber block
-	let mut last_xr = 0;
-	let mut last_yr = 0;
+	let mut pattern_end_time: f64 = 0.0;
+
 	//iterate over the peak times
 	for peak_time in peak_times {
 		//get the related pitch value
@@ -192,73 +205,109 @@ fn generate_map(
 		//now increase our id index
 		id += 1;
 		//if the pitch is high enough
-		if peak_pitch >= MIN_PITCH {
+		if peak_pitch >= MIN_PITCH && *peak_time > pattern_end_time {
 			let use_pattern = rand::thread_rng().gen_range(0, 100);
 			if use_pattern <= PATTERN_CHANCE {
 				let pattern_id = rand::thread_rng().gen_range(0, patterns.len());
 				let pattern_notes = &patterns[pattern_id];
 				let note_type = rand::thread_rng().gen_range(0, 2);
-				for pattern_note in &pattern_notes.notes  {
-					let pattern_x = pattern_note.x;
-					let pattern_y = pattern_note.y;
+				pattern_end_time = *peak_time + pattern_notes.duration;
+				for pattern_note in &pattern_notes.notes {
+					let mut pattern_x = pattern_note.x;
+					if pattern_x < 0 {
+						if note_type == 0 {
+							pattern_x = rand::thread_rng().gen_range(0, 2);
+						} else if note_type == 1 {
+							pattern_x = rand::thread_rng().gen_range(2, 4);
+						} else {
+							pattern_x = rand::thread_rng().gen_range(0, 4);
+						}
+					}
+					let mut pattern_y = pattern_note.y;
+					if pattern_y < 0 {
+						if note_type == 0 {
+							pattern_y = rand::thread_rng().gen_range(0, 2);
+						} else if note_type == 1 {
+							pattern_y = rand::thread_rng().gen_range(2, 4);
+						} else {
+							pattern_y = rand::thread_rng().gen_range(0, 4);
+						}
+					}
+
+					if pattern_y < 0 || pattern_x < 0 && !processed_notes.is_empty() {
+						let prev_note_index = processed_notes.len() - 1;
+						let prev_note = &processed_notes[prev_note_index];
+
+						//if we randomly picked the same coordinates as our last block (either saber)
+						//then we're going to adjust its position
+						while pattern_x == prev_note.x && pattern_y == prev_note.y {
+							pattern_y += rand::thread_rng().gen_range(-1, 2);
+							pattern_x += rand::thread_rng().gen_range(-1, 2);
+						}
+					}
+					if pattern_x < 0 {
+						pattern_x = 0;
+					} else if pattern_x > 3 {
+						pattern_x = 3;
+					}
+					if pattern_y < 0 {
+						pattern_y = 0;
+					} else if pattern_y > 3 {
+						pattern_y = 3;
+					}
 					let mut pattern_note_type = pattern_note.note_type;
 					if pattern_note_type < 0 {
 						pattern_note_type = note_type;
 					}
-					let pattern_cut_direction = pattern_note.cut_direction;
-					last_x = pattern_x;
-					last_y = pattern_y;
-					if pattern_note_type == 0{
-						last_xl = pattern_x;
-						last_yl = pattern_y;
-					}else if pattern_note_type == 1{
-						last_xr = pattern_x;
-						last_yr = pattern_y;
+					let mut pattern_cut_direction = pattern_note.cut_direction;
+					if pattern_cut_direction < 0 {
+						pattern_cut_direction = rand::thread_rng().gen_range(0, 8);
 					}
-					let time_beats = (peak_time / 60.0) * beats_per_minute;
+
+					let pattern_time_beat = pattern_note.beat_time_rel;
+					let mut time_beats = (peak_time / 60.0) * beats_per_minute;
+					if pattern_time_beat > 0.0 {
+						time_beats += pattern_time_beat;
+					}
 					//create the note using the values we calculated
 					let note: String = create_note_json(
 						id,
 						*peak_time,
-						highest_pitch,//highest pitch, not really using it but don't want it to spawn walls
+						highest_pitch, //highest pitch, not really using it but don't want it to spawn walls
 						time_beats,
 						pattern_x,
 						pattern_y,
 						pattern_note_type,
 						pattern_cut_direction,
+						pattern_note.description.to_owned(),
 					);
 					//add the note pattern to the json string
 					contents.push_str(&note);
+					let processed_note = PatternNote {
+						x: pattern_note.x,
+						y: pattern_note.y,
+						cut_direction: pattern_note.cut_direction,
+						note_type: pattern_note.note_type,
+						beat_time_rel: pattern_note.beat_time_rel,
+						description: "Test".to_owned(),
+					};
+					processed_notes.push(processed_note);
 				}
-
-				
 			} else {
 				//value information:
 				//index = left  0-4  right
 				//layer = bottom  0-4  top
 				//note type = 0 left, 1 right, 2 bomb
-				//cut_direction = 0 up, 1 down, 2 left, 3 right, 4 NW, 5 NE, 6 SW, 7 SE, 8 omni-directional
+				//cut_direction = 0 up, 1 down, 2 left, 3 right, 4 NW, 5 NE, 6 SE, 7 SW, 8 omni-directional
 				//get information for a new note
-				let (time_beats, x, y, note_type, cut_direction, lrx, lry, lrxl, lryl, lrxr, lryr) =
-					get_note_information(
-						*peak_time,
-						peak_pitch,
-						highest_pitch,
-						beats_per_minute,
-						&last_x,
-						&last_y,
-						&last_xl,
-						&last_yl,
-						&last_xr,
-						&last_yr,
-					);
+				let (time_beats, x, y, note_type, cut_direction) = get_note_information(
+					*peak_time,
+					peak_pitch,
+					highest_pitch,
+					beats_per_minute,
+					processed_notes,
+				);
 				//update the last placed block positions
-				last_x = lrx;
-				last_y = lry;
-				last_xl = lrxl;
-				last_yl = lryl;
-				last_xr = lrxr;
-				last_yr = lryr;
 				//create the note using the values we calculated
 				let note: String = create_note_json(
 					id,
@@ -269,12 +318,21 @@ fn generate_map(
 					y,
 					note_type,
 					cut_direction,
+					"auto".to_owned(),
 				);
-				
+
 				//add the note to the json string
 				contents.push_str(&note);
+				let processed_note = PatternNote {
+					x,
+					y,
+					cut_direction,
+					note_type,
+					beat_time_rel: 0.0,
+					description: "auto".to_owned(),
+				};
+				processed_notes.push(processed_note);
 			}
-
 		}
 	}
 	//generate walls
@@ -423,6 +481,7 @@ fn create_note_json(
 	y: i64,
 	note_type: i64,
 	cut_direction: i64,
+	description: String,
 ) -> String {
 	let note: String = format!(
 		"{{
@@ -433,9 +492,10 @@ fn create_note_json(
 			\"_lineIndex\": {},
 			\"_lineLayer\": {},
 			\"_type\": {},
-			\"_cutDirection\": {}
+			\"_cutDirection\": {},
+			\"description\":\"{}\"
 		}},",
-		id, peak_time, peak_pitch, time_beats, x, y, note_type, cut_direction,
+		id, peak_time, peak_pitch, time_beats, x, y, note_type, cut_direction, description
 	)
 	.to_owned();
 	(note)
@@ -450,16 +510,11 @@ fn get_note_information(
 	peak_pitch: f64,
 	highest_pitch: f64,
 	beats_per_minute: f64,
-	last_x: &i64,
-	last_y: &i64,
-	last_xl: &i64,
-	last_yl: &i64,
-	last_xr: &i64,
-	last_yr: &i64,
-) -> (f64, i64, i64, i64, i64, i64, i64, i64, i64, i64, i64) {
+	processed_notes: &[PatternNote],
+) -> (f64, i64, i64, i64, i64) {
 	//pick randomly between left and right saber
 	let note_type = rand::thread_rng().gen_range(0, 2);
-	let mut cut_direction = 8;
+
 	let mut x: i64 = 0;
 
 	if note_type == 0 {
@@ -473,156 +528,125 @@ fn get_note_information(
 	}
 	//the y position/row is determined by comparing the pitch against the highest pitch note
 	//4 vertical rows
-	//TODO make 4 a constant
-	let mut y = ((peak_pitch / highest_pitch) * f64::from(4)) as i64;
+	//higher pitch have chance to be higher
+	let mut y =
+		rand::thread_rng().gen_range(0, 1 + ((peak_pitch / highest_pitch) * f64::from(4)) as i64);
 
-	//TODOs
-	// Rewrite to use specific patterns
-	// first time a unique pitch is found assign it a random pattern
-	// keep a map of pitch->pattern
-	// if a pitch is found again use the same pattern
+	//default to omni direction
+	let mut cut_direction = CUT_OMNI;
+	if !processed_notes.is_empty() {
+		let mut prev_note_index = processed_notes.len() - 1;
+		let mut prev_note = &processed_notes[prev_note_index];
 
-	//if we randomly picked the same coordinates as our last block (either saber)
-	//then we're going to adjust its position
-	while x == *last_x && y == *last_y {
-		//initially could be any cut direction (8 cardinal directions)
-		//cut_direction = 0 N, 1 S, 2 W, 3 E, 4 NW, 5 NE, 6 SW, 7 SE, 8 omni
-		//chosen at random
-		let random_direction = rand::thread_rng().gen_range(0, 8);
-		//based on the direction picked we'll change the direction of the noteblock
-		//this makes it easier to chain notes together for the player
-		if random_direction == 0 {
-			//N
-			y += 1;
-			cut_direction = 0;
-		} else if random_direction == 1 {
-			//NE
-			x += 1;
-			y += 1;
-			cut_direction = 5;
-		} else if random_direction == 2 {
-			//E
-			x += 1;
-			cut_direction = 3;
-		} else if random_direction == 3 {
-			//SE
-			x += 1;
-			y -= 1;
-			cut_direction = 7;
-		} else if random_direction == 4 {
-			//S
-			y -= 1;
-			cut_direction = 1;
-		} else if random_direction == 5 {
-			//SW
-			x -= 1;
-			y -= 1;
-			cut_direction = 6;
-		} else if random_direction == 6 {
-			//W
-			x -= 1;
-			cut_direction = 2;
-		} else if random_direction == 7 {
-			//NW
-			x -= 1;
-			y += 1;
-			cut_direction = 4;
+		//if we randomly picked the same coordinates as our last block (either saber)
+		//then we're going to adjust its position
+		while x == prev_note.x && y == prev_note.y {
+			y += rand::thread_rng().gen_range(-1, 2);
+			if note_type == 0 {
+				x -= rand::thread_rng().gen_range(1, 3);
+			} else if note_type == 1 {
+				x += rand::thread_rng().gen_range(1, 3);
+			} else {
+				x += rand::thread_rng().gen_range(-1, 2);
+			}
 		}
-		if x < 0 {
-			x = 2;
-			cut_direction = 8;
-		} else if x > 3 {
-			x = 1;
-			cut_direction = 8;
+		//ensure they are in valid positions
+		if x > 3 {
+			x = 3;
+		} else if x < 0 {
+			x = 0;
 		}
-		if y < 0 {
-			y = 2;
-			cut_direction = 8;
-		} else if y > 3 {
-			y = 1;
-			cut_direction = 8;
+		if y > 3 {
+			y = 3;
+		} else if y < 0 {
+			y = 0;
 		}
-	}
-	//locally store the last note position
-	let mut lx = *last_x;
-	let mut ly = *last_x;
-	//if we have a left/right saber grab those specific values instead
-	if note_type == 0 {
-		lx = *last_xl;
-		ly = *last_yl;
-	} else if note_type == 1 {
-		lx = *last_xr;
-		ly = *last_yr;
-	}
-
-	//compare to our last note position
-	//change the direction of the block based on our relative position
-	//if to the right point us in some right-ward cut direction
-	if x > lx {
-		if y > ly {
-			cut_direction = 5; //NE
-		} else if y < ly {
-			cut_direction = 7; //SE
-		} else {
-			cut_direction = 3; //E
+		//now we'll look specifically for the last note of our particular saber to decide on our cut direction
+		while note_type != prev_note.note_type && prev_note_index > 0 {
+			prev_note_index -= 1;
+			prev_note = &processed_notes[prev_note_index];
 		}
-	} else if x < lx {
-		if y > ly {
-			cut_direction = 4; //NW
-		} else if y < ly {
-			cut_direction = 6; //SW
-		} else {
-			cut_direction = 2; //W
+		//compare to our last note position
+		//change the direction of the block based on our relative position
+		//if to the right point us in some right-ward cut direction
+		//cut_direction =
+		//0 up
+		//1 down
+		//2 left
+		//3 right
+		//4 NW
+		//5 NE
+		//6 SW
+		//7 SE
+		//8 omni-directional
+		if x == prev_note.x {
+			if y > prev_note.y + 1 {
+				cut_direction = CUT_UP;
+			} else if y < prev_note.y - 1 {
+				cut_direction = CUT_DOWN;
+			} else {
+				cut_direction = CUT_OMNI;
+			}
+		} else if x > prev_note.x + 1 {
+			if y > prev_note.y + 1 {
+				cut_direction = CUT_NE;
+			} else if y < prev_note.y - 1 {
+				cut_direction = CUT_SE;
+			} else {
+				cut_direction = CUT_OMNI;
+			}
+		} else if x < prev_note.x - 1 {
+			if y > prev_note.y + 1 {
+				cut_direction = CUT_NW;
+			} else if y < prev_note.y - 1 {
+				cut_direction = CUT_SW;
+			} else {
+				cut_direction = CUT_OMNI;
+			}
+		} else if x > prev_note.x {
+			if y > prev_note.y + 1 || y < prev_note.y - 1 {
+				cut_direction = CUT_OMNI;
+			} else {
+				cut_direction = CUT_RIGHT;
+			}
+		} else if x < prev_note.x {
+			if y > prev_note.y + 1 || y < prev_note.y - 1 {
+				cut_direction = CUT_OMNI;
+			} else {
+				cut_direction = CUT_LEFT;
+			}
 		}
-	} else if y > ly {
-		cut_direction = 0; //N
-	} else if y < ly {
-		cut_direction = 1; //S
+		//special case for the bottom row so we aren't going side to side too much
+		//would rather alternate up and down
+		if y == 0 && prev_note.y == 0 && (cut_direction == CUT_LEFT || cut_direction == CUT_RIGHT) {
+			if prev_note.cut_direction == CUT_UP || prev_note.cut_direction == CUT_OMNI {
+				cut_direction = CUT_DOWN;
+			} else if prev_note.cut_direction == CUT_DOWN {
+				cut_direction = CUT_UP;
+			} else {
+				cut_direction = CUT_OMNI;
+			}
+		}
 	}
 
 	//NOTE _time is IN BEATS, NOT SECONDS
 	//update our last used coordinates for notes
 	let time_beats = (peak_time / 60.0) * beats_per_minute;
-	let last_x_return = x;
-	let last_y_return = y;
-	let mut last_xl_return = last_xl;
-	let mut last_yl_return = last_yl;
-	let mut last_xr_return = last_xr;
-	let mut last_yr_return = last_yr;
 
-	if note_type == 0 {
-		last_xl_return = &x;
-		last_yl_return = &y;
-	} else if note_type == 1 {
-		last_xr_return = &x;
-		last_yr_return = &y;
-	}
-
-	(
-		time_beats,
-		x,
-		y,
-		note_type,
-		cut_direction,
-		last_x_return,
-		last_y_return,
-		*last_xl_return,
-		*last_yl_return,
-		*last_xr_return,
-		*last_yr_return,
-	)
+	(time_beats, x, y, note_type, cut_direction)
 }
 
 /*
 * Zip up the important files from /src/song
 * This is the zip beat saber, bsaber, or the map previewer can use
  */
-fn create_zip_archive<T: Seek + Write>(buf: &mut T) -> ZipResult<()> {
+fn create_zip_archive<T: Seek + Write>(buf: &mut T, song_json: String) -> ZipResult<()> {
 	let mut writer = ZipWriter::new(buf);
 	println!("Adding ExpertPlus");
-	let contents = include_bytes!("./song/ExpertPlus.json");
+
 	writer.start_file("ExpertPlus.json", FileOptions::default())?;
-	writer.write_all(contents)?;
+	writer.write_all(song_json.as_bytes())?;
+
 	println!("Adding cover");
 	let cover = include_bytes!("./song/cover.jpg");
 	writer.start_file("cover.jpg", FileOptions::default())?;
