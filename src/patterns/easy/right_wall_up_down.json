@@ -20,7 +20,7 @@
 		{
 			"x": 0,
 			"y": 0,
-			"beat_time_rel": 3,
+			"beat_time_rel": 4,
 			"note_type": 0,
 			"cut_direction": 1,
 			"description": "S"
@@ -28,7 +28,7 @@
 		{
 			"x": 1,
 			"y": 0,
-			"beat_time_rel": 3,
+			"beat_time_rel": 4,
 			"note_type": 1,
 			"cut_direction": 1,
 			"description": "S"
@@ -36,12 +36,12 @@
 	],
 	"obstacles": [
 		{
-			"x": 2,
+			"x": 3,
 			"y": 2,
 			"wall_time_rel": 0,
-			"wall_type": 3,
+			"wall_type": 0,
 			"duration": -1,
-			"padding": 0.5,
+			"padding": 1,
 			"width": 1.5,
 			"description": "N"
 		}

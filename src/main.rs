@@ -59,9 +59,14 @@ struct Beat {
 	id: usize,
 	pitch: f64,
 }
-
 #[derive(Serialize, Deserialize)]
-struct PatternNotes {
+struct PatternCollection {
+	easy_patterns: Vec<Pattern>,
+	normal_patterns: Vec<Pattern>,
+	hard_patterns: Vec<Pattern>,
+}
+#[derive(Serialize, Deserialize)]
+struct Pattern {
 	description: String,
 	notes: Vec<PatternNote>,
 	obstacles: Vec<PatternWall>,
@@ -98,25 +103,63 @@ fn get_config_file() -> JsonConfig {
 	(config_json)
 }
 
-fn generate_patterns() -> Vec<PatternNotes> {
-	let mut patterns = Vec::new();
-	for entry in glob("src/patterns/*.json").expect("Failed to read glob pattern") {
+fn generate_patterns() -> PatternCollection {
+	let mut easy_patterns = Vec::new();
+	let mut normal_patterns = Vec::new();
+	let mut hard_patterns = Vec::new();
+
+	for entry in glob("src/patterns/easy/*.json").expect("Failed to read glob pattern") {
 		match entry {
 			Ok(path) => {
 				let mut pattern_file = File::open(path).unwrap();
 				let mut pattern_json = String::new();
 				pattern_file.read_to_string(&mut pattern_json).unwrap();
 
-				let pattern_notes: PatternNotes = serde_json::from_str(&pattern_json[..])
+				let pattern_notes: Pattern = serde_json::from_str(&pattern_json[..])
 					.expect("Could not read pattern note json");
 				//println!("pattern:{}",pattern_notes.description.to_owned());
-				patterns.push(pattern_notes);
+				easy_patterns.push(pattern_notes);
 			}
 			Err(e) => println!("{:?}", e),
 		}
 	}
+	for entry in glob("src/patterns/normal/*.json").expect("Failed to read glob pattern") {
+		match entry {
+			Ok(path) => {
+				let mut pattern_file = File::open(path).unwrap();
+				let mut pattern_json = String::new();
+				pattern_file.read_to_string(&mut pattern_json).unwrap();
 
-	(patterns)
+				let pattern_notes: Pattern = serde_json::from_str(&pattern_json[..])
+					.expect("Could not read pattern note json");
+				//println!("pattern:{}",pattern_notes.description.to_owned());
+				normal_patterns.push(pattern_notes);
+			}
+			Err(e) => println!("{:?}", e),
+		}
+	}
+	for entry in glob("src/patterns/hard/*.json").expect("Failed to read glob pattern") {
+		match entry {
+			Ok(path) => {
+				let mut pattern_file = File::open(path).unwrap();
+				let mut pattern_json = String::new();
+				pattern_file.read_to_string(&mut pattern_json).unwrap();
+
+				let pattern_notes: Pattern = serde_json::from_str(&pattern_json[..])
+					.expect("Could not read pattern note json");
+				//println!("pattern:{}",pattern_notes.description.to_owned());
+				hard_patterns.push(pattern_notes);
+			}
+			Err(e) => println!("{:?}", e),
+		}
+	}
+	let pattern_collection: PatternCollection = PatternCollection {
+		easy_patterns,
+		normal_patterns,
+		hard_patterns,
+	};
+
+	(pattern_collection)
 }
 /*
 *
@@ -129,7 +172,7 @@ fn create_bsaber_map() -> String {
 	//read info.json
 	let config_json = get_config_file();
 
-	let patterns = generate_patterns();
+	let pattern_collection = generate_patterns();
 
 	let version = "1.0.0";
 	//get configs from info.json
@@ -202,12 +245,13 @@ fn create_bsaber_map() -> String {
 			lowest_pitch = peak_pitch_as_float;
 		}
 	}
+
 	let mut processed_notes = Vec::new();
 	//generate the map
 	contents = generate_map(
 		contents,
 		&beats,
-		&patterns,
+		&pattern_collection,
 		highest_pitch,
 		lowest_pitch,
 		beats_per_minute,
@@ -227,7 +271,7 @@ fn create_bsaber_map() -> String {
 fn generate_map(
 	mut contents: String,
 	beats: &[Beat],
-	patterns: &[PatternNotes],
+	pattern_collection: &PatternCollection,
 	highest_pitch: f64,
 	lowest_pitch: f64,
 	beats_per_minute: f64,
@@ -237,20 +281,39 @@ fn generate_map(
 
 	let mut pattern_map = HashMap::new();
 	let mut pattern_end_time: f64 = 0.0;
-	//iterate over the peak times
+
+	//we'll treat the lowest 15% as nothing
+	let lowest_threshold = lowest_pitch * 1.15;
+
+	let hard_threshold = highest_pitch * 0.25;
+	let normal_threshold = highest_pitch * 0.40;
 
 	let mut beat_id = 0;
 	for beat in beats {
-		if beat.pitch > lowest_pitch && beat.peak_time_sec > pattern_end_time {
-			let random_pattern_id = rand::thread_rng().gen_range(0, patterns.len());
+		if beat.pitch > lowest_threshold && beat.peak_time_sec > pattern_end_time {
+			let mut patterns = &pattern_collection.easy_patterns;
+			if beat.pitch <= hard_threshold {
+				patterns = &pattern_collection.normal_patterns;
+			} else if beat.pitch <= normal_threshold {
+				patterns = &pattern_collection.hard_patterns;
+			}
+			let mut random_pattern_id = rand::thread_rng().gen_range(0, patterns.len());
+			let random_variant = rand::thread_rng().gen_range(0, 1);
+			random_pattern_id += random_variant;
+			if random_pattern_id >= patterns.len() {
+				random_pattern_id = random_variant;
+			}
 			//x = rand::thread_rng().gen_range(0, 2);
 			let random_pattern = &patterns[random_pattern_id];
-			let pattern = pattern_map.entry(beat.id).or_insert(random_pattern);
+
+			let pattern = pattern_map
+				.entry(beat.id + random_pattern_id)
+				.or_insert(random_pattern);
 
 			println!("pattern:{}", pattern.description.to_owned());
 			let mut last_note_time_in_beats = 0.0;
 
-			let note_type = rand::thread_rng().gen_range(0, 2);
+			let note_type = rand::thread_rng().gen_range(0, 1);
 			for pattern_note in &pattern.notes {
 				let mut beat_next_id = beat_id + pattern_note.beat_time_rel;
 				if beat_next_id >= beats.len() {
@@ -258,7 +321,7 @@ fn generate_map(
 				}
 				let note_time_in_beats =
 					(beats[beat_next_id].peak_time_sec / 60.0) * beats_per_minute;
-				last_note_time_in_beats = note_time_in_beats; 
+				last_note_time_in_beats = note_time_in_beats;
 				let mut pattern_x = pattern_note.x;
 				if pattern_x < 0 {
 					if note_type == 0 {
@@ -321,7 +384,7 @@ fn generate_map(
 				};
 				processed_notes.push(processed_note);
 			}
-			
+
 			for wall in &pattern.obstacles {
 				let mut beat_next_id = beat_id + wall.wall_time_rel;
 				if beat_next_id >= beats.len() {
@@ -337,13 +400,13 @@ fn generate_map(
 				if wall_duration - wall.padding > 0.0 {
 					let wall_json = format!(
 						"{{
-						\"_time\": {},
-						\"_lineIndex\": {},
-						\"_lineLayer\": {},
-						\"_type\": {},
-						\"_duration\": {},
-						\"_width\": {}
-					}},",
+							\"_time\": {},
+							\"_lineIndex\": {},
+							\"_lineLayer\": {},
+							\"_type\": {},
+							\"_duration\": {},
+							\"_width\": {}
+						}},",
 						wall_time_in_beats + wall.padding,
 						wall.x,
 						wall.y,
@@ -384,7 +447,8 @@ fn generate_map(
 
 	//add to json string
 	contents.push_str(&contents_end);
-
+	let note_count = processed_notes.len();
+	println!("note count:{}", note_count.to_owned());
 	//return the completed json string
 	(contents)
 }

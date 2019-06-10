@@ -1,9 +1,9 @@
 {
-	"description": "E W switch.  sabers switch which is on top",
+	"description": "async E",
 	"notes": [
 		{
 			"x": 3,
-			"y": 1,
+			"y": 0,
 			"beat_time_rel": 0,
 			"note_type": 0,
 			"cut_direction": 3,
@@ -11,27 +11,29 @@
 		},
 		{
 			"x": 3,
-			"y": 2,
-			"beat_time_rel": 0,
+			"y": 1,
+			"beat_time_rel": 1,
 			"note_type": 1,
 			"cut_direction": 3,
 			"description": "E"
 		},
 		{
-			"x": 0,
-			"y": 2,
-			"beat_time_rel": 1,
+			"x": 1,
+			"y": 0,
+			"beat_time_rel": 0,
 			"note_type": 0,
-			"cut_direction": 2,
-			"description": "W"
+			"cut_direction": 1,
+			"description": "S"
 		},
 		{
-			"x": 0,
-			"y": 1,
+			"x": 2,
+			"y": 0,
 			"beat_time_rel": 1,
 			"note_type": 1,
-			"cut_direction": 2,
-			"description": "W"
+			"cut_direction": 1,
+			"description": "S"
 		}
+	],
+	"obstacles": [
 	]
 }

@@ -1,0 +1,53 @@
+{
+	"description": "Random mix",
+	"notes": [
+		{
+			"x": -1,
+			"y": 1,
+			"beat_time_rel": 0,
+			"note_type": 0,
+			"cut_direction": -1,
+			"description": "random"
+		},
+		{
+			"x": -1,
+			"y": 2,
+			"beat_time_rel": 1,
+			"note_type": 1,
+			"cut_direction": 1,
+			"description": "random"
+		},{
+			"x": 0,
+			"y": -1,
+			"beat_time_rel": 2,
+			"note_type": 0,
+			"cut_direction": -1,
+			"description": "random"
+		},
+		{
+			"x": 3,
+			"y": -1,
+			"beat_time_rel": 3,
+			"note_type": 1,
+			"cut_direction": 1,
+			"description": "random"
+		},{
+			"x": -1,
+			"y": 1,
+			"beat_time_rel": 4,
+			"note_type": 0,
+			"cut_direction": -1,
+			"description": "random"
+		},
+		{
+			"x": -1,
+			"y": 2,
+			"beat_time_rel": 5,
+			"note_type": 1,
+			"cut_direction": 1,
+			"description": "random"
+		}
+	],
+	"obstacles": [
+	]
+}
