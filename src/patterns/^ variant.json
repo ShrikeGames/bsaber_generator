@@ -1,0 +1,53 @@
+{
+	"description": "SW N SE variant",
+	"notes": [
+		{
+			"x": 0,
+			"y": 1,
+			"beat_time_rel": 0,
+			"note_type": 0,
+			"cut_direction": 6,
+			"description": "SW"
+		},
+		{
+			"x": 1,
+			"y": 0,
+			"beat_time_rel": 0,
+			"note_type": 1,
+			"cut_direction": 6,
+			"description": "SW"
+		},
+		{
+			"x": 1,
+			"y": 2,
+			"beat_time_rel": 1,
+			"note_type": 0,
+			"cut_direction": 0,
+			"description": "N"
+		},
+		{
+			"x": 3,
+			"y": 2,
+			"beat_time_rel": 1,
+			"note_type": 1,
+			"cut_direction": 0,
+			"description": "N"
+		},
+		{
+			"x": 2,
+			"y": 0,
+			"beat_time_rel": 2,
+			"note_type": 0,
+			"cut_direction": 7,
+			"description": "SE"
+		},
+		{
+			"x": 3,
+			"y": 1,
+			"beat_time_rel": 2,
+			"note_type": 1,
+			"cut_direction": 7,
+			"description": "SE"
+		}
+	]
+}

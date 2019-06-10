@@ -1,0 +1,37 @@
+{
+	"description": "async E W",
+	"notes": [
+		{
+			"x": 3,
+			"y": 0,
+			"beat_time_rel": 0,
+			"note_type": 0,
+			"cut_direction": 3,
+			"description": "E"
+		},
+		{
+			"x": 3,
+			"y": 1,
+			"beat_time_rel": 1,
+			"note_type": 1,
+			"cut_direction": 3,
+			"description": "E"
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"beat_time_rel": 2,
+			"note_type": 0,
+			"cut_direction": 2,
+			"description": "W"
+		},
+		{
+			"x": 0,
+			"y": 1,
+			"beat_time_rel": 3,
+			"note_type": 1,
+			"cut_direction": 2,
+			"description": "W"
+		}
+	]
+}

@@ -23,7 +23,9 @@ print("File duration(s): ", str(datetime.timedelta(seconds=duration)))
 onset_env = librosa.onset.onset_strength(y=y, sr=sr,
                                          hop_length=512,
                                          aggregate=np.median)
-peaks = librosa.util.peak_pick(onset_env, 1, 5, 8, 8, 0.01, 1)
+                               #https://librosa.github.io/librosa/generated/librosa.util.peak_pick.html
+                               #x, pre_max, post_max, pre_avg, post_avg, delta, wait
+peaks = librosa.util.peak_pick(onset_env, 3, 3, 3, 3, 0.01, 1)
 
 # Print peaks list to console
 print('Peaks detected at: ', librosa.frames_to_time(peaks, sr=sr))
@@ -37,17 +39,18 @@ peak_times = librosa.frames_to_time(peaks, sr=sr)
 #y1, sr1 = librosa.load('song.ogg')
 #duration = librosa.get_duration(y1)
 
-pitches, magnitudes = librosa.core.piptrack(y=y, sr=sr, fmin=10, fmax=1600, hop_length=512)
+pitches, magnitudes = librosa.core.piptrack(y=y, sr=sr, fmin=30, fmax=1600, hop_length=512)
 
 def detect_pitch(y, sr, t):
   index = magnitudes[:, int(t)].argmax()
   pitch = pitches[index, int(t)]
 
-  return pitch
+  return index, pitch
 
 text_file = open("src/song/peak_times.txt", "w")
 for peak_time in peak_times:
-	text_file.write("%s %s\r\n" % (peak_time, detect_pitch(y, sr, peak_time)))
+	index, pitch = detect_pitch(y, sr, peak_time)
+	text_file.write("%s %s %s\r\n" % (peak_time, index, pitch))
 text_file.close()
 
 # Complete message
