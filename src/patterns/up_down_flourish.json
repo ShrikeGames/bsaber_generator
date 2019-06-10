@@ -81,5 +81,7 @@
 			"cut_direction": 0,
 			"description": "N"
 		}
+	],
+	"obstacles": [
 	]
 }

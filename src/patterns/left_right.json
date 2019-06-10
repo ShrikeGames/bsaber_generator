@@ -33,5 +33,7 @@
 			"cut_direction": 3,
 			"description": "E"
 		}
+	],
+	"obstacles": [
 	]
 }

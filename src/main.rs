@@ -32,8 +32,8 @@ fn main() -> std::io::Result<()> {
 	let map_string: String = create_bsaber_map();
 	println!("Start zipping");
 	//fs::remove_file("output/song.zip")?;
-	//let output_folder = "/home/matt/Games/beatsaver-viewer-master/song.zip";
-	let output_folder = "output/song.zip";
+	let output_folder = "/home/matt/Games/beatsaver-viewer-master/song.zip";
+	//let output_folder = "output/song.zip";
 	let mut file = File::create(output_folder).expect("Couldn't create file");
 	create_zip_archive(&mut file, map_string).expect("Couldn't create archive");
 	println!("Finished zipping");
@@ -64,6 +64,7 @@ struct Beat {
 struct PatternNotes {
 	description: String,
 	notes: Vec<PatternNote>,
+	obstacles: Vec<PatternWall>,
 }
 
 #[derive(Serialize, Deserialize)]
@@ -75,6 +76,19 @@ struct PatternNote {
 	description: String,
 	beat_time_rel: usize,
 }
+
+#[derive(Serialize, Deserialize)]
+struct PatternWall {
+	x: i64,
+	y: i64,
+	duration: f64,
+	padding: f64,
+	width: f64,
+	wall_type: i64,
+	description: String,
+	wall_time_rel: usize,
+}
+
 fn get_config_file() -> JsonConfig {
 	let mut config_file = File::open("src/song/info.json").unwrap();
 	let mut config_data = String::new();
@@ -97,7 +111,6 @@ fn generate_patterns() -> Vec<PatternNotes> {
 					.expect("Could not read pattern note json");
 				//println!("pattern:{}",pattern_notes.description.to_owned());
 				patterns.push(pattern_notes);
-				
 			}
 			Err(e) => println!("{:?}", e),
 		}
@@ -125,7 +138,7 @@ fn create_bsaber_map() -> String {
 	let note_jump_speed = config_json.noteJumpSpeed;
 	let shuffle = config_json.shuffle;
 	let shuffle_period = config_json.shufflePeriod;
-	let song_duration_sec: f64 = (config_json.duration_seconds / 60.0) * beats_per_minute;;
+	let song_duration_beats: f64 = (config_json.duration_seconds / 60.0) * beats_per_minute;
 
 	//start of ExperPlus.json
 	let mut contents: String = format!(
@@ -136,6 +149,9 @@ fn create_bsaber_map() -> String {
 			\"_shuffle\": {},
 			\"_shufflePeriod\": {},
 			\"_time\": {},
+			\"_suggestions\":[\"Custom Base Colors\"],
+			\"_colorRight\":{{\"r\":0.35,\"g\":0.05,\"b\":0.54}},
+			\"_colorLeft\":{{\"r\":0.54,\"g\":0.42,\"b\":0.050}},
 			\"_songTimeOffset\": 0.0,
 			\"_notes\": [",
 		version,
@@ -144,7 +160,7 @@ fn create_bsaber_map() -> String {
 		note_jump_speed,
 		shuffle,
 		shuffle_period,
-		song_duration_sec
+		song_duration_beats
 	)
 	.to_owned();
 
@@ -217,6 +233,8 @@ fn generate_map(
 	beats_per_minute: f64,
 	processed_notes: &mut Vec<PatternNote>,
 ) -> String {
+	let mut obstacles_content: String = " ".to_owned();
+
 	let mut pattern_map = HashMap::new();
 	let mut pattern_end_time: f64 = 0.0;
 	//iterate over the peak times
@@ -228,9 +246,11 @@ fn generate_map(
 			//x = rand::thread_rng().gen_range(0, 2);
 			let random_pattern = &patterns[random_pattern_id];
 			let pattern = pattern_map.entry(beat.id).or_insert(random_pattern);
-			
+
+			println!("pattern:{}", pattern.description.to_owned());
+			let mut last_note_time_in_beats = 0.0;
+
 			let note_type = rand::thread_rng().gen_range(0, 2);
-			println!("pattern:{}",pattern.description.to_owned());
 			for pattern_note in &pattern.notes {
 				let mut beat_next_id = beat_id + pattern_note.beat_time_rel;
 				if beat_next_id >= beats.len() {
@@ -238,7 +258,7 @@ fn generate_map(
 				}
 				let note_time_in_beats =
 					(beats[beat_next_id].peak_time_sec / 60.0) * beats_per_minute;
-
+				last_note_time_in_beats = note_time_in_beats; 
 				let mut pattern_x = pattern_note.x;
 				if pattern_x < 0 {
 					if note_type == 0 {
@@ -259,7 +279,7 @@ fn generate_map(
 						pattern_y = rand::thread_rng().gen_range(0, 4);
 					}
 				}
-				
+
 				if pattern_x < 0 {
 					pattern_x = 0;
 				} else if pattern_x > 3 {
@@ -275,7 +295,7 @@ fn generate_map(
 					pattern_note_type = note_type;
 				}
 				let pattern_cut_direction = pattern_note.cut_direction;
-				
+
 				pattern_end_time = beats[beat_next_id].peak_time_sec;
 				//create the note using the values we calculated
 				let note: String = create_note_json(
@@ -300,7 +320,39 @@ fn generate_map(
 					beat_time_rel: pattern_note.beat_time_rel,
 				};
 				processed_notes.push(processed_note);
-				
+			}
+			
+			for wall in &pattern.obstacles {
+				let mut beat_next_id = beat_id + wall.wall_time_rel;
+				if beat_next_id >= beats.len() {
+					beat_next_id = beats.len() - 1;
+				}
+				let wall_time_in_beats =
+					(beats[beat_next_id].peak_time_sec / 60.0) * beats_per_minute;
+
+				let mut wall_duration = wall.duration;
+				if wall_duration < 0.0 {
+					wall_duration = last_note_time_in_beats - wall_time_in_beats;
+				}
+				if wall_duration - wall.padding > 0.0 {
+					let wall_json = format!(
+						"{{
+						\"_time\": {},
+						\"_lineIndex\": {},
+						\"_lineLayer\": {},
+						\"_type\": {},
+						\"_duration\": {},
+						\"_width\": {}
+					}},",
+						wall_time_in_beats + wall.padding,
+						wall.x,
+						wall.y,
+						wall.wall_type,
+						wall_duration - wall.padding,
+						wall.width
+					);
+					obstacles_content.push_str(&wall_json);
+				}
 			}
 		}
 		beat_id += 1;
@@ -309,22 +361,25 @@ fn generate_map(
 	//generate walls
 	//contents = generate_walls(contents, wall_times, &peak_pitches, beats_per_minute, time, lowest_pitch);
 
-	let contents_end: String = "{
+	let contents_end: String = format!(
+		"{{
 			\"_time\": 0.0,
 			\"_lineIndex\": 3,
 			\"_lineLayer\": 3,
 			\"_type\": 1,
 			\"_cutDirection\": 0
-			}],\"_events\": [],
-			\"_obstacles\": [
-			{
+			}}],\"_events\": [],
+			\"_obstacles\": [{}
+			{{
 				\"_time\": 0,
 				\"_lineIndex\": 0,
 				\"_type\": 0,
 				\"_duration\": 1,
 				\"_width\": 1
-			}]
-		}"
+			}}]
+		}}",
+		obstacles_content
+	)
 	.to_owned();
 
 	//add to json string

@@ -1,0 +1,49 @@
+{
+	"description": "Right Wall, N S",
+	"notes": [
+		{
+			"x": 0,
+			"y": 2,
+			"beat_time_rel": 2,
+			"note_type": 0,
+			"cut_direction": 0,
+			"description": "N"
+		},
+		{
+			"x": 1,
+			"y": 2,
+			"beat_time_rel": 2,
+			"note_type": 1,
+			"cut_direction": 0,
+			"description": "N"
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"beat_time_rel": 3,
+			"note_type": 0,
+			"cut_direction": 1,
+			"description": "S"
+		},
+		{
+			"x": 1,
+			"y": 0,
+			"beat_time_rel": 3,
+			"note_type": 1,
+			"cut_direction": 1,
+			"description": "S"
+		}
+	],
+	"obstacles": [
+		{
+			"x": 2,
+			"y": 2,
+			"wall_time_rel": 0,
+			"wall_type": 3,
+			"duration": -1,
+			"padding": 0.5,
+			"width": 1.5,
+			"description": "N"
+		}
+	]
+}

@@ -49,5 +49,7 @@
 			"cut_direction": 7,
 			"description": "SE"
 		}
+	],
+	"obstacles": [
 	]
 }

@@ -49,5 +49,7 @@
 			"cut_direction": 5,
 			"description": "NE"
 		}
+	],
+	"obstacles": [
 	]
 }

@@ -1,7 +1,7 @@
 {
 	"songName": "PAPERMOON - Tommy heavenly6 [Auto-generated][ShrikeG]",
 	"songSubName": "PAPERMOON",
-	"description": "Generated using https://github.com/ShrikeGames/bsaber_generator",
+	"description": "Generated using https://github.com/ShrikeGames/bsaber_generator Custom Colours available for the sabers. Be warned this was generated automatically and therefore may be janky.",
 	"authorName": "Shrike",
 	"beatsPerMinute": 164,
 	"beatsPerBar": 15.0,
@@ -23,7 +23,8 @@
 			"jsonPath": "ExpertPlus.json",
 			"offset": 0,
 			"oldOffset": 0,
-			"chromaToggle": "Off"
+			"chromaToggle": "Off",
+			"difficultyLabel":	"Jank Expert+"
 		}
 	]
 }
