@@ -32,8 +32,8 @@ fn main() -> std::io::Result<()> {
 	let map_string: String = create_bsaber_map();
 	println!("Start zipping");
 	//fs::remove_file("output/song.zip")?;
-	let output_folder = "/home/matt/Games/beatsaver-viewer-master/song.zip";
-	//let output_folder = "output/song.zip";
+	//let output_folder = "/home/matt/Games/beatsaver-viewer-master/song.zip";
+	let output_folder = "output/song.zip";
 	let mut file = File::create(output_folder).expect("Couldn't create file");
 	create_zip_archive(&mut file, map_string).expect("Couldn't create archive");
 	println!("Finished zipping");
