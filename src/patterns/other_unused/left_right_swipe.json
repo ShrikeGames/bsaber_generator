@@ -1,0 +1,38 @@
+{
+	"description": "left right swipe",
+	"notes": [
+		{
+			"x": 1,
+			"y": 1,
+			"beat_time_rel": 0,
+			"note_type": 1,
+			"cut_direction": 2,
+			"description": "W"
+		},
+		{
+			"x": 2,
+			"y": 1,
+			"beat_time_rel": 0,
+			"note_type": 1,
+			"cut_direction": 2,
+			"description": "W"
+		},{
+			"x": 1,
+			"y": 0,
+			"beat_time_rel": 1,
+			"note_type": 1,
+			"cut_direction": 3,
+			"description": "E"
+		},
+		{
+			"x": 2,
+			"y": 0,
+			"beat_time_rel": 1,
+			"note_type": 1,
+			"cut_direction": 3,
+			"description": "E"
+		}
+	],
+	"obstacles": [
+	]
+}

@@ -1,0 +1,7000 @@
+{"_version":"2.0.0",
+			"_BPMChanges":[],
+			"_events":[{
+				"_time":3.199899911880493,
+				"_type":4,
+				"_value":3
+			}],
+			"_notes":[{
+			"_x": 0,
+			"_real_time": 3.7848526077097504,
+			"_pitch": 1600,
+			"_time": 8.200513983371128,
+			"_lineIndex": 0,
+			"_lineLayer": 2,
+			"_type": 0,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 0,
+			"_real_time": 3.7848526077097504,
+			"_pitch": 1600,
+			"_time": 8.200513983371128,
+			"_lineIndex": 1,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 0,
+			"_real_time": 4.342131519274377,
+			"_pitch": 1600,
+			"_time": 9.407951625094483,
+			"_lineIndex": 0,
+			"_lineLayer": 0,
+			"_type": 0,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 0,
+			"_real_time": 4.342131519274377,
+			"_pitch": 1600,
+			"_time": 9.407951625094483,
+			"_lineIndex": 1,
+			"_lineLayer": 0,
+			"_type": 1,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 5,
+			"_real_time": 5.201269841269841,
+			"_pitch": 1600,
+			"_time": 11.26941798941799,
+			"_lineIndex": 2,
+			"_lineLayer": 2,
+			"_type": 0,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 5,
+			"_real_time": 5.201269841269841,
+			"_pitch": 1600,
+			"_time": 11.26941798941799,
+			"_lineIndex": 3,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 5,
+			"_real_time": 6.757006802721088,
+			"_pitch": 1600,
+			"_time": 14.640181405895692,
+			"_lineIndex": 2,
+			"_lineLayer": 0,
+			"_type": 0,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 5,
+			"_real_time": 6.757006802721088,
+			"_pitch": 1600,
+			"_time": 14.640181405895692,
+			"_lineIndex": 3,
+			"_lineLayer": 0,
+			"_type": 1,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 10,
+			"_real_time": 7.592925170068027,
+			"_pitch": 1600,
+			"_time": 16.451337868480724,
+			"_lineIndex": 2,
+			"_lineLayer": 2,
+			"_type": 0,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 10,
+			"_real_time": 7.778684807256236,
+			"_pitch": 1600,
+			"_time": 16.85381708238851,
+			"_lineIndex": 3,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 10,
+			"_real_time": 8.010884353741497,
+			"_pitch": 1600,
+			"_time": 17.356916099773244,
+			"_lineIndex": 1,
+			"_lineLayer": 0,
+			"_type": 0,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 10,
+			"_real_time": 8.312743764172335,
+			"_pitch": 1600,
+			"_time": 18.010944822373396,
+			"_lineIndex": 2,
+			"_lineLayer": 0,
+			"_type": 1,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 10,
+			"_real_time": 8.475283446712018,
+			"_pitch": 1600,
+			"_time": 18.363114134542705,
+			"_lineIndex": 0,
+			"_lineLayer": 2,
+			"_type": 0,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 10,
+			"_real_time": 8.962902494331066,
+			"_pitch": 1600,
+			"_time": 19.419622071050643,
+			"_lineIndex": 1,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 10,
+			"_real_time": 9.357641723356009,
+			"_pitch": 1600,
+			"_time": 20.274890400604686,
+			"_lineIndex": 1,
+			"_lineLayer": 0,
+			"_type": 0,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 10,
+			"_real_time": 9.659501133786849,
+			"_pitch": 1600,
+			"_time": 20.92891912320484,
+			"_lineIndex": 2,
+			"_lineLayer": 0,
+			"_type": 1,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 10,
+			"_real_time": 10.866938775510205,
+			"_pitch": 1600,
+			"_time": 23.54503401360544,
+			"_lineIndex": 2,
+			"_lineLayer": 2,
+			"_type": 0,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 10,
+			"_real_time": 11.215238095238096,
+			"_pitch": 1600,
+			"_time": 24.299682539682543,
+			"_lineIndex": 3,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 20,
+			"_real_time": 11.377777777777778,
+			"_pitch": 1600,
+			"_time": 24.651851851851855,
+			"_lineIndex": 3,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 0,
+			"description":"2,3"
+		},{
+			"_x": 20,
+			"_real_time": 11.586757369614512,
+			"_pitch": 1600,
+			"_time": 25.10464096749811,
+			"_lineIndex": 3,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 1,
+			"description":"2,3"
+		},{
+			"_x": 22,
+			"_real_time": 12.329795918367347,
+			"_pitch": 1600,
+			"_time": 26.714557823129255,
+			"_lineIndex": 2,
+			"_lineLayer": 2,
+			"_type": 0,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 22,
+			"_real_time": 12.329795918367347,
+			"_pitch": 1600,
+			"_time": 26.714557823129255,
+			"_lineIndex": 3,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 22,
+			"_real_time": 13.072834467120181,
+			"_pitch": 1600,
+			"_time": 28.324474678760392,
+			"_lineIndex": 2,
+			"_lineLayer": 0,
+			"_type": 0,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 22,
+			"_real_time": 13.072834467120181,
+			"_pitch": 1600,
+			"_time": 28.324474678760392,
+			"_lineIndex": 3,
+			"_lineLayer": 0,
+			"_type": 1,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 27,
+			"_real_time": 13.467573696145125,
+			"_pitch": 1600,
+			"_time": 29.17974300831444,
+			"_lineIndex": 0,
+			"_lineLayer": 1,
+			"_type": 0,
+			"_cutDirection": 8,
+			"description":"1,0"
+		},{
+			"_x": 27,
+			"_real_time": 13.653333333333334,
+			"_pitch": 1600,
+			"_time": 29.582222222222224,
+			"_lineIndex": 1,
+			"_lineLayer": 0,
+			"_type": 0,
+			"_cutDirection": 8,
+			"description":"0,1"
+		},{
+			"_x": 29,
+			"_real_time": 14.907210884353741,
+			"_pitch": 1600,
+			"_time": 32.298956916099776,
+			"_lineIndex": 0,
+			"_lineLayer": 2,
+			"_type": 0,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 29,
+			"_real_time": 14.907210884353741,
+			"_pitch": 1600,
+			"_time": 32.298956916099776,
+			"_lineIndex": 1,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 29,
+			"_real_time": 15.185850340136055,
+			"_pitch": 1600,
+			"_time": 32.90267573696145,
+			"_lineIndex": 0,
+			"_lineLayer": 0,
+			"_type": 0,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 29,
+			"_real_time": 15.185850340136055,
+			"_pitch": 1600,
+			"_time": 32.90267573696145,
+			"_lineIndex": 1,
+			"_lineLayer": 0,
+			"_type": 1,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 34,
+			"_real_time": 15.371609977324264,
+			"_pitch": 1600,
+			"_time": 33.30515495086924,
+			"_lineIndex": 3,
+			"_lineLayer": 1,
+			"_type": 1,
+			"_cutDirection": 5,
+			"description":"1,3"
+		},{
+			"_x": 34,
+			"_real_time": 15.696689342403628,
+			"_pitch": 1600,
+			"_time": 34.00949357520786,
+			"_lineIndex": 3,
+			"_lineLayer": 0,
+			"_type": 1,
+			"_cutDirection": 6,
+			"description":"0,3"
+		},{
+			"_x": 36,
+			"_real_time": 17.08988662131519,
+			"_pitch": 1600,
+			"_time": 37.02808767951625,
+			"_lineIndex": 2,
+			"_lineLayer": 2,
+			"_type": 0,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 36,
+			"_real_time": 17.08988662131519,
+			"_pitch": 1600,
+			"_time": 37.02808767951625,
+			"_lineIndex": 3,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 36,
+			"_real_time": 17.368526077097506,
+			"_pitch": 1600,
+			"_time": 37.631806500377934,
+			"_lineIndex": 2,
+			"_lineLayer": 0,
+			"_type": 0,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 36,
+			"_real_time": 17.368526077097506,
+			"_pitch": 1600,
+			"_time": 37.631806500377934,
+			"_lineIndex": 3,
+			"_lineLayer": 0,
+			"_type": 1,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 41,
+			"_real_time": 18.22766439909297,
+			"_pitch": 1600,
+			"_time": 39.49327286470143,
+			"_lineIndex": 0,
+			"_lineLayer": 2,
+			"_type": 0,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 41,
+			"_real_time": 18.22766439909297,
+			"_pitch": 1600,
+			"_time": 39.49327286470143,
+			"_lineIndex": 1,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 41,
+			"_real_time": 18.901043083900227,
+			"_pitch": 1600,
+			"_time": 40.95226001511716,
+			"_lineIndex": 0,
+			"_lineLayer": 0,
+			"_type": 0,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 41,
+			"_real_time": 18.901043083900227,
+			"_pitch": 1600,
+			"_time": 40.95226001511716,
+			"_lineIndex": 1,
+			"_lineLayer": 0,
+			"_type": 1,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 46,
+			"_real_time": 19.156462585034014,
+			"_pitch": 1600,
+			"_time": 41.50566893424036,
+			"_lineIndex": 3,
+			"_lineLayer": 1,
+			"_type": 1,
+			"_cutDirection": 5,
+			"description":"1,3"
+		},{
+			"_x": 46,
+			"_real_time": 19.365442176870747,
+			"_pitch": 1600,
+			"_time": 41.958458049886616,
+			"_lineIndex": 2,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 6,
+			"description":"2,2"
+		},{
+			"_x": 48,
+			"_real_time": 20.131700680272107,
+			"_pitch": 1600,
+			"_time": 43.61868480725623,
+			"_lineIndex": 0,
+			"_lineLayer": 2,
+			"_type": 0,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 48,
+			"_real_time": 20.131700680272107,
+			"_pitch": 1600,
+			"_time": 43.61868480725623,
+			"_lineIndex": 1,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 48,
+			"_real_time": 20.59609977324263,
+			"_pitch": 1600,
+			"_time": 44.6248828420257,
+			"_lineIndex": 0,
+			"_lineLayer": 0,
+			"_type": 0,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 48,
+			"_real_time": 20.59609977324263,
+			"_pitch": 1600,
+			"_time": 44.6248828420257,
+			"_lineIndex": 1,
+			"_lineLayer": 0,
+			"_type": 1,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 53,
+			"_real_time": 20.758639455782312,
+			"_pitch": 1600,
+			"_time": 44.97705215419501,
+			"_lineIndex": 3,
+			"_lineLayer": 3,
+			"_type": 1,
+			"_cutDirection": 7,
+			"description":"3,3"
+		},{
+			"_x": 53,
+			"_real_time": 20.921179138321996,
+			"_pitch": 1600,
+			"_time": 45.329221466364324,
+			"_lineIndex": 2,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 4,
+			"description":"2,2"
+		},{
+			"_x": 55,
+			"_real_time": 21.060498866213152,
+			"_pitch": 1600,
+			"_time": 45.63108087679516,
+			"_lineIndex": 0,
+			"_lineLayer": 1,
+			"_type": 0,
+			"_cutDirection": 4,
+			"description":"1,0"
+		},{
+			"_x": 55,
+			"_real_time": 21.269478458049885,
+			"_pitch": 1600,
+			"_time": 46.08386999244142,
+			"_lineIndex": 1,
+			"_lineLayer": 0,
+			"_type": 0,
+			"_cutDirection": 7,
+			"description":"0,1"
+		},{
+			"_x": 57,
+			"_real_time": 21.803537414965987,
+			"_pitch": 1600,
+			"_time": 47.24099773242631,
+			"_lineIndex": 0,
+			"_lineLayer": 2,
+			"_type": 0,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 57,
+			"_real_time": 21.803537414965987,
+			"_pitch": 1600,
+			"_time": 47.24099773242631,
+			"_lineIndex": 1,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 57,
+			"_real_time": 22.19827664399093,
+			"_pitch": 1600,
+			"_time": 48.096266061980344,
+			"_lineIndex": 0,
+			"_lineLayer": 0,
+			"_type": 0,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 57,
+			"_real_time": 22.19827664399093,
+			"_pitch": 1600,
+			"_time": 48.096266061980344,
+			"_lineIndex": 1,
+			"_lineLayer": 0,
+			"_type": 1,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 62,
+			"_real_time": 22.430476190476192,
+			"_pitch": 1600,
+			"_time": 48.599365079365086,
+			"_lineIndex": 0,
+			"_lineLayer": 2,
+			"_type": 0,
+			"_cutDirection": 4,
+			"description":"2,0"
+		},{
+			"_x": 62,
+			"_real_time": 22.569795918367348,
+			"_pitch": 1600,
+			"_time": 48.90122448979592,
+			"_lineIndex": 1,
+			"_lineLayer": 0,
+			"_type": 0,
+			"_cutDirection": 7,
+			"description":"0,1"
+		},{
+			"_x": 64,
+			"_real_time": 22.732335600907028,
+			"_pitch": 1600,
+			"_time": 49.25339380196523,
+			"_lineIndex": 1,
+			"_lineLayer": 0,
+			"_type": 0,
+			"_cutDirection": 4,
+			"description":"0,1"
+		},{
+			"_x": 64,
+			"_real_time": 22.871655328798187,
+			"_pitch": 1600,
+			"_time": 49.55525321239607,
+			"_lineIndex": 0,
+			"_lineLayer": 0,
+			"_type": 0,
+			"_cutDirection": 7,
+			"description":"0,0"
+		},{
+			"_x": 66,
+			"_real_time": 23.45215419501134,
+			"_pitch": 1600,
+			"_time": 50.8130007558579,
+			"_lineIndex": 2,
+			"_lineLayer": 2,
+			"_type": 0,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 66,
+			"_real_time": 23.45215419501134,
+			"_pitch": 1600,
+			"_time": 50.8130007558579,
+			"_lineIndex": 3,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 66,
+			"_real_time": 23.91655328798186,
+			"_pitch": 1600,
+			"_time": 51.81919879062736,
+			"_lineIndex": 2,
+			"_lineLayer": 0,
+			"_type": 0,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 66,
+			"_real_time": 23.91655328798186,
+			"_pitch": 1600,
+			"_time": 51.81919879062736,
+			"_lineIndex": 3,
+			"_lineLayer": 0,
+			"_type": 1,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 71,
+			"_real_time": 24.61315192743764,
+			"_pitch": 1600,
+			"_time": 53.32849584278156,
+			"_lineIndex": 2,
+			"_lineLayer": 2,
+			"_type": 0,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 71,
+			"_real_time": 24.61315192743764,
+			"_pitch": 1600,
+			"_time": 53.32849584278156,
+			"_lineIndex": 3,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 71,
+			"_real_time": 24.98467120181406,
+			"_pitch": 1600,
+			"_time": 54.13345427059713,
+			"_lineIndex": 2,
+			"_lineLayer": 0,
+			"_type": 0,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 71,
+			"_real_time": 24.98467120181406,
+			"_pitch": 1600,
+			"_time": 54.13345427059713,
+			"_lineIndex": 3,
+			"_lineLayer": 0,
+			"_type": 1,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 76,
+			"_real_time": 25.541950113378686,
+			"_pitch": 1600,
+			"_time": 55.34089191232049,
+			"_lineIndex": 2,
+			"_lineLayer": 2,
+			"_type": 0,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 76,
+			"_real_time": 25.541950113378686,
+			"_pitch": 1600,
+			"_time": 55.34089191232049,
+			"_lineIndex": 3,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 76,
+			"_real_time": 25.75092970521542,
+			"_pitch": 1600,
+			"_time": 55.79368102796674,
+			"_lineIndex": 2,
+			"_lineLayer": 0,
+			"_type": 0,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 76,
+			"_real_time": 25.75092970521542,
+			"_pitch": 1600,
+			"_time": 55.79368102796674,
+			"_lineIndex": 3,
+			"_lineLayer": 0,
+			"_type": 1,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 81,
+			"_real_time": 26.284988662131518,
+			"_pitch": 1600,
+			"_time": 56.95080876795162,
+			"_lineIndex": 2,
+			"_lineLayer": 2,
+			"_type": 0,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 81,
+			"_real_time": 26.284988662131518,
+			"_pitch": 1600,
+			"_time": 56.95080876795162,
+			"_lineIndex": 3,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 81,
+			"_real_time": 26.51718820861678,
+			"_pitch": 1600,
+			"_time": 57.453907785336355,
+			"_lineIndex": 2,
+			"_lineLayer": 0,
+			"_type": 0,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 81,
+			"_real_time": 26.51718820861678,
+			"_pitch": 1600,
+			"_time": 57.453907785336355,
+			"_lineIndex": 3,
+			"_lineLayer": 0,
+			"_type": 1,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 86,
+			"_real_time": 27.09768707482993,
+			"_pitch": 1600,
+			"_time": 58.71165532879818,
+			"_lineIndex": 2,
+			"_lineLayer": 2,
+			"_type": 0,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 86,
+			"_real_time": 27.09768707482993,
+			"_pitch": 1600,
+			"_time": 58.71165532879818,
+			"_lineIndex": 3,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 86,
+			"_real_time": 27.329886621315193,
+			"_pitch": 1600,
+			"_time": 59.21475434618292,
+			"_lineIndex": 2,
+			"_lineLayer": 0,
+			"_type": 0,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 86,
+			"_real_time": 27.329886621315193,
+			"_pitch": 1600,
+			"_time": 59.21475434618292,
+			"_lineIndex": 3,
+			"_lineLayer": 0,
+			"_type": 1,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 115,
+			"_real_time": 32.066757369614514,
+			"_pitch": 1600,
+			"_time": 69.47797430083145,
+			"_lineIndex": 3,
+			"_lineLayer": 0,
+			"_type": 1,
+			"_cutDirection": 5,
+			"description":"0,3"
+		},{
+			"_x": 115,
+			"_real_time": 32.182857142857145,
+			"_pitch": 1600,
+			"_time": 69.72952380952381,
+			"_lineIndex": 3,
+			"_lineLayer": 3,
+			"_type": 1,
+			"_cutDirection": 6,
+			"description":"3,3"
+		},{
+			"_x": 117,
+			"_real_time": 32.833015873015874,
+			"_pitch": 1600,
+			"_time": 71.13820105820106,
+			"_lineIndex": 2,
+			"_lineLayer": 2,
+			"_type": 0,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 117,
+			"_real_time": 32.833015873015874,
+			"_pitch": 1600,
+			"_time": 71.13820105820106,
+			"_lineIndex": 3,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 117,
+			"_real_time": 33.36707482993197,
+			"_pitch": 1600,
+			"_time": 72.29532879818593,
+			"_lineIndex": 2,
+			"_lineLayer": 0,
+			"_type": 0,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 117,
+			"_real_time": 33.36707482993197,
+			"_pitch": 1600,
+			"_time": 72.29532879818593,
+			"_lineIndex": 3,
+			"_lineLayer": 0,
+			"_type": 1,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 122,
+			"_real_time": 33.57605442176871,
+			"_pitch": 1600,
+			"_time": 72.7481179138322,
+			"_lineIndex": 2,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 1,
+			"description":"2,2"
+		},{
+			"_x": 122,
+			"_real_time": 33.69215419501134,
+			"_pitch": 1600,
+			"_time": 72.99966742252457,
+			"_lineIndex": 3,
+			"_lineLayer": 0,
+			"_type": 1,
+			"_cutDirection": 0,
+			"description":"0,3"
+		},{
+			"_x": 124,
+			"_real_time": 33.78503401360544,
+			"_pitch": 1600,
+			"_time": 73.20090702947846,
+			"_lineIndex": 3,
+			"_lineLayer": 1,
+			"_type": 1,
+			"_cutDirection": 2,
+			"description":"1,3"
+		},{
+			"_x": 124,
+			"_real_time": 34.08689342403628,
+			"_pitch": 1600,
+			"_time": 73.85493575207862,
+			"_lineIndex": 3,
+			"_lineLayer": 3,
+			"_type": 1,
+			"_cutDirection": 3,
+			"description":"3,3"
+		},{
+			"_x": 126,
+			"_real_time": 34.29587301587301,
+			"_pitch": 1600,
+			"_time": 74.30772486772486,
+			"_lineIndex": 3,
+			"_lineLayer": 0,
+			"_type": 1,
+			"_cutDirection": 6,
+			"description":"0,3"
+		},{
+			"_x": 126,
+			"_real_time": 34.4584126984127,
+			"_pitch": 1600,
+			"_time": 74.65989417989418,
+			"_lineIndex": 3,
+			"_lineLayer": 3,
+			"_type": 1,
+			"_cutDirection": 5,
+			"description":"3,3"
+		},{
+			"_x": 128,
+			"_real_time": 34.94603174603174,
+			"_pitch": 1600,
+			"_time": 75.71640211640211,
+			"_lineIndex": 2,
+			"_lineLayer": 2,
+			"_type": 0,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 128,
+			"_real_time": 34.94603174603174,
+			"_pitch": 1600,
+			"_time": 75.71640211640211,
+			"_lineIndex": 3,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 128,
+			"_real_time": 35.36399092970522,
+			"_pitch": 1600,
+			"_time": 76.62198034769465,
+			"_lineIndex": 2,
+			"_lineLayer": 0,
+			"_type": 0,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 128,
+			"_real_time": 35.36399092970522,
+			"_pitch": 1600,
+			"_time": 76.62198034769465,
+			"_lineIndex": 3,
+			"_lineLayer": 0,
+			"_type": 1,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 133,
+			"_real_time": 36.22312925170068,
+			"_pitch": 1600,
+			"_time": 78.48344671201815,
+			"_lineIndex": 2,
+			"_lineLayer": 2,
+			"_type": 0,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 133,
+			"_real_time": 36.22312925170068,
+			"_pitch": 1600,
+			"_time": 78.48344671201815,
+			"_lineIndex": 3,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 133,
+			"_real_time": 36.501768707482995,
+			"_pitch": 1600,
+			"_time": 79.08716553287982,
+			"_lineIndex": 2,
+			"_lineLayer": 0,
+			"_type": 0,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 133,
+			"_real_time": 36.501768707482995,
+			"_pitch": 1600,
+			"_time": 79.08716553287982,
+			"_lineIndex": 3,
+			"_lineLayer": 0,
+			"_type": 1,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 138,
+			"_real_time": 37.151927437641724,
+			"_pitch": 1600,
+			"_time": 80.49584278155707,
+			"_lineIndex": 2,
+			"_lineLayer": 2,
+			"_type": 0,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 138,
+			"_real_time": 37.151927437641724,
+			"_pitch": 1600,
+			"_time": 80.49584278155707,
+			"_lineIndex": 3,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 138,
+			"_real_time": 37.61632653061225,
+			"_pitch": 1600,
+			"_time": 81.50204081632654,
+			"_lineIndex": 2,
+			"_lineLayer": 0,
+			"_type": 0,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 138,
+			"_real_time": 37.61632653061225,
+			"_pitch": 1600,
+			"_time": 81.50204081632654,
+			"_lineIndex": 3,
+			"_lineLayer": 0,
+			"_type": 1,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 143,
+			"_real_time": 38.26648526077098,
+			"_pitch": 1600,
+			"_time": 82.91071806500378,
+			"_lineIndex": 0,
+			"_lineLayer": 2,
+			"_type": 0,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 143,
+			"_real_time": 38.26648526077098,
+			"_pitch": 1600,
+			"_time": 82.91071806500378,
+			"_lineIndex": 1,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 143,
+			"_real_time": 38.521904761904764,
+			"_pitch": 1600,
+			"_time": 83.46412698412699,
+			"_lineIndex": 0,
+			"_lineLayer": 0,
+			"_type": 0,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 143,
+			"_real_time": 38.521904761904764,
+			"_pitch": 1600,
+			"_time": 83.46412698412699,
+			"_lineIndex": 1,
+			"_lineLayer": 0,
+			"_type": 1,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 148,
+			"_real_time": 38.963083900226756,
+			"_pitch": 1600,
+			"_time": 84.42001511715797,
+			"_lineIndex": 0,
+			"_lineLayer": 2,
+			"_type": 0,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 148,
+			"_real_time": 38.963083900226756,
+			"_pitch": 1600,
+			"_time": 84.42001511715797,
+			"_lineIndex": 1,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 148,
+			"_real_time": 39.31138321995465,
+			"_pitch": 1600,
+			"_time": 85.17466364323508,
+			"_lineIndex": 0,
+			"_lineLayer": 0,
+			"_type": 0,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 148,
+			"_real_time": 39.31138321995465,
+			"_pitch": 1600,
+			"_time": 85.17466364323508,
+			"_lineIndex": 1,
+			"_lineLayer": 0,
+			"_type": 1,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 153,
+			"_real_time": 39.77578231292517,
+			"_pitch": 1600,
+			"_time": 86.18086167800455,
+			"_lineIndex": 0,
+			"_lineLayer": 2,
+			"_type": 0,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 153,
+			"_real_time": 39.77578231292517,
+			"_pitch": 1600,
+			"_time": 86.18086167800455,
+			"_lineIndex": 1,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 153,
+			"_real_time": 39.9847619047619,
+			"_pitch": 1600,
+			"_time": 86.63365079365079,
+			"_lineIndex": 0,
+			"_lineLayer": 0,
+			"_type": 0,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 153,
+			"_real_time": 39.9847619047619,
+			"_pitch": 1600,
+			"_time": 86.63365079365079,
+			"_lineIndex": 1,
+			"_lineLayer": 0,
+			"_type": 1,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 158,
+			"_real_time": 40.24018140589569,
+			"_pitch": 1600,
+			"_time": 87.187059712774,
+			"_lineIndex": 0,
+			"_lineLayer": 1,
+			"_type": 0,
+			"_cutDirection": 8,
+			"description":"1,0"
+		},{
+			"_x": 158,
+			"_real_time": 40.47238095238095,
+			"_pitch": 1600,
+			"_time": 87.69015873015873,
+			"_lineIndex": 0,
+			"_lineLayer": 2,
+			"_type": 0,
+			"_cutDirection": 8,
+			"description":"2,0"
+		},{
+			"_x": 160,
+			"_real_time": 40.936780045351476,
+			"_pitch": 1600,
+			"_time": 88.6963567649282,
+			"_lineIndex": 2,
+			"_lineLayer": 2,
+			"_type": 0,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 160,
+			"_real_time": 40.936780045351476,
+			"_pitch": 1600,
+			"_time": 88.6963567649282,
+			"_lineIndex": 3,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 160,
+			"_real_time": 41.28507936507936,
+			"_pitch": 1600,
+			"_time": 89.45100529100529,
+			"_lineIndex": 2,
+			"_lineLayer": 0,
+			"_type": 0,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 160,
+			"_real_time": 41.28507936507936,
+			"_pitch": 1600,
+			"_time": 89.45100529100529,
+			"_lineIndex": 3,
+			"_lineLayer": 0,
+			"_type": 1,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 165,
+			"_real_time": 41.40117913832199,
+			"_pitch": 1600,
+			"_time": 89.70255479969765,
+			"_lineIndex": 2,
+			"_lineLayer": 0,
+			"_type": 1,
+			"_cutDirection": 3,
+			"description":"0,2"
+		},{
+			"_x": 165,
+			"_real_time": 41.4940589569161,
+			"_pitch": 1600,
+			"_time": 89.90379440665156,
+			"_lineIndex": 3,
+			"_lineLayer": 1,
+			"_type": 1,
+			"_cutDirection": 2,
+			"description":"1,3"
+		},{
+			"_x": 167,
+			"_real_time": 41.633378684807255,
+			"_pitch": 1600,
+			"_time": 90.20565381708239,
+			"_lineIndex": 0,
+			"_lineLayer": 1,
+			"_type": 0,
+			"_cutDirection": 0,
+			"description":"1,0"
+		},{
+			"_x": 167,
+			"_real_time": 41.84235827664399,
+			"_pitch": 1600,
+			"_time": 90.65844293272865,
+			"_lineIndex": 1,
+			"_lineLayer": 2,
+			"_type": 0,
+			"_cutDirection": 1,
+			"description":"2,1"
+		},{
+			"_x": 169,
+			"_real_time": 42.353197278911566,
+			"_pitch": 1600,
+			"_time": 91.76526077097506,
+			"_lineIndex": 2,
+			"_lineLayer": 2,
+			"_type": 0,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 169,
+			"_real_time": 42.353197278911566,
+			"_pitch": 1600,
+			"_time": 91.76526077097506,
+			"_lineIndex": 3,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 169,
+			"_real_time": 42.6550566893424,
+			"_pitch": 1600,
+			"_time": 92.41928949357519,
+			"_lineIndex": 2,
+			"_lineLayer": 0,
+			"_type": 0,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 169,
+			"_real_time": 42.6550566893424,
+			"_pitch": 1600,
+			"_time": 92.41928949357519,
+			"_lineIndex": 3,
+			"_lineLayer": 0,
+			"_type": 1,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 174,
+			"_real_time": 42.77115646258503,
+			"_pitch": 1600,
+			"_time": 92.67083900226757,
+			"_lineIndex": 0,
+			"_lineLayer": 3,
+			"_type": 0,
+			"_cutDirection": 7,
+			"description":"3,0"
+		},{
+			"_x": 174,
+			"_real_time": 43.003356009070295,
+			"_pitch": 1600,
+			"_time": 93.17393801965231,
+			"_lineIndex": 0,
+			"_lineLayer": 1,
+			"_type": 0,
+			"_cutDirection": 4,
+			"description":"1,0"
+		},{
+			"_x": 176,
+			"_real_time": 43.37487528344671,
+			"_pitch": 1600,
+			"_time": 93.97889644746787,
+			"_lineIndex": 2,
+			"_lineLayer": 2,
+			"_type": 0,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 176,
+			"_real_time": 43.37487528344671,
+			"_pitch": 1600,
+			"_time": 93.97889644746787,
+			"_lineIndex": 3,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 176,
+			"_real_time": 43.699954648526074,
+			"_pitch": 1600,
+			"_time": 94.6832350718065,
+			"_lineIndex": 2,
+			"_lineLayer": 0,
+			"_type": 0,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 176,
+			"_real_time": 43.699954648526074,
+			"_pitch": 1600,
+			"_time": 94.6832350718065,
+			"_lineIndex": 3,
+			"_lineLayer": 0,
+			"_type": 1,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 181,
+			"_real_time": 44.04825396825397,
+			"_pitch": 1600,
+			"_time": 95.4378835978836,
+			"_lineIndex": 2,
+			"_lineLayer": 2,
+			"_type": 0,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 181,
+			"_real_time": 44.04825396825397,
+			"_pitch": 1600,
+			"_time": 95.4378835978836,
+			"_lineIndex": 3,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 181,
+			"_real_time": 44.373333333333335,
+			"_pitch": 1600,
+			"_time": 96.14222222222223,
+			"_lineIndex": 2,
+			"_lineLayer": 0,
+			"_type": 0,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 181,
+			"_real_time": 44.373333333333335,
+			"_pitch": 1600,
+			"_time": 96.14222222222223,
+			"_lineIndex": 3,
+			"_lineLayer": 0,
+			"_type": 1,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 186,
+			"_real_time": 44.62875283446712,
+			"_pitch": 1600,
+			"_time": 96.69563114134543,
+			"_lineIndex": 2,
+			"_lineLayer": 1,
+			"_type": 1,
+			"_cutDirection": 2,
+			"description":"1,2"
+		},{
+			"_x": 186,
+			"_real_time": 44.74485260770975,
+			"_pitch": 1600,
+			"_time": 96.94718065003781,
+			"_lineIndex": 3,
+			"_lineLayer": 1,
+			"_type": 1,
+			"_cutDirection": 3,
+			"description":"1,3"
+		},{
+			"_x": 188,
+			"_real_time": 44.860952380952384,
+			"_pitch": 1600,
+			"_time": 97.19873015873017,
+			"_lineIndex": 3,
+			"_lineLayer": 1,
+			"_type": 1,
+			"_cutDirection": 0,
+			"description":"1,3"
+		},{
+			"_x": 188,
+			"_real_time": 44.977052154195015,
+			"_pitch": 1600,
+			"_time": 97.45027966742252,
+			"_lineIndex": 2,
+			"_lineLayer": 3,
+			"_type": 1,
+			"_cutDirection": 1,
+			"description":"3,2"
+		},{
+			"_x": 190,
+			"_real_time": 45.44145124716553,
+			"_pitch": 1600,
+			"_time": 98.45647770219199,
+			"_lineIndex": 2,
+			"_lineLayer": 2,
+			"_type": 0,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 190,
+			"_real_time": 45.44145124716553,
+			"_pitch": 1600,
+			"_time": 98.45647770219199,
+			"_lineIndex": 3,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 190,
+			"_real_time": 45.72009070294784,
+			"_pitch": 1600,
+			"_time": 99.06019652305365,
+			"_lineIndex": 2,
+			"_lineLayer": 0,
+			"_type": 0,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 190,
+			"_real_time": 45.72009070294784,
+			"_pitch": 1600,
+			"_time": 99.06019652305365,
+			"_lineIndex": 3,
+			"_lineLayer": 0,
+			"_type": 1,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 195,
+			"_real_time": 46.34702947845805,
+			"_pitch": 1600,
+			"_time": 100.41856386999244,
+			"_lineIndex": 2,
+			"_lineLayer": 2,
+			"_type": 0,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 195,
+			"_real_time": 46.34702947845805,
+			"_pitch": 1600,
+			"_time": 100.41856386999244,
+			"_lineIndex": 3,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 195,
+			"_real_time": 46.69532879818594,
+			"_pitch": 1600,
+			"_time": 101.17321239606953,
+			"_lineIndex": 2,
+			"_lineLayer": 0,
+			"_type": 0,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 195,
+			"_real_time": 46.69532879818594,
+			"_pitch": 1600,
+			"_time": 101.17321239606953,
+			"_lineIndex": 3,
+			"_lineLayer": 0,
+			"_type": 1,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 200,
+			"_real_time": 47.06684807256236,
+			"_pitch": 1600,
+			"_time": 101.97817082388511,
+			"_lineIndex": 0,
+			"_lineLayer": 2,
+			"_type": 0,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 200,
+			"_real_time": 47.06684807256236,
+			"_pitch": 1600,
+			"_time": 101.97817082388511,
+			"_lineIndex": 1,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 200,
+			"_real_time": 47.34548752834467,
+			"_pitch": 1600,
+			"_time": 102.58188964474678,
+			"_lineIndex": 0,
+			"_lineLayer": 0,
+			"_type": 0,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 200,
+			"_real_time": 47.34548752834467,
+			"_pitch": 1600,
+			"_time": 102.58188964474678,
+			"_lineIndex": 1,
+			"_lineLayer": 0,
+			"_type": 1,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 205,
+			"_real_time": 47.53124716553288,
+			"_pitch": 1600,
+			"_time": 102.98436885865458,
+			"_lineIndex": 3,
+			"_lineLayer": 3,
+			"_type": 1,
+			"_cutDirection": 1,
+			"description":"3,3"
+		},{
+			"_x": 205,
+			"_real_time": 47.62412698412698,
+			"_pitch": 1600,
+			"_time": 103.18560846560847,
+			"_lineIndex": 2,
+			"_lineLayer": 1,
+			"_type": 1,
+			"_cutDirection": 0,
+			"description":"1,2"
+		},{
+			"_x": 207,
+			"_real_time": 47.85632653061224,
+			"_pitch": 1600,
+			"_time": 103.6887074829932,
+			"_lineIndex": 0,
+			"_lineLayer": 2,
+			"_type": 0,
+			"_cutDirection": 6,
+			"description":"2,0"
+		},{
+			"_x": 207,
+			"_real_time": 48.06530612244898,
+			"_pitch": 1600,
+			"_time": 104.14149659863945,
+			"_lineIndex": 0,
+			"_lineLayer": 0,
+			"_type": 0,
+			"_cutDirection": 5,
+			"description":"0,0"
+		},{
+			"_x": 209,
+			"_real_time": 48.204625850340136,
+			"_pitch": 1600,
+			"_time": 104.4433560090703,
+			"_lineIndex": 1,
+			"_lineLayer": 2,
+			"_type": 0,
+			"_cutDirection": 5,
+			"description":"2,1"
+		},{
+			"_x": 209,
+			"_real_time": 48.29750566893424,
+			"_pitch": 1600,
+			"_time": 104.64459561602419,
+			"_lineIndex": 0,
+			"_lineLayer": 0,
+			"_type": 0,
+			"_cutDirection": 6,
+			"description":"0,0"
+		},{
+			"_x": 211,
+			"_real_time": 49.017324263038546,
+			"_pitch": 1600,
+			"_time": 106.20420256991684,
+			"_lineIndex": 2,
+			"_lineLayer": 2,
+			"_type": 0,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 211,
+			"_real_time": 49.017324263038546,
+			"_pitch": 1600,
+			"_time": 106.20420256991684,
+			"_lineIndex": 3,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 211,
+			"_real_time": 49.24952380952381,
+			"_pitch": 1600,
+			"_time": 106.70730158730159,
+			"_lineIndex": 2,
+			"_lineLayer": 0,
+			"_type": 0,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 211,
+			"_real_time": 49.24952380952381,
+			"_pitch": 1600,
+			"_time": 106.70730158730159,
+			"_lineIndex": 3,
+			"_lineLayer": 0,
+			"_type": 1,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 216,
+			"_real_time": 49.92290249433107,
+			"_pitch": 1600,
+			"_time": 108.16628873771732,
+			"_lineIndex": 2,
+			"_lineLayer": 2,
+			"_type": 0,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 216,
+			"_real_time": 49.92290249433107,
+			"_pitch": 1600,
+			"_time": 108.16628873771732,
+			"_lineIndex": 3,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 216,
+			"_real_time": 50.387301587301586,
+			"_pitch": 1600,
+			"_time": 109.17248677248676,
+			"_lineIndex": 2,
+			"_lineLayer": 0,
+			"_type": 0,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 216,
+			"_real_time": 50.387301587301586,
+			"_pitch": 1600,
+			"_time": 109.17248677248676,
+			"_lineIndex": 3,
+			"_lineLayer": 0,
+			"_type": 1,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 221,
+			"_real_time": 50.85170068027211,
+			"_pitch": 1600,
+			"_time": 110.17868480725625,
+			"_lineIndex": 2,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 1,
+			"description":"2,2"
+		},{
+			"_x": 221,
+			"_real_time": 51.06068027210885,
+			"_pitch": 1600,
+			"_time": 110.6314739229025,
+			"_lineIndex": 3,
+			"_lineLayer": 0,
+			"_type": 1,
+			"_cutDirection": 0,
+			"description":"0,3"
+		},{
+			"_x": 223,
+			"_real_time": 51.43219954648526,
+			"_pitch": 1600,
+			"_time": 111.43643235071806,
+			"_lineIndex": 2,
+			"_lineLayer": 2,
+			"_type": 0,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 223,
+			"_real_time": 51.43219954648526,
+			"_pitch": 1600,
+			"_time": 111.43643235071806,
+			"_lineIndex": 3,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 223,
+			"_real_time": 51.66439909297052,
+			"_pitch": 1600,
+			"_time": 111.93953136810279,
+			"_lineIndex": 2,
+			"_lineLayer": 0,
+			"_type": 0,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 223,
+			"_real_time": 51.66439909297052,
+			"_pitch": 1600,
+			"_time": 111.93953136810279,
+			"_lineIndex": 3,
+			"_lineLayer": 0,
+			"_type": 1,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 228,
+			"_real_time": 52.01269841269841,
+			"_pitch": 1600,
+			"_time": 112.6941798941799,
+			"_lineIndex": 2,
+			"_lineLayer": 2,
+			"_type": 0,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 228,
+			"_real_time": 52.01269841269841,
+			"_pitch": 1600,
+			"_time": 112.6941798941799,
+			"_lineIndex": 3,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 228,
+			"_real_time": 52.47709750566894,
+			"_pitch": 1600,
+			"_time": 113.70037792894937,
+			"_lineIndex": 2,
+			"_lineLayer": 0,
+			"_type": 0,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 228,
+			"_real_time": 52.47709750566894,
+			"_pitch": 1600,
+			"_time": 113.70037792894937,
+			"_lineIndex": 3,
+			"_lineLayer": 0,
+			"_type": 1,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 233,
+			"_real_time": 52.68607709750567,
+			"_pitch": 1600,
+			"_time": 114.1531670445956,
+			"_lineIndex": 0,
+			"_lineLayer": 1,
+			"_type": 0,
+			"_cutDirection": 8,
+			"description":"1,0"
+		},{
+			"_x": 233,
+			"_real_time": 52.8021768707483,
+			"_pitch": 1600,
+			"_time": 114.40471655328798,
+			"_lineIndex": 0,
+			"_lineLayer": 0,
+			"_type": 0,
+			"_cutDirection": 8,
+			"description":"0,0"
+		},{
+			"_x": 235,
+			"_real_time": 52.91827664399093,
+			"_pitch": 1600,
+			"_time": 114.65626606198035,
+			"_lineIndex": 0,
+			"_lineLayer": 1,
+			"_type": 0,
+			"_cutDirection": 8,
+			"description":"1,0"
+		},{
+			"_x": 235,
+			"_real_time": 53.03437641723356,
+			"_pitch": 1600,
+			"_time": 114.90781557067271,
+			"_lineIndex": 0,
+			"_lineLayer": 2,
+			"_type": 0,
+			"_cutDirection": 8,
+			"description":"2,0"
+		},{
+			"_x": 237,
+			"_real_time": 53.38267573696145,
+			"_pitch": 1600,
+			"_time": 115.66246409674982,
+			"_lineIndex": 2,
+			"_lineLayer": 2,
+			"_type": 0,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 237,
+			"_real_time": 53.38267573696145,
+			"_pitch": 1600,
+			"_time": 115.66246409674982,
+			"_lineIndex": 3,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 237,
+			"_real_time": 53.614875283446715,
+			"_pitch": 1600,
+			"_time": 116.16556311413454,
+			"_lineIndex": 2,
+			"_lineLayer": 0,
+			"_type": 0,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 237,
+			"_real_time": 53.614875283446715,
+			"_pitch": 1600,
+			"_time": 116.16556311413454,
+			"_lineIndex": 3,
+			"_lineLayer": 0,
+			"_type": 1,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 242,
+			"_real_time": 53.9631746031746,
+			"_pitch": 1600,
+			"_time": 116.92021164021163,
+			"_lineIndex": 2,
+			"_lineLayer": 2,
+			"_type": 0,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 242,
+			"_real_time": 53.9631746031746,
+			"_pitch": 1600,
+			"_time": 116.92021164021163,
+			"_lineIndex": 3,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 242,
+			"_real_time": 54.427573696145124,
+			"_pitch": 1600,
+			"_time": 117.9264096749811,
+			"_lineIndex": 2,
+			"_lineLayer": 0,
+			"_type": 0,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 242,
+			"_real_time": 54.427573696145124,
+			"_pitch": 1600,
+			"_time": 117.9264096749811,
+			"_lineIndex": 3,
+			"_lineLayer": 0,
+			"_type": 1,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 247,
+			"_real_time": 54.89197278911565,
+			"_pitch": 1600,
+			"_time": 118.93260770975057,
+			"_lineIndex": 2,
+			"_lineLayer": 2,
+			"_type": 0,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 247,
+			"_real_time": 54.89197278911565,
+			"_pitch": 1600,
+			"_time": 118.93260770975057,
+			"_lineIndex": 3,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 247,
+			"_real_time": 55.12417233560091,
+			"_pitch": 1600,
+			"_time": 119.4357067271353,
+			"_lineIndex": 2,
+			"_lineLayer": 0,
+			"_type": 0,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 247,
+			"_real_time": 55.12417233560091,
+			"_pitch": 1600,
+			"_time": 119.4357067271353,
+			"_lineIndex": 3,
+			"_lineLayer": 0,
+			"_type": 1,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 252,
+			"_real_time": 55.5653514739229,
+			"_pitch": 1600,
+			"_time": 120.3915948601663,
+			"_lineIndex": 2,
+			"_lineLayer": 2,
+			"_type": 0,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 252,
+			"_real_time": 55.5653514739229,
+			"_pitch": 1600,
+			"_time": 120.3915948601663,
+			"_lineIndex": 3,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 252,
+			"_real_time": 55.797551020408164,
+			"_pitch": 1600,
+			"_time": 120.89469387755102,
+			"_lineIndex": 2,
+			"_lineLayer": 0,
+			"_type": 0,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 252,
+			"_real_time": 55.797551020408164,
+			"_pitch": 1600,
+			"_time": 120.89469387755102,
+			"_lineIndex": 3,
+			"_lineLayer": 0,
+			"_type": 1,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 257,
+			"_real_time": 55.913650793650795,
+			"_pitch": 1600,
+			"_time": 121.14624338624338,
+			"_lineIndex": 1,
+			"_lineLayer": 3,
+			"_type": 0,
+			"_cutDirection": 3,
+			"description":"3,1"
+		},{
+			"_x": 257,
+			"_real_time": 56.029750566893426,
+			"_pitch": 1600,
+			"_time": 121.39779289493576,
+			"_lineIndex": 0,
+			"_lineLayer": 2,
+			"_type": 0,
+			"_cutDirection": 2,
+			"description":"2,0"
+		},{
+			"_x": 259,
+			"_real_time": 56.37804988662131,
+			"_pitch": 1600,
+			"_time": 122.15244142101284,
+			"_lineIndex": 0,
+			"_lineLayer": 2,
+			"_type": 0,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 259,
+			"_real_time": 56.37804988662131,
+			"_pitch": 1600,
+			"_time": 122.15244142101284,
+			"_lineIndex": 1,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 259,
+			"_real_time": 56.610249433106574,
+			"_pitch": 1600,
+			"_time": 122.65554043839758,
+			"_lineIndex": 0,
+			"_lineLayer": 0,
+			"_type": 0,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 259,
+			"_real_time": 56.610249433106574,
+			"_pitch": 1600,
+			"_time": 122.65554043839758,
+			"_lineIndex": 1,
+			"_lineLayer": 0,
+			"_type": 1,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 264,
+			"_real_time": 57.0746485260771,
+			"_pitch": 1600,
+			"_time": 123.66173847316705,
+			"_lineIndex": 0,
+			"_lineLayer": 2,
+			"_type": 0,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 264,
+			"_real_time": 57.0746485260771,
+			"_pitch": 1600,
+			"_time": 123.66173847316705,
+			"_lineIndex": 1,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 264,
+			"_real_time": 57.42294784580499,
+			"_pitch": 1600,
+			"_time": 124.41638699924414,
+			"_lineIndex": 0,
+			"_lineLayer": 0,
+			"_type": 0,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 264,
+			"_real_time": 57.42294784580499,
+			"_pitch": 1600,
+			"_time": 124.41638699924414,
+			"_lineIndex": 1,
+			"_lineLayer": 0,
+			"_type": 1,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 269,
+			"_real_time": 57.53904761904762,
+			"_pitch": 1600,
+			"_time": 124.66793650793652,
+			"_lineIndex": 2,
+			"_lineLayer": 0,
+			"_type": 1,
+			"_cutDirection": 7,
+			"description":"0,2"
+		},{
+			"_x": 269,
+			"_real_time": 57.655147392290246,
+			"_pitch": 1600,
+			"_time": 124.91948601662887,
+			"_lineIndex": 2,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 4,
+			"description":"2,2"
+		},{
+			"_x": 271,
+			"_real_time": 57.77124716553288,
+			"_pitch": 1600,
+			"_time": 125.17103552532124,
+			"_lineIndex": 0,
+			"_lineLayer": 0,
+			"_type": 0,
+			"_cutDirection": 4,
+			"description":"0,0"
+		},{
+			"_x": 271,
+			"_real_time": 57.88734693877551,
+			"_pitch": 1600,
+			"_time": 125.4225850340136,
+			"_lineIndex": 1,
+			"_lineLayer": 1,
+			"_type": 0,
+			"_cutDirection": 7,
+			"description":"1,1"
+		},{
+			"_x": 273,
+			"_real_time": 58.00344671201814,
+			"_pitch": 1600,
+			"_time": 125.67413454270596,
+			"_lineIndex": 3,
+			"_lineLayer": 3,
+			"_type": 1,
+			"_cutDirection": 3,
+			"description":"3,3"
+		},{
+			"_x": 273,
+			"_real_time": 58.11954648526077,
+			"_pitch": 1600,
+			"_time": 125.92568405139833,
+			"_lineIndex": 2,
+			"_lineLayer": 0,
+			"_type": 1,
+			"_cutDirection": 2,
+			"description":"0,2"
+		},{
+			"_x": 275,
+			"_real_time": 58.583945578231294,
+			"_pitch": 1600,
+			"_time": 126.9318820861678,
+			"_lineIndex": 0,
+			"_lineLayer": 2,
+			"_type": 0,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 275,
+			"_real_time": 58.583945578231294,
+			"_pitch": 1600,
+			"_time": 126.9318820861678,
+			"_lineIndex": 1,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 275,
+			"_real_time": 58.816145124716556,
+			"_pitch": 1600,
+			"_time": 127.43498110355253,
+			"_lineIndex": 0,
+			"_lineLayer": 0,
+			"_type": 0,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 275,
+			"_real_time": 58.816145124716556,
+			"_pitch": 1600,
+			"_time": 127.43498110355253,
+			"_lineIndex": 1,
+			"_lineLayer": 0,
+			"_type": 1,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 280,
+			"_real_time": 59.14122448979592,
+			"_pitch": 1600,
+			"_time": 128.13931972789115,
+			"_lineIndex": 0,
+			"_lineLayer": 2,
+			"_type": 0,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 280,
+			"_real_time": 59.14122448979592,
+			"_pitch": 1600,
+			"_time": 128.13931972789115,
+			"_lineIndex": 1,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 280,
+			"_real_time": 59.396643990929704,
+			"_pitch": 1600,
+			"_time": 128.69272864701435,
+			"_lineIndex": 0,
+			"_lineLayer": 0,
+			"_type": 0,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 280,
+			"_real_time": 59.396643990929704,
+			"_pitch": 1600,
+			"_time": 128.69272864701435,
+			"_lineIndex": 1,
+			"_lineLayer": 0,
+			"_type": 1,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 285,
+			"_real_time": 59.8378231292517,
+			"_pitch": 1600,
+			"_time": 129.64861678004536,
+			"_lineIndex": 0,
+			"_lineLayer": 2,
+			"_type": 0,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 285,
+			"_real_time": 59.8378231292517,
+			"_pitch": 1600,
+			"_time": 129.64861678004536,
+			"_lineIndex": 1,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 285,
+			"_real_time": 60.070022675736965,
+			"_pitch": 1600,
+			"_time": 130.15171579743009,
+			"_lineIndex": 0,
+			"_lineLayer": 0,
+			"_type": 0,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 285,
+			"_real_time": 60.070022675736965,
+			"_pitch": 1600,
+			"_time": 130.15171579743009,
+			"_lineIndex": 1,
+			"_lineLayer": 0,
+			"_type": 1,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 290,
+			"_real_time": 60.41832199546485,
+			"_pitch": 1600,
+			"_time": 130.90636432350718,
+			"_lineIndex": 0,
+			"_lineLayer": 2,
+			"_type": 0,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 290,
+			"_real_time": 60.41832199546485,
+			"_pitch": 1600,
+			"_time": 130.90636432350718,
+			"_lineIndex": 1,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 290,
+			"_real_time": 60.766621315192744,
+			"_pitch": 1600,
+			"_time": 131.66101284958427,
+			"_lineIndex": 0,
+			"_lineLayer": 0,
+			"_type": 0,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 290,
+			"_real_time": 60.766621315192744,
+			"_pitch": 1600,
+			"_time": 131.66101284958427,
+			"_lineIndex": 1,
+			"_lineLayer": 0,
+			"_type": 1,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 295,
+			"_real_time": 61.23102040816327,
+			"_pitch": 1600,
+			"_time": 132.66721088435375,
+			"_lineIndex": 0,
+			"_lineLayer": 2,
+			"_type": 0,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 295,
+			"_real_time": 61.23102040816327,
+			"_pitch": 1600,
+			"_time": 132.66721088435375,
+			"_lineIndex": 1,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 295,
+			"_real_time": 61.46321995464853,
+			"_pitch": 1600,
+			"_time": 133.17030990173848,
+			"_lineIndex": 0,
+			"_lineLayer": 0,
+			"_type": 0,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 295,
+			"_real_time": 61.46321995464853,
+			"_pitch": 1600,
+			"_time": 133.17030990173848,
+			"_lineIndex": 1,
+			"_lineLayer": 0,
+			"_type": 1,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 300,
+			"_real_time": 61.811519274376415,
+			"_pitch": 1600,
+			"_time": 133.92495842781557,
+			"_lineIndex": 2,
+			"_lineLayer": 2,
+			"_type": 0,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 300,
+			"_real_time": 61.811519274376415,
+			"_pitch": 1600,
+			"_time": 133.92495842781557,
+			"_lineIndex": 3,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 300,
+			"_real_time": 62.04371882086168,
+			"_pitch": 1600,
+			"_time": 134.42805744520032,
+			"_lineIndex": 2,
+			"_lineLayer": 0,
+			"_type": 0,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 300,
+			"_real_time": 62.04371882086168,
+			"_pitch": 1600,
+			"_time": 134.42805744520032,
+			"_lineIndex": 3,
+			"_lineLayer": 0,
+			"_type": 1,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 305,
+			"_real_time": 62.368798185941046,
+			"_pitch": 1600,
+			"_time": 135.1323960695389,
+			"_lineIndex": 0,
+			"_lineLayer": 2,
+			"_type": 0,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 305,
+			"_real_time": 62.368798185941046,
+			"_pitch": 1600,
+			"_time": 135.1323960695389,
+			"_lineIndex": 1,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 305,
+			"_real_time": 62.6009977324263,
+			"_pitch": 1600,
+			"_time": 135.63549508692364,
+			"_lineIndex": 0,
+			"_lineLayer": 0,
+			"_type": 0,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 305,
+			"_real_time": 62.6009977324263,
+			"_pitch": 1600,
+			"_time": 135.63549508692364,
+			"_lineIndex": 1,
+			"_lineLayer": 0,
+			"_type": 1,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 310,
+			"_real_time": 63.20471655328798,
+			"_pitch": 1600,
+			"_time": 136.94355253212396,
+			"_lineIndex": 0,
+			"_lineLayer": 2,
+			"_type": 0,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 310,
+			"_real_time": 63.20471655328798,
+			"_pitch": 1600,
+			"_time": 136.94355253212396,
+			"_lineIndex": 1,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 310,
+			"_real_time": 63.41369614512472,
+			"_pitch": 1600,
+			"_time": 137.39634164777024,
+			"_lineIndex": 0,
+			"_lineLayer": 0,
+			"_type": 0,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 310,
+			"_real_time": 63.41369614512472,
+			"_pitch": 1600,
+			"_time": 137.39634164777024,
+			"_lineIndex": 1,
+			"_lineLayer": 0,
+			"_type": 1,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 315,
+			"_real_time": 63.76199546485261,
+			"_pitch": 1600,
+			"_time": 138.1509901738473,
+			"_lineIndex": 0,
+			"_lineLayer": 2,
+			"_type": 0,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 315,
+			"_real_time": 63.76199546485261,
+			"_pitch": 1600,
+			"_time": 138.1509901738473,
+			"_lineIndex": 1,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 315,
+			"_real_time": 63.97097505668934,
+			"_pitch": 1600,
+			"_time": 138.60377928949356,
+			"_lineIndex": 0,
+			"_lineLayer": 0,
+			"_type": 0,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 315,
+			"_real_time": 63.97097505668934,
+			"_pitch": 1600,
+			"_time": 138.60377928949356,
+			"_lineIndex": 1,
+			"_lineLayer": 0,
+			"_type": 1,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 320,
+			"_real_time": 64.45859410430839,
+			"_pitch": 1600,
+			"_time": 139.66028722600151,
+			"_lineIndex": 0,
+			"_lineLayer": 2,
+			"_type": 0,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 320,
+			"_real_time": 64.45859410430839,
+			"_pitch": 1600,
+			"_time": 139.66028722600151,
+			"_lineIndex": 1,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 320,
+			"_real_time": 64.78367346938775,
+			"_pitch": 1600,
+			"_time": 140.36462585034013,
+			"_lineIndex": 0,
+			"_lineLayer": 0,
+			"_type": 0,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 320,
+			"_real_time": 64.78367346938775,
+			"_pitch": 1600,
+			"_time": 140.36462585034013,
+			"_lineIndex": 1,
+			"_lineLayer": 0,
+			"_type": 1,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 325,
+			"_real_time": 65.15519274376418,
+			"_pitch": 1600,
+			"_time": 141.16958427815572,
+			"_lineIndex": 0,
+			"_lineLayer": 2,
+			"_type": 0,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 325,
+			"_real_time": 65.15519274376418,
+			"_pitch": 1600,
+			"_time": 141.16958427815572,
+			"_lineIndex": 1,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 325,
+			"_real_time": 65.38739229024944,
+			"_pitch": 1600,
+			"_time": 141.67268329554042,
+			"_lineIndex": 0,
+			"_lineLayer": 0,
+			"_type": 0,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 325,
+			"_real_time": 65.38739229024944,
+			"_pitch": 1600,
+			"_time": 141.67268329554042,
+			"_lineIndex": 1,
+			"_lineLayer": 0,
+			"_type": 1,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 330,
+			"_real_time": 65.50349206349206,
+			"_pitch": 1600,
+			"_time": 141.9242328042328,
+			"_lineIndex": 1,
+			"_lineLayer": 0,
+			"_type": 0,
+			"_cutDirection": 4,
+			"description":"0,1"
+		},{
+			"_x": 330,
+			"_real_time": 65.59637188208617,
+			"_pitch": 1600,
+			"_time": 142.1254724111867,
+			"_lineIndex": 1,
+			"_lineLayer": 2,
+			"_type": 0,
+			"_cutDirection": 7,
+			"description":"2,1"
+		},{
+			"_x": 332,
+			"_real_time": 65.73569160997732,
+			"_pitch": 1600,
+			"_time": 142.42733182161754,
+			"_lineIndex": 3,
+			"_lineLayer": 3,
+			"_type": 1,
+			"_cutDirection": 3,
+			"description":"3,3"
+		},{
+			"_x": 332,
+			"_real_time": 65.82857142857142,
+			"_pitch": 1600,
+			"_time": 142.6285714285714,
+			"_lineIndex": 3,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 2,
+			"description":"2,3"
+		},{
+			"_x": 334,
+			"_real_time": 66.20009070294785,
+			"_pitch": 1600,
+			"_time": 143.433529856387,
+			"_lineIndex": 2,
+			"_lineLayer": 2,
+			"_type": 0,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 334,
+			"_real_time": 66.20009070294785,
+			"_pitch": 1600,
+			"_time": 143.433529856387,
+			"_lineIndex": 3,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 334,
+			"_real_time": 66.52517006802721,
+			"_pitch": 1600,
+			"_time": 144.13786848072561,
+			"_lineIndex": 2,
+			"_lineLayer": 0,
+			"_type": 0,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 334,
+			"_real_time": 66.52517006802721,
+			"_pitch": 1600,
+			"_time": 144.13786848072561,
+			"_lineIndex": 3,
+			"_lineLayer": 0,
+			"_type": 1,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 339,
+			"_real_time": 66.89668934240363,
+			"_pitch": 1600,
+			"_time": 144.9428269085412,
+			"_lineIndex": 0,
+			"_lineLayer": 2,
+			"_type": 0,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 339,
+			"_real_time": 66.89668934240363,
+			"_pitch": 1600,
+			"_time": 144.9428269085412,
+			"_lineIndex": 1,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 339,
+			"_real_time": 67.10566893424036,
+			"_pitch": 1600,
+			"_time": 145.39561602418743,
+			"_lineIndex": 0,
+			"_lineLayer": 0,
+			"_type": 0,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 339,
+			"_real_time": 67.10566893424036,
+			"_pitch": 1600,
+			"_time": 145.39561602418743,
+			"_lineIndex": 1,
+			"_lineLayer": 0,
+			"_type": 1,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 344,
+			"_real_time": 67.221768707483,
+			"_pitch": 1600,
+			"_time": 145.64716553287982,
+			"_lineIndex": 0,
+			"_lineLayer": 1,
+			"_type": 0,
+			"_cutDirection": 4,
+			"description":"1,0"
+		},{
+			"_x": 344,
+			"_real_time": 67.33786848072562,
+			"_pitch": 1600,
+			"_time": 145.89871504157216,
+			"_lineIndex": 0,
+			"_lineLayer": 0,
+			"_type": 0,
+			"_cutDirection": 7,
+			"description":"0,0"
+		},{
+			"_x": 346,
+			"_real_time": 67.80226757369614,
+			"_pitch": 1600,
+			"_time": 146.90491307634164,
+			"_lineIndex": 2,
+			"_lineLayer": 2,
+			"_type": 0,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 346,
+			"_real_time": 67.80226757369614,
+			"_pitch": 1600,
+			"_time": 146.90491307634164,
+			"_lineIndex": 3,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 346,
+			"_real_time": 68.0344671201814,
+			"_pitch": 1600,
+			"_time": 147.4080120937264,
+			"_lineIndex": 2,
+			"_lineLayer": 0,
+			"_type": 0,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 346,
+			"_real_time": 68.0344671201814,
+			"_pitch": 1600,
+			"_time": 147.4080120937264,
+			"_lineIndex": 3,
+			"_lineLayer": 0,
+			"_type": 1,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 351,
+			"_real_time": 68.49886621315193,
+			"_pitch": 1600,
+			"_time": 148.41421012849582,
+			"_lineIndex": 0,
+			"_lineLayer": 2,
+			"_type": 0,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 351,
+			"_real_time": 68.49886621315193,
+			"_pitch": 1600,
+			"_time": 148.41421012849582,
+			"_lineIndex": 1,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 351,
+			"_real_time": 68.73106575963719,
+			"_pitch": 1600,
+			"_time": 148.91730914588058,
+			"_lineIndex": 0,
+			"_lineLayer": 0,
+			"_type": 0,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 351,
+			"_real_time": 68.73106575963719,
+			"_pitch": 1600,
+			"_time": 148.91730914588058,
+			"_lineIndex": 1,
+			"_lineLayer": 0,
+			"_type": 1,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 356,
+			"_real_time": 69.07936507936508,
+			"_pitch": 1600,
+			"_time": 149.67195767195767,
+			"_lineIndex": 0,
+			"_lineLayer": 2,
+			"_type": 0,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 356,
+			"_real_time": 69.07936507936508,
+			"_pitch": 1600,
+			"_time": 149.67195767195767,
+			"_lineIndex": 1,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 356,
+			"_real_time": 69.28834467120181,
+			"_pitch": 1600,
+			"_time": 150.12474678760393,
+			"_lineIndex": 0,
+			"_lineLayer": 0,
+			"_type": 0,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 356,
+			"_real_time": 69.28834467120181,
+			"_pitch": 1600,
+			"_time": 150.12474678760393,
+			"_lineIndex": 1,
+			"_lineLayer": 0,
+			"_type": 1,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 361,
+			"_real_time": 69.65986394557824,
+			"_pitch": 1600,
+			"_time": 150.92970521541952,
+			"_lineIndex": 0,
+			"_lineLayer": 2,
+			"_type": 0,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 361,
+			"_real_time": 69.65986394557824,
+			"_pitch": 1600,
+			"_time": 150.92970521541952,
+			"_lineIndex": 1,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 361,
+			"_real_time": 69.9849433106576,
+			"_pitch": 1600,
+			"_time": 151.6340438397581,
+			"_lineIndex": 0,
+			"_lineLayer": 0,
+			"_type": 0,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 361,
+			"_real_time": 69.9849433106576,
+			"_pitch": 1600,
+			"_time": 151.6340438397581,
+			"_lineIndex": 1,
+			"_lineLayer": 0,
+			"_type": 1,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 366,
+			"_real_time": 70.33324263038548,
+			"_pitch": 1600,
+			"_time": 152.38869236583523,
+			"_lineIndex": 0,
+			"_lineLayer": 2,
+			"_type": 0,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 366,
+			"_real_time": 70.33324263038548,
+			"_pitch": 1600,
+			"_time": 152.38869236583523,
+			"_lineIndex": 1,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 366,
+			"_real_time": 70.68154195011338,
+			"_pitch": 1600,
+			"_time": 153.14334089191235,
+			"_lineIndex": 0,
+			"_lineLayer": 0,
+			"_type": 0,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 366,
+			"_real_time": 70.68154195011338,
+			"_pitch": 1600,
+			"_time": 153.14334089191235,
+			"_lineIndex": 1,
+			"_lineLayer": 0,
+			"_type": 1,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 371,
+			"_real_time": 70.82086167800453,
+			"_pitch": 1600,
+			"_time": 153.44520030234315,
+			"_lineIndex": 1,
+			"_lineLayer": 2,
+			"_type": 0,
+			"_cutDirection": 8,
+			"description":"2,1"
+		},{
+			"_x": 371,
+			"_real_time": 70.91374149659863,
+			"_pitch": 1600,
+			"_time": 153.64643990929704,
+			"_lineIndex": 0,
+			"_lineLayer": 3,
+			"_type": 0,
+			"_cutDirection": 8,
+			"description":"3,0"
+		},{
+			"_x": 373,
+			"_real_time": 71.37814058956916,
+			"_pitch": 1600,
+			"_time": 154.6526379440665,
+			"_lineIndex": 0,
+			"_lineLayer": 2,
+			"_type": 0,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 373,
+			"_real_time": 71.37814058956916,
+			"_pitch": 1600,
+			"_time": 154.6526379440665,
+			"_lineIndex": 1,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 373,
+			"_real_time": 71.61034013605442,
+			"_pitch": 1600,
+			"_time": 155.15573696145123,
+			"_lineIndex": 0,
+			"_lineLayer": 0,
+			"_type": 0,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 373,
+			"_real_time": 71.61034013605442,
+			"_pitch": 1600,
+			"_time": 155.15573696145123,
+			"_lineIndex": 1,
+			"_lineLayer": 0,
+			"_type": 1,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 378,
+			"_real_time": 72.19083900226758,
+			"_pitch": 1600,
+			"_time": 156.4134845049131,
+			"_lineIndex": 0,
+			"_lineLayer": 2,
+			"_type": 0,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 378,
+			"_real_time": 72.19083900226758,
+			"_pitch": 1600,
+			"_time": 156.4134845049131,
+			"_lineIndex": 1,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 378,
+			"_real_time": 72.42303854875283,
+			"_pitch": 1600,
+			"_time": 156.9165835222978,
+			"_lineIndex": 0,
+			"_lineLayer": 0,
+			"_type": 0,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 378,
+			"_real_time": 72.42303854875283,
+			"_pitch": 1600,
+			"_time": 156.9165835222978,
+			"_lineIndex": 1,
+			"_lineLayer": 0,
+			"_type": 1,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 383,
+			"_real_time": 72.77133786848073,
+			"_pitch": 1600,
+			"_time": 157.67123204837492,
+			"_lineIndex": 2,
+			"_lineLayer": 2,
+			"_type": 0,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 383,
+			"_real_time": 72.77133786848073,
+			"_pitch": 1600,
+			"_time": 157.67123204837492,
+			"_lineIndex": 3,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 383,
+			"_real_time": 73.00353741496599,
+			"_pitch": 1600,
+			"_time": 158.17433106575965,
+			"_lineIndex": 2,
+			"_lineLayer": 0,
+			"_type": 0,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 383,
+			"_real_time": 73.00353741496599,
+			"_pitch": 1600,
+			"_time": 158.17433106575965,
+			"_lineIndex": 3,
+			"_lineLayer": 0,
+			"_type": 1,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 388,
+			"_real_time": 73.46793650793651,
+			"_pitch": 1600,
+			"_time": 159.1805291005291,
+			"_lineIndex": 2,
+			"_lineLayer": 2,
+			"_type": 0,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 388,
+			"_real_time": 73.46793650793651,
+			"_pitch": 1600,
+			"_time": 159.1805291005291,
+			"_lineIndex": 3,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 388,
+			"_real_time": 73.67691609977324,
+			"_pitch": 1600,
+			"_time": 159.63331821617535,
+			"_lineIndex": 2,
+			"_lineLayer": 0,
+			"_type": 0,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 388,
+			"_real_time": 73.67691609977324,
+			"_pitch": 1600,
+			"_time": 159.63331821617535,
+			"_lineIndex": 3,
+			"_lineLayer": 0,
+			"_type": 1,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 393,
+			"_real_time": 73.8162358276644,
+			"_pitch": 1600,
+			"_time": 159.9351776266062,
+			"_lineIndex": 0,
+			"_lineLayer": 1,
+			"_type": 0,
+			"_cutDirection": 3,
+			"description":"1,0"
+		},{
+			"_x": 393,
+			"_real_time": 73.9091156462585,
+			"_pitch": 1600,
+			"_time": 160.13641723356008,
+			"_lineIndex": 1,
+			"_lineLayer": 0,
+			"_type": 0,
+			"_cutDirection": 2,
+			"description":"0,1"
+		},{
+			"_x": 395,
+			"_real_time": 74.04843537414966,
+			"_pitch": 1600,
+			"_time": 160.43827664399095,
+			"_lineIndex": 2,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 1,
+			"description":"2,2"
+		},{
+			"_x": 395,
+			"_real_time": 74.16453514739229,
+			"_pitch": 1600,
+			"_time": 160.6898261526833,
+			"_lineIndex": 3,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 0,
+			"description":"2,3"
+		},{
+			"_x": 397,
+			"_real_time": 74.48961451247166,
+			"_pitch": 1600,
+			"_time": 161.39416477702193,
+			"_lineIndex": 2,
+			"_lineLayer": 2,
+			"_type": 0,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 397,
+			"_real_time": 74.48961451247166,
+			"_pitch": 1600,
+			"_time": 161.39416477702193,
+			"_lineIndex": 3,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 397,
+			"_real_time": 74.74503401360545,
+			"_pitch": 1600,
+			"_time": 161.94757369614513,
+			"_lineIndex": 2,
+			"_lineLayer": 0,
+			"_type": 0,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 397,
+			"_real_time": 74.74503401360545,
+			"_pitch": 1600,
+			"_time": 161.94757369614513,
+			"_lineIndex": 3,
+			"_lineLayer": 0,
+			"_type": 1,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 402,
+			"_real_time": 75.18621315192743,
+			"_pitch": 1600,
+			"_time": 162.9034618291761,
+			"_lineIndex": 2,
+			"_lineLayer": 2,
+			"_type": 0,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 402,
+			"_real_time": 75.18621315192743,
+			"_pitch": 1600,
+			"_time": 162.9034618291761,
+			"_lineIndex": 3,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 402,
+			"_real_time": 75.4184126984127,
+			"_pitch": 1600,
+			"_time": 163.40656084656084,
+			"_lineIndex": 2,
+			"_lineLayer": 0,
+			"_type": 0,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 402,
+			"_real_time": 75.4184126984127,
+			"_pitch": 1600,
+			"_time": 163.40656084656084,
+			"_lineIndex": 3,
+			"_lineLayer": 0,
+			"_type": 1,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 407,
+			"_real_time": 75.53451247165533,
+			"_pitch": 1600,
+			"_time": 163.65811035525323,
+			"_lineIndex": 1,
+			"_lineLayer": 3,
+			"_type": 0,
+			"_cutDirection": 8,
+			"description":"3,1"
+		},{
+			"_x": 407,
+			"_real_time": 75.7667120181406,
+			"_pitch": 1600,
+			"_time": 164.16120937263796,
+			"_lineIndex": 1,
+			"_lineLayer": 3,
+			"_type": 0,
+			"_cutDirection": 8,
+			"description":"3,1"
+		},{
+			"_x": 409,
+			"_real_time": 76.11501133786848,
+			"_pitch": 1600,
+			"_time": 164.91585789871502,
+			"_lineIndex": 2,
+			"_lineLayer": 2,
+			"_type": 0,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 409,
+			"_real_time": 76.11501133786848,
+			"_pitch": 1600,
+			"_time": 164.91585789871502,
+			"_lineIndex": 3,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 409,
+			"_real_time": 76.34721088435374,
+			"_pitch": 1600,
+			"_time": 165.41895691609977,
+			"_lineIndex": 2,
+			"_lineLayer": 0,
+			"_type": 0,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 409,
+			"_real_time": 76.34721088435374,
+			"_pitch": 1600,
+			"_time": 165.41895691609977,
+			"_lineIndex": 3,
+			"_lineLayer": 0,
+			"_type": 1,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 414,
+			"_real_time": 76.6722902494331,
+			"_pitch": 1600,
+			"_time": 166.1232955404384,
+			"_lineIndex": 2,
+			"_lineLayer": 2,
+			"_type": 0,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 414,
+			"_real_time": 76.6722902494331,
+			"_pitch": 1600,
+			"_time": 166.1232955404384,
+			"_lineIndex": 3,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 414,
+			"_real_time": 76.90448979591837,
+			"_pitch": 1600,
+			"_time": 166.62639455782312,
+			"_lineIndex": 2,
+			"_lineLayer": 0,
+			"_type": 0,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 414,
+			"_real_time": 76.90448979591837,
+			"_pitch": 1600,
+			"_time": 166.62639455782312,
+			"_lineIndex": 3,
+			"_lineLayer": 0,
+			"_type": 1,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 419,
+			"_real_time": 77.13668934240363,
+			"_pitch": 1600,
+			"_time": 167.12949357520787,
+			"_lineIndex": 1,
+			"_lineLayer": 0,
+			"_type": 0,
+			"_cutDirection": 0,
+			"description":"0,1"
+		},{
+			"_x": 419,
+			"_real_time": 77.27600907029479,
+			"_pitch": 1600,
+			"_time": 167.4313529856387,
+			"_lineIndex": 1,
+			"_lineLayer": 3,
+			"_type": 0,
+			"_cutDirection": 1,
+			"description":"3,1"
+		},{
+			"_x": 421,
+			"_real_time": 77.71718820861678,
+			"_pitch": 1600,
+			"_time": 168.38724111866966,
+			"_lineIndex": 2,
+			"_lineLayer": 2,
+			"_type": 0,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 421,
+			"_real_time": 77.71718820861678,
+			"_pitch": 1600,
+			"_time": 168.38724111866966,
+			"_lineIndex": 3,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 421,
+			"_real_time": 78.1815873015873,
+			"_pitch": 1600,
+			"_time": 169.39343915343915,
+			"_lineIndex": 2,
+			"_lineLayer": 0,
+			"_type": 0,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 421,
+			"_real_time": 78.1815873015873,
+			"_pitch": 1600,
+			"_time": 169.39343915343915,
+			"_lineIndex": 3,
+			"_lineLayer": 0,
+			"_type": 1,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 426,
+			"_real_time": 78.5298866213152,
+			"_pitch": 1600,
+			"_time": 170.14808767951627,
+			"_lineIndex": 0,
+			"_lineLayer": 0,
+			"_type": 0,
+			"_cutDirection": 3,
+			"description":"0,0"
+		},{
+			"_x": 426,
+			"_real_time": 78.64598639455782,
+			"_pitch": 1600,
+			"_time": 170.39963718820863,
+			"_lineIndex": 0,
+			"_lineLayer": 0,
+			"_type": 0,
+			"_cutDirection": 2,
+			"description":"0,0"
+		},{
+			"_x": 428,
+			"_real_time": 78.99428571428571,
+			"_pitch": 1600,
+			"_time": 171.1542857142857,
+			"_lineIndex": 2,
+			"_lineLayer": 2,
+			"_type": 0,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 428,
+			"_real_time": 78.99428571428571,
+			"_pitch": 1600,
+			"_time": 171.1542857142857,
+			"_lineIndex": 3,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 428,
+			"_real_time": 79.43546485260771,
+			"_pitch": 1600,
+			"_time": 172.1101738473167,
+			"_lineIndex": 2,
+			"_lineLayer": 0,
+			"_type": 0,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 428,
+			"_real_time": 79.43546485260771,
+			"_pitch": 1600,
+			"_time": 172.1101738473167,
+			"_lineIndex": 3,
+			"_lineLayer": 0,
+			"_type": 1,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 433,
+			"_real_time": 79.80698412698413,
+			"_pitch": 1600,
+			"_time": 172.9151322751323,
+			"_lineIndex": 0,
+			"_lineLayer": 2,
+			"_type": 0,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 433,
+			"_real_time": 79.80698412698413,
+			"_pitch": 1600,
+			"_time": 172.9151322751323,
+			"_lineIndex": 1,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 433,
+			"_real_time": 80.03918367346938,
+			"_pitch": 1600,
+			"_time": 173.418231292517,
+			"_lineIndex": 0,
+			"_lineLayer": 0,
+			"_type": 0,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 433,
+			"_real_time": 80.03918367346938,
+			"_pitch": 1600,
+			"_time": 173.418231292517,
+			"_lineIndex": 1,
+			"_lineLayer": 0,
+			"_type": 1,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 438,
+			"_real_time": 80.15528344671202,
+			"_pitch": 1600,
+			"_time": 173.66978080120938,
+			"_lineIndex": 3,
+			"_lineLayer": 0,
+			"_type": 1,
+			"_cutDirection": 1,
+			"description":"0,3"
+		},{
+			"_x": 438,
+			"_real_time": 80.27138321995464,
+			"_pitch": 1600,
+			"_time": 173.92133030990175,
+			"_lineIndex": 2,
+			"_lineLayer": 0,
+			"_type": 1,
+			"_cutDirection": 0,
+			"description":"0,2"
+		},{
+			"_x": 440,
+			"_real_time": 80.36426303854876,
+			"_pitch": 1600,
+			"_time": 174.12256991685564,
+			"_lineIndex": 3,
+			"_lineLayer": 0,
+			"_type": 1,
+			"_cutDirection": 5,
+			"description":"0,3"
+		},{
+			"_x": 440,
+			"_real_time": 80.5035827664399,
+			"_pitch": 1600,
+			"_time": 174.42442932728648,
+			"_lineIndex": 2,
+			"_lineLayer": 1,
+			"_type": 1,
+			"_cutDirection": 6,
+			"description":"1,2"
+		},{
+			"_x": 442,
+			"_real_time": 80.59646258503402,
+			"_pitch": 1600,
+			"_time": 174.62566893424037,
+			"_lineIndex": 1,
+			"_lineLayer": 0,
+			"_type": 0,
+			"_cutDirection": 2,
+			"description":"0,1"
+		},{
+			"_x": 442,
+			"_real_time": 80.73578231292517,
+			"_pitch": 1600,
+			"_time": 174.92752834467117,
+			"_lineIndex": 1,
+			"_lineLayer": 1,
+			"_type": 0,
+			"_cutDirection": 3,
+			"description":"1,1"
+		},{
+			"_x": 444,
+			"_real_time": 81.06086167800453,
+			"_pitch": 1600,
+			"_time": 175.63186696900982,
+			"_lineIndex": 0,
+			"_lineLayer": 2,
+			"_type": 0,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 444,
+			"_real_time": 81.06086167800453,
+			"_pitch": 1600,
+			"_time": 175.63186696900982,
+			"_lineIndex": 1,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 444,
+			"_real_time": 81.29306122448979,
+			"_pitch": 1600,
+			"_time": 176.13496598639455,
+			"_lineIndex": 0,
+			"_lineLayer": 0,
+			"_type": 0,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 444,
+			"_real_time": 81.29306122448979,
+			"_pitch": 1600,
+			"_time": 176.13496598639455,
+			"_lineIndex": 1,
+			"_lineLayer": 0,
+			"_type": 1,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 449,
+			"_real_time": 81.43238095238095,
+			"_pitch": 1600,
+			"_time": 176.4368253968254,
+			"_lineIndex": 1,
+			"_lineLayer": 0,
+			"_type": 0,
+			"_cutDirection": 5,
+			"description":"0,1"
+		},{
+			"_x": 449,
+			"_real_time": 81.54848072562358,
+			"_pitch": 1600,
+			"_time": 176.68837490551775,
+			"_lineIndex": 0,
+			"_lineLayer": 1,
+			"_type": 0,
+			"_cutDirection": 6,
+			"description":"1,0"
+		},{
+			"_x": 451,
+			"_real_time": 81.66458049886621,
+			"_pitch": 1600,
+			"_time": 176.93992441421014,
+			"_lineIndex": 2,
+			"_lineLayer": 0,
+			"_type": 1,
+			"_cutDirection": 5,
+			"description":"0,2"
+		},{
+			"_x": 451,
+			"_real_time": 81.75746031746031,
+			"_pitch": 1600,
+			"_time": 177.14116402116403,
+			"_lineIndex": 3,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 6,
+			"description":"2,3"
+		},{
+			"_x": 453,
+			"_real_time": 82.0128798185941,
+			"_pitch": 1600,
+			"_time": 177.69457294028723,
+			"_lineIndex": 0,
+			"_lineLayer": 2,
+			"_type": 0,
+			"_cutDirection": 7,
+			"description":"2,0"
+		},{
+			"_x": 453,
+			"_real_time": 82.17541950113379,
+			"_pitch": 1600,
+			"_time": 178.04674225245654,
+			"_lineIndex": 0,
+			"_lineLayer": 3,
+			"_type": 0,
+			"_cutDirection": 4,
+			"description":"3,0"
+		},{
+			"_x": 455,
+			"_real_time": 82.29151927437641,
+			"_pitch": 1600,
+			"_time": 178.29829176114887,
+			"_lineIndex": 3,
+			"_lineLayer": 3,
+			"_type": 1,
+			"_cutDirection": 2,
+			"description":"3,3"
+		},{
+			"_x": 455,
+			"_real_time": 82.47727891156462,
+			"_pitch": 1600,
+			"_time": 178.70077097505668,
+			"_lineIndex": 3,
+			"_lineLayer": 3,
+			"_type": 1,
+			"_cutDirection": 3,
+			"description":"3,3"
+		},{
+			"_x": 457,
+			"_real_time": 82.68625850340136,
+			"_pitch": 1600,
+			"_time": 179.15356009070294,
+			"_lineIndex": 2,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 0,
+			"description":"2,2"
+		},{
+			"_x": 457,
+			"_real_time": 82.82557823129251,
+			"_pitch": 1600,
+			"_time": 179.45541950113378,
+			"_lineIndex": 3,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 1,
+			"description":"2,3"
+		},{
+			"_x": 459,
+			"_real_time": 82.94167800453515,
+			"_pitch": 1600,
+			"_time": 179.70696900982617,
+			"_lineIndex": 1,
+			"_lineLayer": 2,
+			"_type": 0,
+			"_cutDirection": 2,
+			"description":"2,1"
+		},{
+			"_x": 459,
+			"_real_time": 83.4292970521542,
+			"_pitch": 1600,
+			"_time": 180.7634769463341,
+			"_lineIndex": 1,
+			"_lineLayer": 0,
+			"_type": 0,
+			"_cutDirection": 3,
+			"description":"0,1"
+		},{
+			"_x": 461,
+			"_real_time": 84.0562358276644,
+			"_pitch": 1600,
+			"_time": 182.12184429327286,
+			"_lineIndex": 2,
+			"_lineLayer": 2,
+			"_type": 0,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 461,
+			"_real_time": 84.0562358276644,
+			"_pitch": 1600,
+			"_time": 182.12184429327286,
+			"_lineIndex": 3,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 461,
+			"_real_time": 84.52063492063492,
+			"_pitch": 1600,
+			"_time": 183.12804232804234,
+			"_lineIndex": 2,
+			"_lineLayer": 0,
+			"_type": 0,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 461,
+			"_real_time": 84.52063492063492,
+			"_pitch": 1600,
+			"_time": 183.12804232804234,
+			"_lineIndex": 3,
+			"_lineLayer": 0,
+			"_type": 1,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 466,
+			"_real_time": 85.26367346938775,
+			"_pitch": 1600,
+			"_time": 184.73795918367347,
+			"_lineIndex": 0,
+			"_lineLayer": 2,
+			"_type": 0,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 466,
+			"_real_time": 85.26367346938775,
+			"_pitch": 1600,
+			"_time": 184.73795918367347,
+			"_lineIndex": 1,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 466,
+			"_real_time": 85.91383219954649,
+			"_pitch": 1600,
+			"_time": 186.14663643235073,
+			"_lineIndex": 0,
+			"_lineLayer": 0,
+			"_type": 0,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 466,
+			"_real_time": 85.91383219954649,
+			"_pitch": 1600,
+			"_time": 186.14663643235073,
+			"_lineIndex": 1,
+			"_lineLayer": 0,
+			"_type": 1,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 471,
+			"_real_time": 86.61043083900226,
+			"_pitch": 1600,
+			"_time": 187.6559334845049,
+			"_lineIndex": 2,
+			"_lineLayer": 2,
+			"_type": 0,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 471,
+			"_real_time": 86.61043083900226,
+			"_pitch": 1600,
+			"_time": 187.6559334845049,
+			"_lineIndex": 3,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 471,
+			"_real_time": 87.02839002267574,
+			"_pitch": 1600,
+			"_time": 188.56151171579742,
+			"_lineIndex": 2,
+			"_lineLayer": 0,
+			"_type": 0,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 471,
+			"_real_time": 87.02839002267574,
+			"_pitch": 1600,
+			"_time": 188.56151171579742,
+			"_lineIndex": 3,
+			"_lineLayer": 0,
+			"_type": 1,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 476,
+			"_real_time": 87.21414965986395,
+			"_pitch": 1600,
+			"_time": 188.96399092970523,
+			"_lineIndex": 0,
+			"_lineLayer": 3,
+			"_type": 0,
+			"_cutDirection": 3,
+			"description":"3,0"
+		},{
+			"_x": 476,
+			"_real_time": 87.44634920634921,
+			"_pitch": 1600,
+			"_time": 189.46708994708996,
+			"_lineIndex": 0,
+			"_lineLayer": 1,
+			"_type": 0,
+			"_cutDirection": 2,
+			"description":"1,0"
+		},{
+			"_x": 478,
+			"_real_time": 87.67854875283447,
+			"_pitch": 1600,
+			"_time": 189.9701889644747,
+			"_lineIndex": 0,
+			"_lineLayer": 0,
+			"_type": 0,
+			"_cutDirection": 6,
+			"description":"0,0"
+		},{
+			"_x": 478,
+			"_real_time": 87.77142857142857,
+			"_pitch": 1600,
+			"_time": 190.17142857142858,
+			"_lineIndex": 1,
+			"_lineLayer": 1,
+			"_type": 0,
+			"_cutDirection": 5,
+			"description":"1,1"
+		},{
+			"_x": 480,
+			"_real_time": 88.37514739229024,
+			"_pitch": 1600,
+			"_time": 191.47948601662884,
+			"_lineIndex": 2,
+			"_lineLayer": 2,
+			"_type": 0,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 480,
+			"_real_time": 88.37514739229024,
+			"_pitch": 1600,
+			"_time": 191.47948601662884,
+			"_lineIndex": 3,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 480,
+			"_real_time": 88.81632653061224,
+			"_pitch": 1600,
+			"_time": 192.43537414965985,
+			"_lineIndex": 2,
+			"_lineLayer": 0,
+			"_type": 0,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 480,
+			"_real_time": 88.81632653061224,
+			"_pitch": 1600,
+			"_time": 192.43537414965985,
+			"_lineIndex": 3,
+			"_lineLayer": 0,
+			"_type": 1,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 485,
+			"_real_time": 89.42004535147392,
+			"_pitch": 1600,
+			"_time": 193.74343159486017,
+			"_lineIndex": 0,
+			"_lineLayer": 2,
+			"_type": 0,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 485,
+			"_real_time": 89.42004535147392,
+			"_pitch": 1600,
+			"_time": 193.74343159486017,
+			"_lineIndex": 1,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 485,
+			"_real_time": 89.83800453514739,
+			"_pitch": 1600,
+			"_time": 194.64900982615268,
+			"_lineIndex": 0,
+			"_lineLayer": 0,
+			"_type": 0,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 485,
+			"_real_time": 89.83800453514739,
+			"_pitch": 1600,
+			"_time": 194.64900982615268,
+			"_lineIndex": 1,
+			"_lineLayer": 0,
+			"_type": 1,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 490,
+			"_real_time": 90.39528344671201,
+			"_pitch": 1600,
+			"_time": 195.85644746787602,
+			"_lineIndex": 0,
+			"_lineLayer": 2,
+			"_type": 0,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 490,
+			"_real_time": 90.39528344671201,
+			"_pitch": 1600,
+			"_time": 195.85644746787602,
+			"_lineIndex": 1,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 490,
+			"_real_time": 91.06866213151928,
+			"_pitch": 1600,
+			"_time": 197.31543461829176,
+			"_lineIndex": 0,
+			"_lineLayer": 0,
+			"_type": 0,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 490,
+			"_real_time": 91.06866213151928,
+			"_pitch": 1600,
+			"_time": 197.31543461829176,
+			"_lineIndex": 1,
+			"_lineLayer": 0,
+			"_type": 1,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 550,
+			"_real_time": 101.03002267573696,
+			"_pitch": 1600,
+			"_time": 218.89838246409673,
+			"_lineIndex": 0,
+			"_lineLayer": 3,
+			"_type": 0,
+			"_cutDirection": 4,
+			"description":"3,0"
+		},{
+			"_x": 550,
+			"_real_time": 101.1461224489796,
+			"_pitch": 1600,
+			"_time": 219.14993197278912,
+			"_lineIndex": 0,
+			"_lineLayer": 0,
+			"_type": 0,
+			"_cutDirection": 7,
+			"description":"0,0"
+		},{
+			"_x": 552,
+			"_real_time": 101.72662131519274,
+			"_pitch": 1600,
+			"_time": 220.40767951625097,
+			"_lineIndex": 0,
+			"_lineLayer": 2,
+			"_type": 0,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 552,
+			"_real_time": 101.72662131519274,
+			"_pitch": 1600,
+			"_time": 220.40767951625097,
+			"_lineIndex": 1,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 552,
+			"_real_time": 102.07492063492063,
+			"_pitch": 1600,
+			"_time": 221.16232804232803,
+			"_lineIndex": 0,
+			"_lineLayer": 0,
+			"_type": 0,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 552,
+			"_real_time": 102.07492063492063,
+			"_pitch": 1600,
+			"_time": 221.16232804232803,
+			"_lineIndex": 1,
+			"_lineLayer": 0,
+			"_type": 1,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 557,
+			"_real_time": 102.53931972789115,
+			"_pitch": 1600,
+			"_time": 222.1685260770975,
+			"_lineIndex": 0,
+			"_lineLayer": 2,
+			"_type": 0,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 557,
+			"_real_time": 102.53931972789115,
+			"_pitch": 1600,
+			"_time": 222.1685260770975,
+			"_lineIndex": 1,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 557,
+			"_real_time": 102.98049886621315,
+			"_pitch": 1600,
+			"_time": 223.1244142101285,
+			"_lineIndex": 0,
+			"_lineLayer": 0,
+			"_type": 0,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 557,
+			"_real_time": 102.98049886621315,
+			"_pitch": 1600,
+			"_time": 223.1244142101285,
+			"_lineIndex": 1,
+			"_lineLayer": 0,
+			"_type": 1,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 562,
+			"_real_time": 103.1198185941043,
+			"_pitch": 1600,
+			"_time": 223.42627362055933,
+			"_lineIndex": 3,
+			"_lineLayer": 1,
+			"_type": 1,
+			"_cutDirection": 2,
+			"description":"1,3"
+		},{
+			"_x": 562,
+			"_real_time": 103.23591836734694,
+			"_pitch": 1600,
+			"_time": 223.67782312925172,
+			"_lineIndex": 3,
+			"_lineLayer": 1,
+			"_type": 1,
+			"_cutDirection": 3,
+			"description":"1,3"
+		},{
+			"_x": 564,
+			"_real_time": 103.70031746031746,
+			"_pitch": 1600,
+			"_time": 224.68402116402117,
+			"_lineIndex": 0,
+			"_lineLayer": 2,
+			"_type": 0,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 564,
+			"_real_time": 103.70031746031746,
+			"_pitch": 1600,
+			"_time": 224.68402116402117,
+			"_lineIndex": 1,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 564,
+			"_real_time": 103.9092970521542,
+			"_pitch": 1600,
+			"_time": 225.13681027966743,
+			"_lineIndex": 0,
+			"_lineLayer": 0,
+			"_type": 0,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 564,
+			"_real_time": 103.9092970521542,
+			"_pitch": 1600,
+			"_time": 225.13681027966743,
+			"_lineIndex": 1,
+			"_lineLayer": 0,
+			"_type": 1,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 569,
+			"_real_time": 104.37369614512471,
+			"_pitch": 1600,
+			"_time": 226.14300831443688,
+			"_lineIndex": 0,
+			"_lineLayer": 2,
+			"_type": 0,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 569,
+			"_real_time": 104.37369614512471,
+			"_pitch": 1600,
+			"_time": 226.14300831443688,
+			"_lineIndex": 1,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 569,
+			"_real_time": 104.72199546485261,
+			"_pitch": 1600,
+			"_time": 226.897656840514,
+			"_lineIndex": 0,
+			"_lineLayer": 0,
+			"_type": 0,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 569,
+			"_real_time": 104.72199546485261,
+			"_pitch": 1600,
+			"_time": 226.897656840514,
+			"_lineIndex": 1,
+			"_lineLayer": 0,
+			"_type": 1,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 574,
+			"_real_time": 105.18639455782314,
+			"_pitch": 1600,
+			"_time": 227.90385487528346,
+			"_lineIndex": 0,
+			"_lineLayer": 2,
+			"_type": 0,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 574,
+			"_real_time": 105.18639455782314,
+			"_pitch": 1600,
+			"_time": 227.90385487528346,
+			"_lineIndex": 1,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 574,
+			"_real_time": 105.41859410430838,
+			"_pitch": 1600,
+			"_time": 228.40695389266816,
+			"_lineIndex": 0,
+			"_lineLayer": 0,
+			"_type": 0,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 574,
+			"_real_time": 105.41859410430838,
+			"_pitch": 1600,
+			"_time": 228.40695389266816,
+			"_lineIndex": 1,
+			"_lineLayer": 0,
+			"_type": 1,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 579,
+			"_real_time": 105.53469387755102,
+			"_pitch": 1600,
+			"_time": 228.65850340136055,
+			"_lineIndex": 2,
+			"_lineLayer": 3,
+			"_type": 1,
+			"_cutDirection": 0,
+			"description":"3,2"
+		},{
+			"_x": 579,
+			"_real_time": 105.65079365079364,
+			"_pitch": 1600,
+			"_time": 228.91005291005288,
+			"_lineIndex": 3,
+			"_lineLayer": 1,
+			"_type": 1,
+			"_cutDirection": 1,
+			"description":"1,3"
+		},{
+			"_x": 581,
+			"_real_time": 105.99909297052154,
+			"_pitch": 1600,
+			"_time": 229.66470143613003,
+			"_lineIndex": 2,
+			"_lineLayer": 2,
+			"_type": 0,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 581,
+			"_real_time": 105.99909297052154,
+			"_pitch": 1600,
+			"_time": 229.66470143613003,
+			"_lineIndex": 3,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 581,
+			"_real_time": 106.34739229024943,
+			"_pitch": 1600,
+			"_time": 230.41934996220712,
+			"_lineIndex": 2,
+			"_lineLayer": 0,
+			"_type": 0,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 581,
+			"_real_time": 106.34739229024943,
+			"_pitch": 1600,
+			"_time": 230.41934996220712,
+			"_lineIndex": 3,
+			"_lineLayer": 0,
+			"_type": 1,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 586,
+			"_real_time": 106.90467120181405,
+			"_pitch": 1600,
+			"_time": 231.62678760393044,
+			"_lineIndex": 2,
+			"_lineLayer": 2,
+			"_type": 0,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 586,
+			"_real_time": 106.90467120181405,
+			"_pitch": 1600,
+			"_time": 231.62678760393044,
+			"_lineIndex": 3,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 586,
+			"_real_time": 107.25297052154195,
+			"_pitch": 1600,
+			"_time": 232.38143613000756,
+			"_lineIndex": 2,
+			"_lineLayer": 0,
+			"_type": 0,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 586,
+			"_real_time": 107.25297052154195,
+			"_pitch": 1600,
+			"_time": 232.38143613000756,
+			"_lineIndex": 3,
+			"_lineLayer": 0,
+			"_type": 1,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 591,
+			"_real_time": 107.50839002267574,
+			"_pitch": 1600,
+			"_time": 232.9348450491308,
+			"_lineIndex": 3,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 4,
+			"description":"2,3"
+		},{
+			"_x": 591,
+			"_real_time": 107.60126984126984,
+			"_pitch": 1600,
+			"_time": 233.13608465608465,
+			"_lineIndex": 2,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 7,
+			"description":"2,2"
+		},{
+			"_x": 593,
+			"_real_time": 107.71736961451248,
+			"_pitch": 1600,
+			"_time": 233.38763416477704,
+			"_lineIndex": 0,
+			"_lineLayer": 1,
+			"_type": 0,
+			"_cutDirection": 8,
+			"description":"1,0"
+		},{
+			"_x": 593,
+			"_real_time": 107.8334693877551,
+			"_pitch": 1600,
+			"_time": 233.6391836734694,
+			"_lineIndex": 0,
+			"_lineLayer": 1,
+			"_type": 0,
+			"_cutDirection": 8,
+			"description":"1,0"
+		},{
+			"_x": 595,
+			"_real_time": 108.18176870748299,
+			"_pitch": 1600,
+			"_time": 234.39383219954647,
+			"_lineIndex": 2,
+			"_lineLayer": 2,
+			"_type": 0,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 595,
+			"_real_time": 108.18176870748299,
+			"_pitch": 1600,
+			"_time": 234.39383219954647,
+			"_lineIndex": 3,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 595,
+			"_real_time": 108.41396825396825,
+			"_pitch": 1600,
+			"_time": 234.8969312169312,
+			"_lineIndex": 2,
+			"_lineLayer": 0,
+			"_type": 0,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 595,
+			"_real_time": 108.41396825396825,
+			"_pitch": 1600,
+			"_time": 234.8969312169312,
+			"_lineIndex": 3,
+			"_lineLayer": 0,
+			"_type": 1,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 600,
+			"_real_time": 108.99446712018141,
+			"_pitch": 1600,
+			"_time": 236.15467876039307,
+			"_lineIndex": 2,
+			"_lineLayer": 2,
+			"_type": 0,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 600,
+			"_real_time": 108.99446712018141,
+			"_pitch": 1600,
+			"_time": 236.15467876039307,
+			"_lineIndex": 3,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 600,
+			"_real_time": 109.22666666666667,
+			"_pitch": 1600,
+			"_time": 236.6577777777778,
+			"_lineIndex": 2,
+			"_lineLayer": 0,
+			"_type": 0,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 600,
+			"_real_time": 109.22666666666667,
+			"_pitch": 1600,
+			"_time": 236.6577777777778,
+			"_lineIndex": 3,
+			"_lineLayer": 0,
+			"_type": 1,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 605,
+			"_real_time": 109.3427664399093,
+			"_pitch": 1600,
+			"_time": 236.90932728647016,
+			"_lineIndex": 0,
+			"_lineLayer": 3,
+			"_type": 0,
+			"_cutDirection": 4,
+			"description":"3,0"
+		},{
+			"_x": 605,
+			"_real_time": 109.45886621315192,
+			"_pitch": 1600,
+			"_time": 237.1608767951625,
+			"_lineIndex": 0,
+			"_lineLayer": 1,
+			"_type": 0,
+			"_cutDirection": 7,
+			"description":"1,0"
+		},{
+			"_x": 607,
+			"_real_time": 109.57496598639456,
+			"_pitch": 1600,
+			"_time": 237.4124263038549,
+			"_lineIndex": 1,
+			"_lineLayer": 1,
+			"_type": 0,
+			"_cutDirection": 2,
+			"description":"1,1"
+		},{
+			"_x": 607,
+			"_real_time": 109.69106575963718,
+			"_pitch": 1600,
+			"_time": 237.66397581254722,
+			"_lineIndex": 1,
+			"_lineLayer": 1,
+			"_type": 0,
+			"_cutDirection": 3,
+			"description":"1,1"
+		},{
+			"_x": 609,
+			"_real_time": 109.80716553287982,
+			"_pitch": 1600,
+			"_time": 237.9155253212396,
+			"_lineIndex": 3,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 5,
+			"description":"2,3"
+		},{
+			"_x": 609,
+			"_real_time": 109.92326530612245,
+			"_pitch": 1600,
+			"_time": 238.16707482993195,
+			"_lineIndex": 2,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 6,
+			"description":"2,2"
+		},{
+			"_x": 611,
+			"_real_time": 110.03936507936508,
+			"_pitch": 1600,
+			"_time": 238.41862433862434,
+			"_lineIndex": 0,
+			"_lineLayer": 0,
+			"_type": 0,
+			"_cutDirection": 5,
+			"description":"0,0"
+		},{
+			"_x": 611,
+			"_real_time": 110.13224489795918,
+			"_pitch": 1600,
+			"_time": 238.61986394557823,
+			"_lineIndex": 1,
+			"_lineLayer": 3,
+			"_type": 0,
+			"_cutDirection": 6,
+			"description":"3,1"
+		},{
+			"_x": 613,
+			"_real_time": 110.27156462585035,
+			"_pitch": 1600,
+			"_time": 238.92172335600907,
+			"_lineIndex": 3,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 0,
+			"description":"2,3"
+		},{
+			"_x": 613,
+			"_real_time": 110.36444444444444,
+			"_pitch": 1600,
+			"_time": 239.12296296296296,
+			"_lineIndex": 2,
+			"_lineLayer": 3,
+			"_type": 1,
+			"_cutDirection": 1,
+			"description":"3,2"
+		},{
+			"_x": 615,
+			"_real_time": 110.73596371882086,
+			"_pitch": 1600,
+			"_time": 239.92792139077852,
+			"_lineIndex": 0,
+			"_lineLayer": 2,
+			"_type": 0,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 615,
+			"_real_time": 110.73596371882086,
+			"_pitch": 1600,
+			"_time": 239.92792139077852,
+			"_lineIndex": 1,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 615,
+			"_real_time": 110.96816326530612,
+			"_pitch": 1600,
+			"_time": 240.43102040816328,
+			"_lineIndex": 0,
+			"_lineLayer": 0,
+			"_type": 0,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 615,
+			"_real_time": 110.96816326530612,
+			"_pitch": 1600,
+			"_time": 240.43102040816328,
+			"_lineIndex": 1,
+			"_lineLayer": 0,
+			"_type": 1,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 620,
+			"_real_time": 111.43256235827664,
+			"_pitch": 1600,
+			"_time": 241.4372184429327,
+			"_lineIndex": 2,
+			"_lineLayer": 2,
+			"_type": 0,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 620,
+			"_real_time": 111.43256235827664,
+			"_pitch": 1600,
+			"_time": 241.4372184429327,
+			"_lineIndex": 3,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 620,
+			"_real_time": 111.6647619047619,
+			"_pitch": 1600,
+			"_time": 241.94031746031746,
+			"_lineIndex": 2,
+			"_lineLayer": 0,
+			"_type": 0,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 620,
+			"_real_time": 111.6647619047619,
+			"_pitch": 1600,
+			"_time": 241.94031746031746,
+			"_lineIndex": 3,
+			"_lineLayer": 0,
+			"_type": 1,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 625,
+			"_real_time": 112.1059410430839,
+			"_pitch": 1600,
+			"_time": 242.89620559334847,
+			"_lineIndex": 2,
+			"_lineLayer": 2,
+			"_type": 0,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 625,
+			"_real_time": 112.1059410430839,
+			"_pitch": 1600,
+			"_time": 242.89620559334847,
+			"_lineIndex": 3,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 625,
+			"_real_time": 112.36136054421769,
+			"_pitch": 1600,
+			"_time": 243.44961451247167,
+			"_lineIndex": 2,
+			"_lineLayer": 0,
+			"_type": 0,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 625,
+			"_real_time": 112.36136054421769,
+			"_pitch": 1600,
+			"_time": 243.44961451247167,
+			"_lineIndex": 3,
+			"_lineLayer": 0,
+			"_type": 1,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 630,
+			"_real_time": 112.80253968253969,
+			"_pitch": 1600,
+			"_time": 244.40550264550265,
+			"_lineIndex": 2,
+			"_lineLayer": 2,
+			"_type": 0,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 630,
+			"_real_time": 112.80253968253969,
+			"_pitch": 1600,
+			"_time": 244.40550264550265,
+			"_lineIndex": 3,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 630,
+			"_real_time": 113.03473922902495,
+			"_pitch": 1600,
+			"_time": 244.90860166288738,
+			"_lineIndex": 2,
+			"_lineLayer": 0,
+			"_type": 0,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 630,
+			"_real_time": 113.03473922902495,
+			"_pitch": 1600,
+			"_time": 244.90860166288738,
+			"_lineIndex": 3,
+			"_lineLayer": 0,
+			"_type": 1,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 635,
+			"_real_time": 113.15083900226757,
+			"_pitch": 1600,
+			"_time": 245.16015117157974,
+			"_lineIndex": 1,
+			"_lineLayer": 1,
+			"_type": 0,
+			"_cutDirection": 8,
+			"description":"1,1"
+		},{
+			"_x": 635,
+			"_real_time": 113.2669387755102,
+			"_pitch": 1600,
+			"_time": 245.4117006802721,
+			"_lineIndex": 1,
+			"_lineLayer": 1,
+			"_type": 0,
+			"_cutDirection": 8,
+			"description":"1,1"
+		},{
+			"_x": 637,
+			"_real_time": 113.59201814058957,
+			"_pitch": 1600,
+			"_time": 246.11603930461075,
+			"_lineIndex": 0,
+			"_lineLayer": 2,
+			"_type": 0,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 637,
+			"_real_time": 113.59201814058957,
+			"_pitch": 1600,
+			"_time": 246.11603930461075,
+			"_lineIndex": 1,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 637,
+			"_real_time": 113.96353741496598,
+			"_pitch": 1600,
+			"_time": 246.92099773242631,
+			"_lineIndex": 0,
+			"_lineLayer": 0,
+			"_type": 0,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 637,
+			"_real_time": 113.96353741496598,
+			"_pitch": 1600,
+			"_time": 246.92099773242631,
+			"_lineIndex": 1,
+			"_lineLayer": 0,
+			"_type": 1,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 642,
+			"_real_time": 114.31183673469388,
+			"_pitch": 1600,
+			"_time": 247.6756462585034,
+			"_lineIndex": 2,
+			"_lineLayer": 2,
+			"_type": 0,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 642,
+			"_real_time": 114.31183673469388,
+			"_pitch": 1600,
+			"_time": 247.6756462585034,
+			"_lineIndex": 3,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 642,
+			"_real_time": 114.63691609977325,
+			"_pitch": 1600,
+			"_time": 248.37998488284202,
+			"_lineIndex": 2,
+			"_lineLayer": 0,
+			"_type": 0,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 642,
+			"_real_time": 114.63691609977325,
+			"_pitch": 1600,
+			"_time": 248.37998488284202,
+			"_lineIndex": 3,
+			"_lineLayer": 0,
+			"_type": 1,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 647,
+			"_real_time": 114.98521541950113,
+			"_pitch": 1600,
+			"_time": 249.13463340891911,
+			"_lineIndex": 2,
+			"_lineLayer": 2,
+			"_type": 0,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 647,
+			"_real_time": 114.98521541950113,
+			"_pitch": 1600,
+			"_time": 249.13463340891911,
+			"_lineIndex": 3,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 647,
+			"_real_time": 115.24063492063492,
+			"_pitch": 1600,
+			"_time": 249.68804232804231,
+			"_lineIndex": 2,
+			"_lineLayer": 0,
+			"_type": 0,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 647,
+			"_real_time": 115.24063492063492,
+			"_pitch": 1600,
+			"_time": 249.68804232804231,
+			"_lineIndex": 3,
+			"_lineLayer": 0,
+			"_type": 1,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 652,
+			"_real_time": 115.56571428571428,
+			"_pitch": 1600,
+			"_time": 250.39238095238096,
+			"_lineIndex": 0,
+			"_lineLayer": 2,
+			"_type": 0,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 652,
+			"_real_time": 115.56571428571428,
+			"_pitch": 1600,
+			"_time": 250.39238095238096,
+			"_lineIndex": 1,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 652,
+			"_real_time": 115.79791383219954,
+			"_pitch": 1600,
+			"_time": 250.89547996976566,
+			"_lineIndex": 0,
+			"_lineLayer": 0,
+			"_type": 0,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 652,
+			"_real_time": 115.79791383219954,
+			"_pitch": 1600,
+			"_time": 250.89547996976566,
+			"_lineIndex": 1,
+			"_lineLayer": 0,
+			"_type": 1,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 657,
+			"_real_time": 116.3784126984127,
+			"_pitch": 1600,
+			"_time": 252.1532275132275,
+			"_lineIndex": 0,
+			"_lineLayer": 2,
+			"_type": 0,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 657,
+			"_real_time": 116.3784126984127,
+			"_pitch": 1600,
+			"_time": 252.1532275132275,
+			"_lineIndex": 1,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 657,
+			"_real_time": 116.72671201814059,
+			"_pitch": 1600,
+			"_time": 252.90787603930463,
+			"_lineIndex": 0,
+			"_lineLayer": 0,
+			"_type": 0,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 657,
+			"_real_time": 116.72671201814059,
+			"_pitch": 1600,
+			"_time": 252.90787603930463,
+			"_lineIndex": 1,
+			"_lineLayer": 0,
+			"_type": 1,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 662,
+			"_real_time": 117.19111111111111,
+			"_pitch": 1600,
+			"_time": 253.91407407407408,
+			"_lineIndex": 2,
+			"_lineLayer": 2,
+			"_type": 0,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 662,
+			"_real_time": 117.19111111111111,
+			"_pitch": 1600,
+			"_time": 253.91407407407408,
+			"_lineIndex": 3,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 662,
+			"_real_time": 117.539410430839,
+			"_pitch": 1600,
+			"_time": 254.66872260015114,
+			"_lineIndex": 2,
+			"_lineLayer": 0,
+			"_type": 0,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 662,
+			"_real_time": 117.539410430839,
+			"_pitch": 1600,
+			"_time": 254.66872260015114,
+			"_lineIndex": 3,
+			"_lineLayer": 0,
+			"_type": 1,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 667,
+			"_real_time": 117.8877097505669,
+			"_pitch": 1600,
+			"_time": 255.4233711262283,
+			"_lineIndex": 2,
+			"_lineLayer": 2,
+			"_type": 0,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 667,
+			"_real_time": 117.8877097505669,
+			"_pitch": 1600,
+			"_time": 255.4233711262283,
+			"_lineIndex": 3,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 667,
+			"_real_time": 118.11990929705216,
+			"_pitch": 1600,
+			"_time": 255.92647014361302,
+			"_lineIndex": 2,
+			"_lineLayer": 0,
+			"_type": 0,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 667,
+			"_real_time": 118.11990929705216,
+			"_pitch": 1600,
+			"_time": 255.92647014361302,
+			"_lineIndex": 3,
+			"_lineLayer": 0,
+			"_type": 1,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 672,
+			"_real_time": 118.46820861678005,
+			"_pitch": 1600,
+			"_time": 256.6811186696901,
+			"_lineIndex": 2,
+			"_lineLayer": 2,
+			"_type": 0,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 672,
+			"_real_time": 118.46820861678005,
+			"_pitch": 1600,
+			"_time": 256.6811186696901,
+			"_lineIndex": 3,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 672,
+			"_real_time": 118.67718820861678,
+			"_pitch": 1600,
+			"_time": 257.13390778533636,
+			"_lineIndex": 2,
+			"_lineLayer": 0,
+			"_type": 0,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 672,
+			"_real_time": 118.67718820861678,
+			"_pitch": 1600,
+			"_time": 257.13390778533636,
+			"_lineIndex": 3,
+			"_lineLayer": 0,
+			"_type": 1,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 677,
+			"_real_time": 118.90938775510205,
+			"_pitch": 1600,
+			"_time": 257.6370068027211,
+			"_lineIndex": 2,
+			"_lineLayer": 0,
+			"_type": 1,
+			"_cutDirection": 0,
+			"description":"0,2"
+		},{
+			"_x": 677,
+			"_real_time": 119.02548752834467,
+			"_pitch": 1600,
+			"_time": 257.8885563114135,
+			"_lineIndex": 3,
+			"_lineLayer": 3,
+			"_type": 1,
+			"_cutDirection": 1,
+			"description":"3,3"
+		},{
+			"_x": 679,
+			"_real_time": 119.51310657596372,
+			"_pitch": 1600,
+			"_time": 258.9450642479214,
+			"_lineIndex": 2,
+			"_lineLayer": 2,
+			"_type": 0,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 679,
+			"_real_time": 119.51310657596372,
+			"_pitch": 1600,
+			"_time": 258.9450642479214,
+			"_lineIndex": 3,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 679,
+			"_real_time": 119.72208616780046,
+			"_pitch": 1600,
+			"_time": 259.39785336356766,
+			"_lineIndex": 2,
+			"_lineLayer": 0,
+			"_type": 0,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 679,
+			"_real_time": 119.72208616780046,
+			"_pitch": 1600,
+			"_time": 259.39785336356766,
+			"_lineIndex": 3,
+			"_lineLayer": 0,
+			"_type": 1,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 684,
+			"_real_time": 120.07038548752834,
+			"_pitch": 1600,
+			"_time": 260.1525018896447,
+			"_lineIndex": 2,
+			"_lineLayer": 2,
+			"_type": 0,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 684,
+			"_real_time": 120.07038548752834,
+			"_pitch": 1600,
+			"_time": 260.1525018896447,
+			"_lineIndex": 3,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 684,
+			"_real_time": 120.3025850340136,
+			"_pitch": 1600,
+			"_time": 260.6556009070295,
+			"_lineIndex": 2,
+			"_lineLayer": 0,
+			"_type": 0,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 684,
+			"_real_time": 120.3025850340136,
+			"_pitch": 1600,
+			"_time": 260.6556009070295,
+			"_lineIndex": 3,
+			"_lineLayer": 0,
+			"_type": 1,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 689,
+			"_real_time": 120.76698412698413,
+			"_pitch": 1600,
+			"_time": 261.66179894179896,
+			"_lineIndex": 2,
+			"_lineLayer": 2,
+			"_type": 0,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 689,
+			"_real_time": 120.76698412698413,
+			"_pitch": 1600,
+			"_time": 261.66179894179896,
+			"_lineIndex": 3,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 689,
+			"_real_time": 120.99918367346939,
+			"_pitch": 1600,
+			"_time": 262.1648979591837,
+			"_lineIndex": 2,
+			"_lineLayer": 0,
+			"_type": 0,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 689,
+			"_real_time": 120.99918367346939,
+			"_pitch": 1600,
+			"_time": 262.1648979591837,
+			"_lineIndex": 3,
+			"_lineLayer": 0,
+			"_type": 1,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 694,
+			"_real_time": 121.34748299319727,
+			"_pitch": 1600,
+			"_time": 262.91954648526075,
+			"_lineIndex": 2,
+			"_lineLayer": 2,
+			"_type": 0,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 694,
+			"_real_time": 121.34748299319727,
+			"_pitch": 1600,
+			"_time": 262.91954648526075,
+			"_lineIndex": 3,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 694,
+			"_real_time": 121.69578231292518,
+			"_pitch": 1600,
+			"_time": 263.6741950113379,
+			"_lineIndex": 2,
+			"_lineLayer": 0,
+			"_type": 0,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 694,
+			"_real_time": 121.69578231292518,
+			"_pitch": 1600,
+			"_time": 263.6741950113379,
+			"_lineIndex": 3,
+			"_lineLayer": 0,
+			"_type": 1,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 699,
+			"_real_time": 121.8118820861678,
+			"_pitch": 1600,
+			"_time": 263.9257445200302,
+			"_lineIndex": 3,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 7,
+			"description":"2,3"
+		},{
+			"_x": 699,
+			"_real_time": 121.9047619047619,
+			"_pitch": 1600,
+			"_time": 264.1269841269841,
+			"_lineIndex": 3,
+			"_lineLayer": 1,
+			"_type": 1,
+			"_cutDirection": 4,
+			"description":"1,3"
+		},{
+			"_x": 701,
+			"_real_time": 122.04408163265306,
+			"_pitch": 1600,
+			"_time": 264.42884353741493,
+			"_lineIndex": 0,
+			"_lineLayer": 0,
+			"_type": 0,
+			"_cutDirection": 5,
+			"description":"0,0"
+		},{
+			"_x": 701,
+			"_real_time": 122.27628117913832,
+			"_pitch": 1600,
+			"_time": 264.9319425547997,
+			"_lineIndex": 1,
+			"_lineLayer": 2,
+			"_type": 0,
+			"_cutDirection": 6,
+			"description":"2,1"
+		},{
+			"_x": 703,
+			"_real_time": 122.60136054421768,
+			"_pitch": 1600,
+			"_time": 265.63628117913834,
+			"_lineIndex": 2,
+			"_lineLayer": 2,
+			"_type": 0,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 703,
+			"_real_time": 122.60136054421768,
+			"_pitch": 1600,
+			"_time": 265.63628117913834,
+			"_lineIndex": 3,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 703,
+			"_real_time": 122.83356009070295,
+			"_pitch": 1600,
+			"_time": 266.13938019652306,
+			"_lineIndex": 2,
+			"_lineLayer": 0,
+			"_type": 0,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 703,
+			"_real_time": 122.83356009070295,
+			"_pitch": 1600,
+			"_time": 266.13938019652306,
+			"_lineIndex": 3,
+			"_lineLayer": 0,
+			"_type": 1,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 708,
+			"_real_time": 123.18185941043085,
+			"_pitch": 1600,
+			"_time": 266.8940287226002,
+			"_lineIndex": 2,
+			"_lineLayer": 2,
+			"_type": 0,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 708,
+			"_real_time": 123.18185941043085,
+			"_pitch": 1600,
+			"_time": 266.8940287226002,
+			"_lineIndex": 3,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 708,
+			"_real_time": 123.53015873015873,
+			"_pitch": 1600,
+			"_time": 267.64867724867725,
+			"_lineIndex": 2,
+			"_lineLayer": 0,
+			"_type": 0,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 708,
+			"_real_time": 123.53015873015873,
+			"_pitch": 1600,
+			"_time": 267.64867724867725,
+			"_lineIndex": 3,
+			"_lineLayer": 0,
+			"_type": 1,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 713,
+			"_real_time": 123.99455782312926,
+			"_pitch": 1600,
+			"_time": 268.65487528344676,
+			"_lineIndex": 2,
+			"_lineLayer": 2,
+			"_type": 0,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 713,
+			"_real_time": 123.99455782312926,
+			"_pitch": 1600,
+			"_time": 268.65487528344676,
+			"_lineIndex": 3,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 713,
+			"_real_time": 124.22675736961452,
+			"_pitch": 1600,
+			"_time": 269.1579743008315,
+			"_lineIndex": 2,
+			"_lineLayer": 0,
+			"_type": 0,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 713,
+			"_real_time": 124.22675736961452,
+			"_pitch": 1600,
+			"_time": 269.1579743008315,
+			"_lineIndex": 3,
+			"_lineLayer": 0,
+			"_type": 1,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 718,
+			"_real_time": 124.34285714285714,
+			"_pitch": 1600,
+			"_time": 269.40952380952376,
+			"_lineIndex": 1,
+			"_lineLayer": 3,
+			"_type": 0,
+			"_cutDirection": 4,
+			"description":"3,1"
+		},{
+			"_x": 718,
+			"_real_time": 124.45895691609978,
+			"_pitch": 1600,
+			"_time": 269.66107331821615,
+			"_lineIndex": 1,
+			"_lineLayer": 3,
+			"_type": 0,
+			"_cutDirection": 7,
+			"description":"3,1"
+		},{
+			"_x": 720,
+			"_real_time": 124.5750566893424,
+			"_pitch": 1600,
+			"_time": 269.91262282690855,
+			"_lineIndex": 3,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 7,
+			"description":"2,3"
+		},{
+			"_x": 720,
+			"_real_time": 124.6679365079365,
+			"_pitch": 1600,
+			"_time": 270.1138624338624,
+			"_lineIndex": 2,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 4,
+			"description":"2,2"
+		},{
+			"_x": 722,
+			"_real_time": 125.03945578231293,
+			"_pitch": 1600,
+			"_time": 270.918820861678,
+			"_lineIndex": 2,
+			"_lineLayer": 2,
+			"_type": 0,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 722,
+			"_real_time": 125.03945578231293,
+			"_pitch": 1600,
+			"_time": 270.918820861678,
+			"_lineIndex": 3,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 722,
+			"_real_time": 125.27165532879819,
+			"_pitch": 1600,
+			"_time": 271.4219198790627,
+			"_lineIndex": 2,
+			"_lineLayer": 0,
+			"_type": 0,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 722,
+			"_real_time": 125.27165532879819,
+			"_pitch": 1600,
+			"_time": 271.4219198790627,
+			"_lineIndex": 3,
+			"_lineLayer": 0,
+			"_type": 1,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 727,
+			"_real_time": 125.38775510204081,
+			"_pitch": 1600,
+			"_time": 271.67346938775506,
+			"_lineIndex": 0,
+			"_lineLayer": 3,
+			"_type": 0,
+			"_cutDirection": 6,
+			"description":"3,0"
+		},{
+			"_x": 727,
+			"_real_time": 125.50385487528345,
+			"_pitch": 1600,
+			"_time": 271.92501889644745,
+			"_lineIndex": 1,
+			"_lineLayer": 3,
+			"_type": 0,
+			"_cutDirection": 5,
+			"description":"3,1"
+		},{
+			"_x": 729,
+			"_real_time": 125.96825396825396,
+			"_pitch": 1600,
+			"_time": 272.9312169312169,
+			"_lineIndex": 2,
+			"_lineLayer": 2,
+			"_type": 0,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 729,
+			"_real_time": 125.96825396825396,
+			"_pitch": 1600,
+			"_time": 272.9312169312169,
+			"_lineIndex": 3,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 729,
+			"_real_time": 126.29333333333334,
+			"_pitch": 1600,
+			"_time": 273.6355555555556,
+			"_lineIndex": 2,
+			"_lineLayer": 0,
+			"_type": 0,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 729,
+			"_real_time": 126.29333333333334,
+			"_pitch": 1600,
+			"_time": 273.6355555555556,
+			"_lineIndex": 3,
+			"_lineLayer": 0,
+			"_type": 1,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 734,
+			"_real_time": 126.98993197278912,
+			"_pitch": 1600,
+			"_time": 275.14485260770977,
+			"_lineIndex": 2,
+			"_lineLayer": 2,
+			"_type": 0,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 734,
+			"_real_time": 126.98993197278912,
+			"_pitch": 1600,
+			"_time": 275.14485260770977,
+			"_lineIndex": 3,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 734,
+			"_real_time": 127.45433106575963,
+			"_pitch": 1600,
+			"_time": 276.15105064247916,
+			"_lineIndex": 2,
+			"_lineLayer": 0,
+			"_type": 0,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 734,
+			"_real_time": 127.45433106575963,
+			"_pitch": 1600,
+			"_time": 276.15105064247916,
+			"_lineIndex": 3,
+			"_lineLayer": 0,
+			"_type": 1,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 741,
+			"_real_time": 128.5921088435374,
+			"_pitch": 1600,
+			"_time": 278.61623582766435,
+			"_lineIndex": 2,
+			"_lineLayer": 2,
+			"_type": 0,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 741,
+			"_real_time": 128.5921088435374,
+			"_pitch": 1600,
+			"_time": 278.61623582766435,
+			"_lineIndex": 3,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 741,
+			"_real_time": 128.8475283446712,
+			"_pitch": 1600,
+			"_time": 279.1696447467876,
+			"_lineIndex": 2,
+			"_lineLayer": 0,
+			"_type": 0,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 741,
+			"_real_time": 128.8475283446712,
+			"_pitch": 1600,
+			"_time": 279.1696447467876,
+			"_lineIndex": 3,
+			"_lineLayer": 0,
+			"_type": 1,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 746,
+			"_real_time": 129.3815873015873,
+			"_pitch": 1600,
+			"_time": 280.3267724867725,
+			"_lineIndex": 2,
+			"_lineLayer": 2,
+			"_type": 0,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 746,
+			"_real_time": 129.3815873015873,
+			"_pitch": 1600,
+			"_time": 280.3267724867725,
+			"_lineIndex": 3,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 746,
+			"_real_time": 129.77632653061224,
+			"_pitch": 1600,
+			"_time": 281.18204081632655,
+			"_lineIndex": 2,
+			"_lineLayer": 0,
+			"_type": 0,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 746,
+			"_real_time": 129.77632653061224,
+			"_pitch": 1600,
+			"_time": 281.18204081632655,
+			"_lineIndex": 3,
+			"_lineLayer": 0,
+			"_type": 1,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 751,
+			"_real_time": 129.89242630385488,
+			"_pitch": 1600,
+			"_time": 281.43359032501894,
+			"_lineIndex": 0,
+			"_lineLayer": 2,
+			"_type": 0,
+			"_cutDirection": 8,
+			"description":"2,0"
+		},{
+			"_x": 751,
+			"_real_time": 130.0085260770975,
+			"_pitch": 1600,
+			"_time": 281.6851398337113,
+			"_lineIndex": 0,
+			"_lineLayer": 0,
+			"_type": 0,
+			"_cutDirection": 8,
+			"description":"0,0"
+		},{
+			"_x": 753,
+			"_real_time": 130.58902494331065,
+			"_pitch": 1600,
+			"_time": 282.94288737717307,
+			"_lineIndex": 2,
+			"_lineLayer": 2,
+			"_type": 0,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 753,
+			"_real_time": 130.58902494331065,
+			"_pitch": 1600,
+			"_time": 282.94288737717307,
+			"_lineIndex": 3,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 753,
+			"_real_time": 131.03020408163266,
+			"_pitch": 1600,
+			"_time": 283.8987755102041,
+			"_lineIndex": 2,
+			"_lineLayer": 0,
+			"_type": 0,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 753,
+			"_real_time": 131.03020408163266,
+			"_pitch": 1600,
+			"_time": 283.8987755102041,
+			"_lineIndex": 3,
+			"_lineLayer": 0,
+			"_type": 1,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 758,
+			"_real_time": 131.6107029478458,
+			"_pitch": 1600,
+			"_time": 285.15652305366586,
+			"_lineIndex": 0,
+			"_lineLayer": 2,
+			"_type": 0,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 758,
+			"_real_time": 131.6107029478458,
+			"_pitch": 1600,
+			"_time": 285.15652305366586,
+			"_lineIndex": 1,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 758,
+			"_real_time": 132.02866213151927,
+			"_pitch": 1600,
+			"_time": 286.06210128495843,
+			"_lineIndex": 0,
+			"_lineLayer": 0,
+			"_type": 0,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 758,
+			"_real_time": 132.02866213151927,
+			"_pitch": 1600,
+			"_time": 286.06210128495843,
+			"_lineIndex": 1,
+			"_lineLayer": 0,
+			"_type": 1,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 763,
+			"_real_time": 132.65560090702948,
+			"_pitch": 1600,
+			"_time": 287.4204686318972,
+			"_lineIndex": 2,
+			"_lineLayer": 2,
+			"_type": 0,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 763,
+			"_real_time": 132.65560090702948,
+			"_pitch": 1600,
+			"_time": 287.4204686318972,
+			"_lineIndex": 3,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 763,
+			"_real_time": 132.91102040816327,
+			"_pitch": 1600,
+			"_time": 287.97387755102045,
+			"_lineIndex": 2,
+			"_lineLayer": 0,
+			"_type": 0,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 763,
+			"_real_time": 132.91102040816327,
+			"_pitch": 1600,
+			"_time": 287.97387755102045,
+			"_lineIndex": 3,
+			"_lineLayer": 0,
+			"_type": 1,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 768,
+			"_real_time": 133.00390022675737,
+			"_pitch": 1600,
+			"_time": 288.17511715797434,
+			"_lineIndex": 2,
+			"_lineLayer": 1,
+			"_type": 1,
+			"_cutDirection": 2,
+			"description":"1,2"
+		},{
+			"_x": 768,
+			"_real_time": 133.35219954648525,
+			"_pitch": 1600,
+			"_time": 288.9297656840514,
+			"_lineIndex": 2,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 3,
+			"description":"2,2"
+		},{
+			"_x": 770,
+			"_real_time": 133.93269841269841,
+			"_pitch": 1600,
+			"_time": 290.1875132275132,
+			"_lineIndex": 0,
+			"_lineLayer": 2,
+			"_type": 0,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 770,
+			"_real_time": 133.93269841269841,
+			"_pitch": 1600,
+			"_time": 290.1875132275132,
+			"_lineIndex": 1,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 770,
+			"_real_time": 134.32743764172335,
+			"_pitch": 1600,
+			"_time": 291.04278155706726,
+			"_lineIndex": 0,
+			"_lineLayer": 0,
+			"_type": 0,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 770,
+			"_real_time": 134.32743764172335,
+			"_pitch": 1600,
+			"_time": 291.04278155706726,
+			"_lineIndex": 1,
+			"_lineLayer": 0,
+			"_type": 1,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 775,
+			"_real_time": 134.83827664399092,
+			"_pitch": 1600,
+			"_time": 292.14959939531366,
+			"_lineIndex": 2,
+			"_lineLayer": 2,
+			"_type": 0,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 775,
+			"_real_time": 134.83827664399092,
+			"_pitch": 1600,
+			"_time": 292.14959939531366,
+			"_lineIndex": 3,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 775,
+			"_real_time": 135.0704761904762,
+			"_pitch": 1600,
+			"_time": 292.65269841269844,
+			"_lineIndex": 2,
+			"_lineLayer": 0,
+			"_type": 0,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 775,
+			"_real_time": 135.0704761904762,
+			"_pitch": 1600,
+			"_time": 292.65269841269844,
+			"_lineIndex": 3,
+			"_lineLayer": 0,
+			"_type": 1,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 780,
+			"_real_time": 135.20979591836735,
+			"_pitch": 1600,
+			"_time": 292.9545578231293,
+			"_lineIndex": 3,
+			"_lineLayer": 3,
+			"_type": 1,
+			"_cutDirection": 2,
+			"description":"3,3"
+		},{
+			"_x": 780,
+			"_real_time": 135.30267573696145,
+			"_pitch": 1600,
+			"_time": 293.15579743008317,
+			"_lineIndex": 2,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 3,
+			"description":"2,2"
+		},{
+			"_x": 782,
+			"_real_time": 135.4419954648526,
+			"_pitch": 1600,
+			"_time": 293.45765684051395,
+			"_lineIndex": 1,
+			"_lineLayer": 3,
+			"_type": 0,
+			"_cutDirection": 1,
+			"description":"3,1"
+		},{
+			"_x": 782,
+			"_real_time": 135.53487528344672,
+			"_pitch": 1600,
+			"_time": 293.6588964474679,
+			"_lineIndex": 0,
+			"_lineLayer": 1,
+			"_type": 0,
+			"_cutDirection": 0,
+			"description":"1,0"
+		},{
+			"_x": 784,
+			"_real_time": 135.67419501133787,
+			"_pitch": 1600,
+			"_time": 293.96075585789873,
+			"_lineIndex": 0,
+			"_lineLayer": 1,
+			"_type": 0,
+			"_cutDirection": 7,
+			"description":"1,0"
+		},{
+			"_x": 784,
+			"_real_time": 135.8831746031746,
+			"_pitch": 1600,
+			"_time": 294.413544973545,
+			"_lineIndex": 0,
+			"_lineLayer": 3,
+			"_type": 0,
+			"_cutDirection": 4,
+			"description":"3,0"
+		},{
+			"_x": 786,
+			"_real_time": 136.0457142857143,
+			"_pitch": 1600,
+			"_time": 294.76571428571435,
+			"_lineIndex": 2,
+			"_lineLayer": 0,
+			"_type": 1,
+			"_cutDirection": 8,
+			"description":"0,2"
+		},{
+			"_x": 786,
+			"_real_time": 136.2314739229025,
+			"_pitch": 1600,
+			"_time": 295.1681934996221,
+			"_lineIndex": 2,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 8,
+			"description":"2,2"
+		},{
+			"_x": 788,
+			"_real_time": 136.57977324263038,
+			"_pitch": 1600,
+			"_time": 295.92284202569914,
+			"_lineIndex": 0,
+			"_lineLayer": 2,
+			"_type": 0,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 788,
+			"_real_time": 136.57977324263038,
+			"_pitch": 1600,
+			"_time": 295.92284202569914,
+			"_lineIndex": 1,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 788,
+			"_real_time": 136.90485260770976,
+			"_pitch": 1600,
+			"_time": 296.62718065003776,
+			"_lineIndex": 0,
+			"_lineLayer": 0,
+			"_type": 0,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 788,
+			"_real_time": 136.90485260770976,
+			"_pitch": 1600,
+			"_time": 296.62718065003776,
+			"_lineIndex": 1,
+			"_lineLayer": 0,
+			"_type": 1,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 793,
+			"_real_time": 137.27637188208618,
+			"_pitch": 1600,
+			"_time": 297.4321390778534,
+			"_lineIndex": 0,
+			"_lineLayer": 2,
+			"_type": 0,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 793,
+			"_real_time": 137.27637188208618,
+			"_pitch": 1600,
+			"_time": 297.4321390778534,
+			"_lineIndex": 1,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 793,
+			"_real_time": 137.50857142857143,
+			"_pitch": 1600,
+			"_time": 297.9352380952381,
+			"_lineIndex": 0,
+			"_lineLayer": 0,
+			"_type": 0,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 793,
+			"_real_time": 137.50857142857143,
+			"_pitch": 1600,
+			"_time": 297.9352380952381,
+			"_lineIndex": 1,
+			"_lineLayer": 0,
+			"_type": 1,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 798,
+			"_real_time": 137.60145124716553,
+			"_pitch": 1600,
+			"_time": 298.136477702192,
+			"_lineIndex": 2,
+			"_lineLayer": 3,
+			"_type": 1,
+			"_cutDirection": 0,
+			"description":"3,2"
+		},{
+			"_x": 798,
+			"_real_time": 137.85687074829931,
+			"_pitch": 1600,
+			"_time": 298.68988662131517,
+			"_lineIndex": 3,
+			"_lineLayer": 3,
+			"_type": 1,
+			"_cutDirection": 1,
+			"description":"3,3"
+		},{
+			"_x": 800,
+			"_real_time": 138.13551020408164,
+			"_pitch": 1600,
+			"_time": 299.2936054421769,
+			"_lineIndex": 1,
+			"_lineLayer": 2,
+			"_type": 0,
+			"_cutDirection": 7,
+			"description":"2,1"
+		},{
+			"_x": 800,
+			"_real_time": 138.34448979591838,
+			"_pitch": 1600,
+			"_time": 299.7463945578232,
+			"_lineIndex": 0,
+			"_lineLayer": 3,
+			"_type": 0,
+			"_cutDirection": 4,
+			"description":"3,0"
+		},{
+			"_x": 802,
+			"_real_time": 139.0178684807256,
+			"_pitch": 1600,
+			"_time": 301.20538170823886,
+			"_lineIndex": 0,
+			"_lineLayer": 2,
+			"_type": 0,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 802,
+			"_real_time": 139.0178684807256,
+			"_pitch": 1600,
+			"_time": 301.20538170823886,
+			"_lineIndex": 1,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 802,
+			"_real_time": 139.45904761904762,
+			"_pitch": 1600,
+			"_time": 302.16126984126987,
+			"_lineIndex": 0,
+			"_lineLayer": 0,
+			"_type": 0,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 802,
+			"_real_time": 139.45904761904762,
+			"_pitch": 1600,
+			"_time": 302.16126984126987,
+			"_lineIndex": 1,
+			"_lineLayer": 0,
+			"_type": 1,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 807,
+			"_real_time": 139.92344671201815,
+			"_pitch": 1600,
+			"_time": 303.1674678760393,
+			"_lineIndex": 2,
+			"_lineLayer": 2,
+			"_type": 0,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 807,
+			"_real_time": 139.92344671201815,
+			"_pitch": 1600,
+			"_time": 303.1674678760393,
+			"_lineIndex": 3,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 807,
+			"_real_time": 140.38784580498867,
+			"_pitch": 1600,
+			"_time": 304.1736659108088,
+			"_lineIndex": 2,
+			"_lineLayer": 0,
+			"_type": 0,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 807,
+			"_real_time": 140.38784580498867,
+			"_pitch": 1600,
+			"_time": 304.1736659108088,
+			"_lineIndex": 3,
+			"_lineLayer": 0,
+			"_type": 1,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 812,
+			"_real_time": 141.0612244897959,
+			"_pitch": 1600,
+			"_time": 305.63265306122446,
+			"_lineIndex": 2,
+			"_lineLayer": 2,
+			"_type": 0,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 812,
+			"_real_time": 141.0612244897959,
+			"_pitch": 1600,
+			"_time": 305.63265306122446,
+			"_lineIndex": 3,
+			"_lineLayer": 2,
+			"_type": 1,
+			"_cutDirection": 0,
+			"description":"N"
+		},{
+			"_x": 812,
+			"_real_time": 142.61696145124716,
+			"_pitch": 1600,
+			"_time": 309.0034164777022,
+			"_lineIndex": 2,
+			"_lineLayer": 0,
+			"_type": 0,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_x": 812,
+			"_real_time": 142.61696145124716,
+			"_pitch": 1600,
+			"_time": 309.0034164777022,
+			"_lineIndex": 3,
+			"_lineLayer": 0,
+			"_type": 1,
+			"_cutDirection": 1,
+			"description":"S"
+		},{
+			"_time": 0.0,
+			"_lineIndex": 3,
+			"_lineLayer": 3,
+			"_type": 1,
+			"_cutDirection": 0
+			}],
+			"_obstacles": [ {
+							"_time": 7.540287226001512,
+							"_lineIndex": 3,
+							"_lineLayer": 2,
+							"_type": 0,
+							"_duration": 1.8676643990929715,
+							"_width": 1
+						},{
+							"_time": 10.760120937263794,
+							"_lineIndex": 0,
+							"_lineLayer": 2,
+							"_type": 0,
+							"_duration": 3.880060468631898,
+							"_width": 1
+						},{
+							"_time": 26.708359788359786,
+							"_lineIndex": 0,
+							"_lineLayer": 2,
+							"_type": 0,
+							"_duration": 1.6161148904006062,
+							"_width": 1
+						},{
+							"_time": 31.035011337868482,
+							"_lineIndex": 3,
+							"_lineLayer": 2,
+							"_type": 0,
+							"_duration": 1.8676643990929662,
+							"_width": 1
+						},{
+							"_time": 37.27343915343915,
+							"_lineIndex": 0,
+							"_lineLayer": 2,
+							"_type": 0,
+							"_duration": 0.3583673469387847,
+							"_width": 1
+						},{
+							"_time": 39.034285714285716,
+							"_lineIndex": 3,
+							"_lineLayer": 2,
+							"_type": 0,
+							"_duration": 1.917974300831446,
+							"_width": 1
+						},{
+							"_time": 43.51186696900982,
+							"_lineIndex": 3,
+							"_lineLayer": 2,
+							"_type": 0,
+							"_duration": 1.1130158730158755,
+							"_width": 1
+						},{
+							"_time": 47.586969009826156,
+							"_lineIndex": 3,
+							"_lineLayer": 2,
+							"_type": 0,
+							"_duration": 0.5092970521541886,
+							"_width": 1
+						},{
+							"_time": 51.15897203325775,
+							"_lineIndex": 0,
+							"_lineLayer": 2,
+							"_type": 0,
+							"_duration": 0.6602267573696139,
+							"_width": 1
+						},{
+							"_time": 53.271987906273615,
+							"_lineIndex": 0,
+							"_lineLayer": 2,
+							"_type": 0,
+							"_duration": 0.8614663643235119,
+							"_width": 1
+						},{
+							"_time": 55.58624338624338,
+							"_lineIndex": 0,
+							"_lineLayer": 2,
+							"_type": 0,
+							"_duration": 0.20743764172335943,
+							"_width": 1
+						},{
+							"_time": 57.14585034013606,
+							"_lineIndex": 0,
+							"_lineLayer": 2,
+							"_type": 0,
+							"_duration": 0.30805744520029776,
+							"_width": 1
+						},{
+							"_time": 58.705457294028726,
+							"_lineIndex": 0,
+							"_lineLayer": 2,
+							"_type": 0,
+							"_duration": 0.5092970521541957,
+							"_width": 1
+						},{
+							"_time": 71.1320030234316,
+							"_lineIndex": 0,
+							"_lineLayer": 2,
+							"_type": 0,
+							"_duration": 1.163325774754341,
+							"_width": 1
+						},{
+							"_time": 76.01206349206349,
+							"_lineIndex": 0,
+							"_lineLayer": 2,
+							"_type": 0,
+							"_duration": 0.6099168556311554,
+							"_width": 1
+						},{
+							"_time": 77.97414965986395,
+							"_lineIndex": 0,
+							"_lineLayer": 2,
+							"_type": 0,
+							"_duration": 1.1130158730158684,
+							"_width": 1
+						},{
+							"_time": 80.43933484504913,
+							"_lineIndex": 0,
+							"_lineLayer": 2,
+							"_type": 0,
+							"_duration": 1.0627059712774098,
+							"_width": 1
+						},{
+							"_time": 83.15606953892669,
+							"_lineIndex": 3,
+							"_lineLayer": 2,
+							"_type": 0,
+							"_duration": 0.30805744520030487,
+							"_width": 1
+						},{
+							"_time": 84.71567649281936,
+							"_lineIndex": 3,
+							"_lineLayer": 2,
+							"_type": 0,
+							"_duration": 0.458987150415723,
+							"_width": 1
+						},{
+							"_time": 86.47652305366591,
+							"_lineIndex": 3,
+							"_lineLayer": 2,
+							"_type": 0,
+							"_duration": 0.1571277399848725,
+							"_width": 1
+						},{
+							"_time": 89.19325774754347,
+							"_lineIndex": 0,
+							"_lineLayer": 2,
+							"_type": 0,
+							"_duration": 0.25774754346181794,
+							"_width": 1
+						},{
+							"_time": 91.90999244142101,
+							"_lineIndex": 0,
+							"_lineLayer": 2,
+							"_type": 0,
+							"_duration": 0.5092970521541815,
+							"_width": 1
+						},{
+							"_time": 94.47579743008315,
+							"_lineIndex": 0,
+							"_lineLayer": 2,
+							"_type": 0,
+							"_duration": 0.20743764172334522,
+							"_width": 1
+						},{
+							"_time": 95.93478458049886,
+							"_lineIndex": 0,
+							"_lineLayer": 2,
+							"_type": 0,
+							"_duration": 0.20743764172337364,
+							"_width": 1
+						},{
+							"_time": 98.70182917611488,
+							"_lineIndex": 0,
+							"_lineLayer": 2,
+							"_type": 0,
+							"_duration": 0.3583673469387634,
+							"_width": 1
+						},{
+							"_time": 100.66391534391535,
+							"_lineIndex": 0,
+							"_lineLayer": 2,
+							"_type": 0,
+							"_duration": 0.5092970521541815,
+							"_width": 1
+						},{
+							"_time": 102.42476190476191,
+							"_lineIndex": 3,
+							"_lineLayer": 2,
+							"_type": 0,
+							"_duration": 0.1571277399848725,
+							"_width": 1
+						},{
+							"_time": 106.44955404383977,
+							"_lineIndex": 0,
+							"_lineLayer": 2,
+							"_type": 0,
+							"_duration": 0.25774754346181794,
+							"_width": 1
+						},{
+							"_time": 108.21040060468631,
+							"_lineIndex": 0,
+							"_lineLayer": 2,
+							"_type": 0,
+							"_duration": 0.9620861678004502,
+							"_width": 1
+						},{
+							"_time": 111.93333333333334,
+							"_lineIndex": 0,
+							"_lineLayer": 2,
+							"_type": 0,
+							"_duration": 0.0061980347694543525,
+							"_width": 1
+						},{
+							"_time": 113.19108087679516,
+							"_lineIndex": 0,
+							"_lineLayer": 2,
+							"_type": 0,
+							"_duration": 0.50929705215421,
+							"_width": 1
+						},{
+							"_time": 116.15936507936509,
+							"_lineIndex": 0,
+							"_lineLayer": 2,
+							"_type": 0,
+							"_duration": 0.0061980347694543525,
+							"_width": 1
+						},{
+							"_time": 117.41711262282692,
+							"_lineIndex": 0,
+							"_lineLayer": 2,
+							"_type": 0,
+							"_duration": 0.5092970521541815,
+							"_width": 1
+						},{
+							"_time": 119.127649281935,
+							"_lineIndex": 0,
+							"_lineLayer": 2,
+							"_type": 0,
+							"_duration": 0.30805744520029066,
+							"_width": 1
+						},{
+							"_time": 120.63694633408919,
+							"_lineIndex": 0,
+							"_lineLayer": 2,
+							"_type": 0,
+							"_duration": 0.25774754346183215,
+							"_width": 1
+						},{
+							"_time": 122.64934240362813,
+							"_lineIndex": 3,
+							"_lineLayer": 2,
+							"_type": 0,
+							"_duration": 0.0061980347694543525,
+							"_width": 1
+						},{
+							"_time": 123.90708994708994,
+							"_lineIndex": 3,
+							"_lineLayer": 2,
+							"_type": 0,
+							"_duration": 0.5092970521541957,
+							"_width": 1
+						},{
+							"_time": 127.12692365835223,
+							"_lineIndex": 3,
+							"_lineLayer": 2,
+							"_type": 0,
+							"_duration": 0.30805744520030487,
+							"_width": 1
+						},{
+							"_time": 128.63622071050642,
+							"_lineIndex": 3,
+							"_lineLayer": 2,
+							"_type": 0,
+							"_duration": 0.05650793650792707,
+							"_width": 1
+						},{
+							"_time": 129.94427815570674,
+							"_lineIndex": 3,
+							"_lineLayer": 2,
+							"_type": 0,
+							"_duration": 0.20743764172334522,
+							"_width": 1
+						},{
+							"_time": 131.40326530612245,
+							"_lineIndex": 3,
+							"_lineLayer": 2,
+							"_type": 0,
+							"_duration": 0.25774754346181794,
+							"_width": 1
+						},{
+							"_time": 133.11380196523052,
+							"_lineIndex": 3,
+							"_lineLayer": 2,
+							"_type": 0,
+							"_duration": 0.05650793650795549,
+							"_width": 1
+						},{
+							"_time": 134.42185941043084,
+							"_lineIndex": 0,
+							"_lineLayer": 2,
+							"_type": 0,
+							"_duration": 0.006198034769482774,
+							"_width": 1
+						},{
+							"_time": 135.6292970521542,
+							"_lineIndex": 3,
+							"_lineLayer": 2,
+							"_type": 0,
+							"_duration": 0.0061980347694543525,
+							"_width": 1
+						},{
+							"_time": 137.1385941043084,
+							"_lineIndex": 3,
+							"_lineLayer": 2,
+							"_type": 0,
+							"_duration": 0.25774754346184636,
+							"_width": 1
+						},{
+							"_time": 139.90563869992442,
+							"_lineIndex": 3,
+							"_lineLayer": 2,
+							"_type": 0,
+							"_duration": 0.4589871504157088,
+							"_width": 1
+						},{
+							"_time": 141.666485260771,
+							"_lineIndex": 3,
+							"_lineLayer": 2,
+							"_type": 0,
+							"_duration": 0.006198034769425931,
+							"_width": 1
+						},{
+							"_time": 143.93043083900227,
+							"_lineIndex": 0,
+							"_lineLayer": 2,
+							"_type": 0,
+							"_duration": 0.20743764172334522,
+							"_width": 1
+						},{
+							"_time": 147.15026455026455,
+							"_lineIndex": 0,
+							"_lineLayer": 2,
+							"_type": 0,
+							"_duration": 0.25774754346184636,
+							"_width": 1
+						},{
+							"_time": 148.6092517006803,
+							"_lineIndex": 3,
+							"_lineLayer": 2,
+							"_type": 0,
+							"_duration": 0.30805744520029066,
+							"_width": 1
+						},{
+							"_time": 151.4266061980348,
+							"_lineIndex": 3,
+							"_lineLayer": 2,
+							"_type": 0,
+							"_duration": 0.2074376417233168,
+							"_width": 1
+						},{
+							"_time": 152.93590325018894,
+							"_lineIndex": 3,
+							"_lineLayer": 2,
+							"_type": 0,
+							"_duration": 0.20743764172340207,
+							"_width": 1
+						},{
+							"_time": 154.9482993197279,
+							"_lineIndex": 3,
+							"_lineLayer": 2,
+							"_type": 0,
+							"_duration": 0.2074376417233168,
+							"_width": 1
+						},{
+							"_time": 156.65883597883598,
+							"_lineIndex": 3,
+							"_lineLayer": 2,
+							"_type": 0,
+							"_duration": 0.25774754346181794,
+							"_width": 1
+						},{
+							"_time": 158.1681330309902,
+							"_lineIndex": 0,
+							"_lineLayer": 2,
+							"_type": 0,
+							"_duration": 0.0061980347694543525,
+							"_width": 1
+						},{
+							"_time": 159.6271201814059,
+							"_lineIndex": 0,
+							"_lineLayer": 2,
+							"_type": 0,
+							"_duration": 0.0061980347694543525,
+							"_width": 1
+						},{
+							"_time": 161.94137566137567,
+							"_lineIndex": 0,
+							"_lineLayer": 2,
+							"_type": 0,
+							"_duration": 0.0061980347694543525,
+							"_width": 1
+						},{
+							"_time": 163.14881330309902,
+							"_lineIndex": 0,
+							"_lineLayer": 2,
+							"_type": 0,
+							"_duration": 0.25774754346181794,
+							"_width": 1
+						},{
+							"_time": 165.41275888133032,
+							"_lineIndex": 0,
+							"_lineLayer": 2,
+							"_type": 0,
+							"_duration": 0.0061980347694543525,
+							"_width": 1
+						},{
+							"_time": 168.6325925925926,
+							"_lineIndex": 0,
+							"_lineLayer": 2,
+							"_type": 0,
+							"_duration": 0.7608465608465451,
+							"_width": 1
+						},{
+							"_time": 171.60087679516252,
+							"_lineIndex": 0,
+							"_lineLayer": 2,
+							"_type": 0,
+							"_duration": 0.5092970521541815,
+							"_width": 1
+						},{
+							"_time": 173.3617233560091,
+							"_lineIndex": 3,
+							"_lineLayer": 2,
+							"_type": 0,
+							"_duration": 0.05650793650789865,
+							"_width": 1
+						},{
+							"_time": 176.1287679516251,
+							"_lineIndex": 3,
+							"_lineLayer": 2,
+							"_type": 0,
+							"_duration": 0.0061980347694543525,
+							"_width": 1
+						},{
+							"_time": 182.51812547241116,
+							"_lineIndex": 0,
+							"_lineLayer": 2,
+							"_type": 0,
+							"_duration": 0.6099168556311838,
+							"_width": 1
+						},{
+							"_time": 184.68145124716554,
+							"_lineIndex": 3,
+							"_lineLayer": 2,
+							"_type": 0,
+							"_duration": 1.4651851851851916,
+							"_width": 1
+						},{
+							"_time": 187.70004535147393,
+							"_lineIndex": 0,
+							"_lineLayer": 2,
+							"_type": 0,
+							"_duration": 0.8614663643234906,
+							"_width": 1
+						},{
+							"_time": 191.42297808012094,
+							"_lineIndex": 0,
+							"_lineLayer": 2,
+							"_type": 0,
+							"_duration": 1.0123960695389087,
+							"_width": 1
+						},{
+							"_time": 193.83785336356766,
+							"_lineIndex": 3,
+							"_lineLayer": 2,
+							"_type": 0,
+							"_duration": 0.8111564625850178,
+							"_width": 1
+						},{
+							"_time": 196.05148904006046,
+							"_lineIndex": 3,
+							"_lineLayer": 2,
+							"_type": 0,
+							"_duration": 1.2639455782313007,
+							"_width": 1
+						},{
+							"_time": 220.65303099017387,
+							"_lineIndex": 3,
+							"_lineLayer": 2,
+							"_type": 0,
+							"_duration": 0.5092970521541531,
+							"_width": 1
+						},{
+							"_time": 222.61511715797428,
+							"_lineIndex": 3,
+							"_lineLayer": 2,
+							"_type": 0,
+							"_duration": 0.50929705215421,
+							"_width": 1
+						},{
+							"_time": 224.92937263794406,
+							"_lineIndex": 3,
+							"_lineLayer": 2,
+							"_type": 0,
+							"_duration": 0.20743764172337364,
+							"_width": 1
+						},{
+							"_time": 226.63990929705213,
+							"_lineIndex": 3,
+							"_lineLayer": 2,
+							"_type": 0,
+							"_duration": 0.2577475434618748,
+							"_width": 1
+						},{
+							"_time": 228.14920634920637,
+							"_lineIndex": 3,
+							"_lineLayer": 2,
+							"_type": 0,
+							"_duration": 0.2577475434617895,
+							"_width": 1
+						},{
+							"_time": 230.16160241874528,
+							"_lineIndex": 0,
+							"_lineLayer": 2,
+							"_type": 0,
+							"_duration": 0.25774754346184636,
+							"_width": 1
+						},{
+							"_time": 231.620589569161,
+							"_lineIndex": 0,
+							"_lineLayer": 2,
+							"_type": 0,
+							"_duration": 0.7608465608465451,
+							"_width": 1
+						},{
+							"_time": 234.89073318216174,
+							"_lineIndex": 0,
+							"_lineLayer": 2,
+							"_type": 0,
+							"_duration": 0.0061980347694543525,
+							"_width": 1
+						},{
+							"_time": 236.14848072562359,
+							"_lineIndex": 0,
+							"_lineLayer": 2,
+							"_type": 0,
+							"_duration": 0.50929705215421,
+							"_width": 1
+						},{
+							"_time": 240.42482237339382,
+							"_lineIndex": 3,
+							"_lineLayer": 2,
+							"_type": 0,
+							"_duration": 0.0061980347694543525,
+							"_width": 1
+						},{
+							"_time": 241.93411942554798,
+							"_lineIndex": 0,
+							"_lineLayer": 2,
+							"_type": 0,
+							"_duration": 0.006198034769482774,
+							"_width": 1
+						},{
+							"_time": 243.14155706727132,
+							"_lineIndex": 0,
+							"_lineLayer": 2,
+							"_type": 0,
+							"_duration": 0.3080574452003475,
+							"_width": 1
+						},{
+							"_time": 244.65085411942556,
+							"_lineIndex": 0,
+							"_lineLayer": 2,
+							"_type": 0,
+							"_duration": 0.25774754346181794,
+							"_width": 1
+						},{
+							"_time": 246.66325018896447,
+							"_lineIndex": 3,
+							"_lineLayer": 2,
+							"_type": 0,
+							"_duration": 0.25774754346184636,
+							"_width": 1
+						},{
+							"_time": 248.12223733938023,
+							"_lineIndex": 0,
+							"_lineLayer": 2,
+							"_type": 0,
+							"_duration": 0.2577475434617895,
+							"_width": 1
+						},{
+							"_time": 249.6315343915344,
+							"_lineIndex": 0,
+							"_lineLayer": 2,
+							"_type": 0,
+							"_duration": 0.05650793650792707,
+							"_width": 1
+						},{
+							"_time": 252.14702947845805,
+							"_lineIndex": 3,
+							"_lineLayer": 2,
+							"_type": 0,
+							"_duration": 0.7608465608465735,
+							"_width": 1
+						},{
+							"_time": 254.159425547997,
+							"_lineIndex": 0,
+							"_lineLayer": 2,
+							"_type": 0,
+							"_duration": 0.5092970521541531,
+							"_width": 1
+						},{
+							"_time": 255.92027210884353,
+							"_lineIndex": 0,
+							"_lineLayer": 2,
+							"_type": 0,
+							"_duration": 0.006198034769482774,
+							"_width": 1
+						},{
+							"_time": 257.1277097505669,
+							"_lineIndex": 0,
+							"_lineLayer": 2,
+							"_type": 0,
+							"_duration": 0.0061980347694543525,
+							"_width": 1
+						},{
+							"_time": 259.1401058201058,
+							"_lineIndex": 0,
+							"_lineLayer": 2,
+							"_type": 0,
+							"_duration": 0.25774754346184636,
+							"_width": 1
+						},{
+							"_time": 260.64940287226,
+							"_lineIndex": 0,
+							"_lineLayer": 2,
+							"_type": 0,
+							"_duration": 0.006198034769511196,
+							"_width": 1
+						},{
+							"_time": 262.15869992441424,
+							"_lineIndex": 0,
+							"_lineLayer": 2,
+							"_type": 0,
+							"_duration": 0.0061980347694543525,
+							"_width": 1
+						},{
+							"_time": 263.4164474678761,
+							"_lineIndex": 0,
+							"_lineLayer": 2,
+							"_type": 0,
+							"_duration": 0.2577475434617895,
+							"_width": 1
+						},{
+							"_time": 266.13318216175355,
+							"_lineIndex": 0,
+							"_lineLayer": 2,
+							"_type": 0,
+							"_duration": 0.006198034769511196,
+							"_width": 1
+						},{
+							"_time": 267.39092970521546,
+							"_lineIndex": 0,
+							"_lineLayer": 2,
+							"_type": 0,
+							"_duration": 0.2577475434617895,
+							"_width": 1
+						},{
+							"_time": 269.15177626606203,
+							"_lineIndex": 0,
+							"_lineLayer": 2,
+							"_type": 0,
+							"_duration": 0.0061980347694543525,
+							"_width": 1
+						},{
+							"_time": 271.4157218442933,
+							"_lineIndex": 0,
+							"_lineLayer": 2,
+							"_type": 0,
+							"_duration": 0.0061980347694543525,
+							"_width": 1
+						},{
+							"_time": 273.12625850340135,
+							"_lineIndex": 0,
+							"_lineLayer": 2,
+							"_type": 0,
+							"_duration": 0.5092970521542384,
+							"_width": 1
+						},{
+							"_time": 275.39020408163265,
+							"_lineIndex": 0,
+							"_lineLayer": 2,
+							"_type": 0,
+							"_duration": 0.7608465608465167,
+							"_width": 1
+						},{
+							"_time": 278.6603476946334,
+							"_lineIndex": 0,
+							"_lineLayer": 2,
+							"_type": 0,
+							"_duration": 0.5092970521541815,
+							"_width": 1
+						},{
+							"_time": 280.5721239606954,
+							"_lineIndex": 0,
+							"_lineLayer": 2,
+							"_type": 0,
+							"_duration": 0.609916855631127,
+							"_width": 1
+						},{
+							"_time": 283.0373091458806,
+							"_lineIndex": 0,
+							"_lineLayer": 2,
+							"_type": 0,
+							"_duration": 0.8614663643234621,
+							"_width": 1
+						},{
+							"_time": 285.4018745275888,
+							"_lineIndex": 3,
+							"_lineLayer": 2,
+							"_type": 0,
+							"_duration": 0.6602267573696281,
+							"_width": 1
+						},{
+							"_time": 287.5148904006047,
+							"_lineIndex": 0,
+							"_lineLayer": 2,
+							"_type": 0,
+							"_duration": 0.45898715041573723,
+							"_width": 1
+						},{
+							"_time": 290.4831746031746,
+							"_lineIndex": 3,
+							"_lineLayer": 2,
+							"_type": 0,
+							"_duration": 0.5596069538926827,
+							"_width": 1
+						},{
+							"_time": 292.64650037792893,
+							"_lineIndex": 0,
+							"_lineLayer": 2,
+							"_type": 0,
+							"_duration": 0.006198034769511196,
+							"_width": 1
+						},{
+							"_time": 296.41974300831447,
+							"_lineIndex": 3,
+							"_lineLayer": 2,
+							"_type": 0,
+							"_duration": 0.20743764172328838,
+							"_width": 1
+						},{
+							"_time": 297.87873015873015,
+							"_lineIndex": 3,
+							"_lineLayer": 2,
+							"_type": 0,
+							"_duration": 0.05650793650795549,
+							"_width": 1
+						},{
+							"_time": 301.45073318216174,
+							"_lineIndex": 3,
+							"_lineLayer": 2,
+							"_type": 0,
+							"_duration": 0.7105366591081292,
+							"_width": 1
+						},{
+							"_time": 303.66436885865454,
+							"_lineIndex": 0,
+							"_lineLayer": 2,
+							"_type": 0,
+							"_duration": 0.5092970521542384,
+							"_width": 1
+						},{
+							"_time": 305.6767649281935,
+							"_lineIndex": 0,
+							"_lineLayer": 2,
+							"_type": 0,
+							"_duration": 3.3266515495087106,
+							"_width": 1
+						},
+			{
+				"_time": 0,
+				"_lineIndex": 0,
+				"_type": 0,
+				"_duration": 1,
+				"_width": 1
+			}]
+		}

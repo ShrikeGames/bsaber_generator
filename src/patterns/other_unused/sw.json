@@ -1,0 +1,40 @@
+{
+	"description": "sw",
+	"notes": [
+		{
+			"x": 0,
+			"y": 1,
+			"beat_time_rel": 0,
+			"note_type": 0,
+			"cut_direction": 6,
+			"description": "SW going SW"
+		},
+		{
+			"x": 1,
+			"y": 0,
+			"beat_time_rel": 0,
+			"note_type": 1,
+			"cut_direction": 6,
+			"description": "SW going SW"
+		},
+		
+		{
+			"x": 1,
+			"y": 2,
+			"beat_time_rel": 1,
+			"note_type": 0,
+			"cut_direction": 5,
+			"description": "NE going NE"
+		},
+		{
+			"x": 2,
+			"y": 1,
+			"beat_time_rel": 1,
+			"note_type": 1,
+			"cut_direction": 5,
+			"description": "NE going NE"
+		}
+	],
+	"obstacles": [
+	]
+}

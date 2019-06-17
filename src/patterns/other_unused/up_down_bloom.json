@@ -1,0 +1,39 @@
+{
+	"description": "N S but the up is further out",
+	"notes": [
+		{
+			"x": 0,
+			"y": 2,
+			"beat_time_rel": 0,
+			"note_type": 0,
+			"cut_direction": 0,
+			"description": "N"
+		},
+		{
+			"x": 3,
+			"y": 2,
+			"beat_time_rel": 0,
+			"note_type": 1,
+			"cut_direction": 0,
+			"description": "N"
+		},
+		{
+			"x": 1,
+			"y": 0,
+			"beat_time_rel": 1,
+			"note_type": 0,
+			"cut_direction": 1,
+			"description": "S"
+		},
+		{
+			"x": 2,
+			"y": 0,
+			"beat_time_rel": 1,
+			"note_type": 1,
+			"cut_direction": 1,
+			"description": "S"
+		}
+	],
+	"obstacles": [
+	]
+}

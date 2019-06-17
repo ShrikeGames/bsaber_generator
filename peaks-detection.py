@@ -40,7 +40,7 @@ peak_times = librosa.frames_to_time(peaks, sr=sr)
 #y1, sr1 = librosa.load('song.ogg')
 #duration = librosa.get_duration(y1)
 
-pitches, magnitudes = librosa.core.piptrack(y=y, sr=sr, fmin=30, fmax=1600, hop_length=512)
+pitches, magnitudes = librosa.core.piptrack(y=y, sr=sr, fmin=100, fmax=1600, hop_length=512)
 
 def detect_pitch(y, sr, t):
   index = magnitudes[:, int(t)].argmax()

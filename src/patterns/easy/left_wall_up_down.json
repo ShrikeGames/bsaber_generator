@@ -39,10 +39,10 @@
 			"x": 0,
 			"y": 2,
 			"wall_time_rel": 0,
-			"wall_type": 3,
+			"wall_type": 0,
 			"duration": -1,
 			"padding": 1,
-			"width": 1.5,
+			"width": 1,
 			"description": "N"
 		}
 	]

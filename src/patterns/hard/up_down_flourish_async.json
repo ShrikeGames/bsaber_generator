@@ -1,0 +1,87 @@
+{
+	"description": "async N S N S N",
+	"notes": [
+		{
+			"x": 2,
+			"y": 2,
+			"beat_time_rel": 0,
+			"note_type": 0,
+			"cut_direction": 0,
+			"description": "N"
+		},
+		{
+			"x": 3,
+			"y": 2,
+			"beat_time_rel": 1,
+			"note_type": 1,
+			"cut_direction": 0,
+			"description": "N"
+		},
+		{
+			"x": 1,
+			"y": 0,
+			"beat_time_rel": 2,
+			"note_type": 0,
+			"cut_direction": 1,
+			"description": "S"
+		},
+		{
+			"x": 2,
+			"y": 0,
+			"beat_time_rel": 3,
+			"note_type": 1,
+			"cut_direction": 1,
+			"description": "S"
+		},
+		{
+			"x": 0,
+			"y": 2,
+			"beat_time_rel": 4,
+			"note_type": 0,
+			"cut_direction": 0,
+			"description": "N"
+		},
+		{
+			"x": 1,
+			"y": 2,
+			"beat_time_rel": 5,
+			"note_type": 1,
+			"cut_direction": 0,
+			"description": "N"
+		},
+		{
+			"x": 1,
+			"y": 0,
+			"beat_time_rel": 6,
+			"note_type": 0,
+			"cut_direction": 1,
+			"description": "S"
+		},
+		{
+			"x": 2,
+			"y": 0,
+			"beat_time_rel": 7,
+			"note_type": 1,
+			"cut_direction": 1,
+			"description": "S"
+		},
+		{
+			"x": 2,
+			"y": 2,
+			"beat_time_rel": 8,
+			"note_type": 0,
+			"cut_direction": 0,
+			"description": "N"
+		},
+		{
+			"x": 3,
+			"y": 2,
+			"beat_time_rel": 9,
+			"note_type": 1,
+			"cut_direction": 0,
+			"description": "N"
+		}
+	],
+	"obstacles": [
+	]
+}

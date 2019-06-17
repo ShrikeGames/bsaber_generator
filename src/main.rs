@@ -16,6 +16,7 @@ use std::io::{Seek, Write};
 use zip::result::ZipResult;
 use zip::write::{FileOptions, ZipWriter};
 
+const CHANCE_FOR_DYNAMIC_PATTERN: i64 = 40;
 const CUT_UP: i64 = 0;
 const CUT_DOWN: i64 = 1;
 const CUT_LEFT: i64 = 2;
@@ -25,7 +26,28 @@ const CUT_NE: i64 = 5;
 const CUT_SW: i64 = 6;
 const CUT_SE: i64 = 7;
 const CUT_OMNI: i64 = 8;
+fn get_opposite_cut(direction: i64) -> i64 {
+	let mut result = CUT_OMNI;
+	if direction == CUT_UP {
+		result = CUT_DOWN;
+	} else if direction == CUT_DOWN {
+		result = CUT_UP;
+	} else if direction == CUT_RIGHT {
+		result = CUT_LEFT;
+	} else if direction == CUT_LEFT {
+		result = CUT_RIGHT;
+	} else if direction == CUT_NW {
+		result = CUT_SE;
+	} else if direction == CUT_NE {
+		result = CUT_SW;
+	} else if direction == CUT_SW {
+		result = CUT_NE;
+	} else if direction == CUT_SE {
+		result = CUT_NW;
+	}
 
+	(result)
+}
 fn main() -> std::io::Result<()> {
 	println!("Start map creation");
 
@@ -44,12 +66,20 @@ fn main() -> std::io::Result<()> {
 #[derive(Serialize, Deserialize)]
 #[allow(non_snake_case)] //they're not snake case in the json
 struct JsonConfig {
-	beatsPerMinute: f64,
-	beatsPerBar: f64,
-	noteJumpSpeed: f64,
-	shuffle: f64,
-	shufflePeriod: f64,
-	duration_seconds: f64,
+	_version: String,
+	_songName: String,
+	_songSubName: String,
+	_songAuthorName: String,
+	_levelAuthorName: String,
+	_beatsPerMinute: f64,
+	_duration_seconds: f64,
+	_songTimeOffset: f64,
+	_shuffle: f64,
+	_shufflePeriod: f64,
+	_previewStartTime: f64,
+	_previewDuration: f64,
+	_songFilename: String,
+	_coverImageFilename: String,
 }
 
 #[allow(non_snake_case)]
@@ -94,8 +124,14 @@ struct PatternWall {
 	wall_time_rel: usize,
 }
 
+struct AddPatternResult {
+	pattern_end_time: f64,
+	contents: String,
+	obstacles_content: String,
+}
+
 fn get_config_file() -> JsonConfig {
-	let mut config_file = File::open("src/song/info.json").unwrap();
+	let mut config_file = File::open("src/song/info.dat").unwrap();
 	let mut config_data = String::new();
 	config_file.read_to_string(&mut config_data).unwrap();
 	let config_json: JsonConfig =
@@ -165,45 +201,32 @@ fn generate_patterns() -> PatternCollection {
 *
 */
 fn create_bsaber_map() -> String {
-	fs::remove_file("src/song/ExpertPlus.json").expect("Could not remove song json");
+	fs::remove_file("src/song/ExpertPlus.dat").expect("Could not remove song json");
 	let mut file =
-		File::create("src/song/ExpertPlus.json").expect("Could not create song json file");
+		File::create("src/song/ExpertPlus.dat").expect("Could not create song json file");
 
-	//read info.json
+	//read info.dat
 	let config_json = get_config_file();
 
 	let pattern_collection = generate_patterns();
 
-	let version = "1.0.0";
-	//get configs from info.json
-	let beats_per_minute: f64 = config_json.beatsPerMinute;
-	let beats_per_bar = config_json.beatsPerBar;
-	let note_jump_speed = config_json.noteJumpSpeed;
-	let shuffle = config_json.shuffle;
-	let shuffle_period = config_json.shufflePeriod;
-	let song_duration_beats: f64 = (config_json.duration_seconds / 60.0) * beats_per_minute;
+	let version = "2.0.0";
+	//get configs from info.dat
+	let beats_per_minute: f64 = config_json._beatsPerMinute;
+	let duration_seconds: f64 = config_json._duration_seconds;
+	let song_duration_beats: f64 = (duration_seconds / 60.0) * beats_per_minute;
 
 	//start of ExperPlus.json
 	let mut contents: String = format!(
-		"{{\"_version\": \"{}\",
-			\"_beatsPerMinute\": {},
-			\"_beatsPerBar\": {},
-			\"_noteJumpSpeed\": {},
-			\"_shuffle\": {},
-			\"_shufflePeriod\": {},
-			\"_time\": {},
-			\"_suggestions\":[\"Custom Base Colors\"],
-			\"_colorRight\":{{\"r\":0.35,\"g\":0.05,\"b\":0.54}},
-			\"_colorLeft\":{{\"r\":0.54,\"g\":0.42,\"b\":0.050}},
-			\"_songTimeOffset\": 0.0,
-			\"_notes\": [",
-		version,
-		beats_per_minute,
-		beats_per_bar,
-		note_jump_speed,
-		shuffle,
-		shuffle_period,
-		song_duration_beats
+		"{{\"_version\":\"{}\",
+			\"_BPMChanges\":[],
+			\"_events\":[{{
+				\"_time\":3.199899911880493,
+				\"_type\":4,
+				\"_value\":3
+			}}],
+			\"_notes\":[",
+		version
 	)
 	.to_owned();
 
@@ -263,6 +286,191 @@ fn create_bsaber_map() -> String {
 	drop(file);
 	(contents)
 }
+fn get_random_x(note_type: i64) -> usize {
+	let mut random_x = rand::thread_rng().gen_range(0, 4);
+	if note_type == 0 {
+		random_x = rand::thread_rng().gen_range(0, 2);
+	} else if note_type == 1 {
+		random_x = rand::thread_rng().gen_range(2, 4);
+	}
+	(random_x)
+}
+fn generate_dynamic_pattern() -> Pattern {
+	//placeholder logic
+	let mut notes = Vec::new();
+	let mut obstacles = Vec::new();
+	let description = "Dynamic pattern".to_owned();
+
+	let mut prev_x: i64 = 4;
+	let mut prev_y: i64 = 4;
+	let mut prev_cut_direction = i64::from(rand::thread_rng().gen_range(0, 9));
+	let mut cut_direction  = 8;
+	let note_type = i64::from(rand::thread_rng().gen_range(0, 2));
+	let number_of_notes = 2;//really 1
+	for i in 0..number_of_notes {
+		cut_direction = get_opposite_cut(prev_cut_direction);
+		let mut x = get_random_x(note_type) as i64;
+		let mut y = i64::from(rand::thread_rng().gen_range(0, 4));
+		
+		let description = format!("{},{}", y, x).to_owned();
+		let beat_time_rel = i;
+		let note = PatternNote {
+			x: x as i64,
+			y: y as i64,
+			cut_direction,
+			note_type,
+			description,
+			beat_time_rel,
+		};
+
+		notes.push(note);
+		prev_x = x;
+		prev_y = y;
+		prev_cut_direction = cut_direction;
+	}
+
+
+	/*PatternNote {
+		x: i64,
+	y: i64,
+			cut_direction: i64,
+	note_type: i64,
+			description: String,
+	beat_time_rel: usize,
+	}*/
+
+	let pattern: Pattern = Pattern {
+		description,
+		notes,
+		obstacles,
+	};
+
+	(pattern)
+}
+
+#[allow(clippy::too_many_arguments)]
+fn add_pattern(
+	pattern: &Pattern,
+	mut contents: String,
+	beats: &[Beat],
+	processed_notes: &mut Vec<PatternNote>,
+	beat_id: usize,
+	beats_per_minute: f64,
+	mut pattern_end_time: f64,
+	mut obstacles_content: String,
+) -> AddPatternResult {
+	println!("pattern:{}", pattern.description.to_owned());
+	let mut last_note_time_in_beats = 0.0;
+
+	let note_type = rand::thread_rng().gen_range(0, 1);
+	for pattern_note in &pattern.notes {
+		let mut beat_next_id = beat_id + pattern_note.beat_time_rel;
+		if beat_next_id >= beats.len() {
+			beat_next_id = beats.len() - 1;
+		}
+		let note_time_in_beats = (beats[beat_next_id].peak_time_sec / 60.0) * beats_per_minute;
+		last_note_time_in_beats = note_time_in_beats;
+		let mut pattern_x = pattern_note.x;
+		if pattern_x < 0 {
+			if note_type == 0 {
+				pattern_x = rand::thread_rng().gen_range(0, 2);
+			} else if note_type == 1 {
+				pattern_x = rand::thread_rng().gen_range(2, 4);
+			} else {
+				pattern_x = rand::thread_rng().gen_range(0, 4);
+			}
+		}
+		let mut pattern_y = pattern_note.y;
+		if pattern_y < 0 {
+			if note_type == 0 {
+				pattern_y = rand::thread_rng().gen_range(0, 2);
+			} else if note_type == 1 {
+				pattern_y = rand::thread_rng().gen_range(2, 4);
+			} else {
+				pattern_y = rand::thread_rng().gen_range(0, 4);
+			}
+		}
+
+		if pattern_x < 0 {
+			pattern_x = 0;
+		} else if pattern_x > 3 {
+			pattern_x = 3;
+		}
+		if pattern_y < 0 {
+			pattern_y = 0;
+		} else if pattern_y > 3 {
+			pattern_y = 3;
+		}
+		let mut pattern_note_type = pattern_note.note_type;
+		if pattern_note_type < 0 {
+			pattern_note_type = note_type;
+		}
+		let pattern_cut_direction = pattern_note.cut_direction;
+
+		pattern_end_time = beats[beat_next_id].peak_time_sec;
+		//create the note using the values we calculated
+		let note: String = create_note_json(
+			beat_id,
+			pattern_end_time,
+			1600.0,
+			note_time_in_beats,
+			pattern_x,
+			pattern_y,
+			pattern_note_type,
+			pattern_cut_direction,
+			pattern_note.description.to_owned(),
+		);
+		//add the note pattern to the json string
+		contents.push_str(&note);
+		let processed_note = PatternNote {
+			x: pattern_note.x,
+			y: pattern_note.y,
+			cut_direction: pattern_note.cut_direction,
+			note_type: pattern_note.note_type,
+			description: "Test".to_owned(),
+			beat_time_rel: pattern_note.beat_time_rel,
+		};
+		processed_notes.push(processed_note);
+	}
+
+	for wall in &pattern.obstacles {
+		let mut beat_next_id = beat_id + wall.wall_time_rel;
+		if beat_next_id >= beats.len() {
+			beat_next_id = beats.len() - 1;
+		}
+		let wall_time_in_beats = (beats[beat_next_id].peak_time_sec / 60.0) * beats_per_minute;
+
+		let mut wall_duration = wall.duration;
+		if wall_duration < 0.0 {
+			wall_duration = last_note_time_in_beats - wall_time_in_beats;
+		}
+		if wall_duration - wall.padding > 0.0 {
+			let wall_json = format!(
+				"{{
+							\"_time\": {},
+							\"_lineIndex\": {},
+							\"_lineLayer\": {},
+							\"_type\": {},
+							\"_duration\": {},
+							\"_width\": {}
+						}},",
+				wall_time_in_beats + wall.padding,
+				wall.x,
+				wall.y,
+				wall.wall_type,
+				wall_duration - wall.padding,
+				wall.width
+			);
+			obstacles_content.push_str(&wall_json);
+		}
+	}
+	let results: AddPatternResult = AddPatternResult {
+		pattern_end_time,
+		contents,
+		obstacles_content,
+	};
+	(results)
+}
 /*
 * Generate a bsaber map using the information provided
 */
@@ -285,137 +493,56 @@ fn generate_map(
 	//we'll treat the lowest 15% as nothing
 	let lowest_threshold = lowest_pitch * 1.15;
 
-	let hard_threshold = highest_pitch * 0.25;
+	let hard_threshold = highest_pitch * 0.20;
 	let normal_threshold = highest_pitch * 0.40;
 
 	let mut beat_id = 0;
 	for beat in beats {
 		if beat.pitch > lowest_threshold && beat.peak_time_sec > pattern_end_time {
-			let mut patterns = &pattern_collection.easy_patterns;
-			if beat.pitch <= hard_threshold {
-				patterns = &pattern_collection.normal_patterns;
-			} else if beat.pitch <= normal_threshold {
-				patterns = &pattern_collection.hard_patterns;
-			}
-			let mut random_pattern_id = rand::thread_rng().gen_range(0, patterns.len());
-			let random_variant = rand::thread_rng().gen_range(0, 1);
-			random_pattern_id += random_variant;
-			if random_pattern_id >= patterns.len() {
-				random_pattern_id = random_variant;
-			}
-			//x = rand::thread_rng().gen_range(0, 2);
-			let random_pattern = &patterns[random_pattern_id];
+			let dynamic_pattern_chance = rand::thread_rng().gen_range(0, 100);
 
-			let pattern = pattern_map
-				.entry(beat.id + random_pattern_id)
-				.or_insert(random_pattern);
-
-			println!("pattern:{}", pattern.description.to_owned());
-			let mut last_note_time_in_beats = 0.0;
-
-			let note_type = rand::thread_rng().gen_range(0, 1);
-			for pattern_note in &pattern.notes {
-				let mut beat_next_id = beat_id + pattern_note.beat_time_rel;
-				if beat_next_id >= beats.len() {
-					beat_next_id = beats.len() - 1;
-				}
-				let note_time_in_beats =
-					(beats[beat_next_id].peak_time_sec / 60.0) * beats_per_minute;
-				last_note_time_in_beats = note_time_in_beats;
-				let mut pattern_x = pattern_note.x;
-				if pattern_x < 0 {
-					if note_type == 0 {
-						pattern_x = rand::thread_rng().gen_range(0, 2);
-					} else if note_type == 1 {
-						pattern_x = rand::thread_rng().gen_range(2, 4);
-					} else {
-						pattern_x = rand::thread_rng().gen_range(0, 4);
-					}
-				}
-				let mut pattern_y = pattern_note.y;
-				if pattern_y < 0 {
-					if note_type == 0 {
-						pattern_y = rand::thread_rng().gen_range(0, 2);
-					} else if note_type == 1 {
-						pattern_y = rand::thread_rng().gen_range(2, 4);
-					} else {
-						pattern_y = rand::thread_rng().gen_range(0, 4);
-					}
-				}
-
-				if pattern_x < 0 {
-					pattern_x = 0;
-				} else if pattern_x > 3 {
-					pattern_x = 3;
-				}
-				if pattern_y < 0 {
-					pattern_y = 0;
-				} else if pattern_y > 3 {
-					pattern_y = 3;
-				}
-				let mut pattern_note_type = pattern_note.note_type;
-				if pattern_note_type < 0 {
-					pattern_note_type = note_type;
-				}
-				let pattern_cut_direction = pattern_note.cut_direction;
-
-				pattern_end_time = beats[beat_next_id].peak_time_sec;
-				//create the note using the values we calculated
-				let note: String = create_note_json(
-					beat.id,
+			if dynamic_pattern_chance <= CHANCE_FOR_DYNAMIC_PATTERN {
+				let new_pattern = generate_dynamic_pattern();
+				let add_pattern_results: AddPatternResult = add_pattern(
+					&new_pattern,
+					contents,
+					beats,
+					processed_notes,
+					beat_id,
+					beats_per_minute,
 					pattern_end_time,
-					highest_pitch, //highest pitch, not really using it but don't want it to spawn walls
-					note_time_in_beats,
-					pattern_x,
-					pattern_y,
-					pattern_note_type,
-					pattern_cut_direction,
-					pattern_note.description.to_owned(),
+					obstacles_content,
 				);
-				//add the note pattern to the json string
-				contents.push_str(&note);
-				let processed_note = PatternNote {
-					x: pattern_note.x,
-					y: pattern_note.y,
-					cut_direction: pattern_note.cut_direction,
-					note_type: pattern_note.note_type,
-					description: "Test".to_owned(),
-					beat_time_rel: pattern_note.beat_time_rel,
-				};
-				processed_notes.push(processed_note);
-			}
+				contents = add_pattern_results.contents;
+				pattern_end_time = add_pattern_results.pattern_end_time;
+				obstacles_content = add_pattern_results.obstacles_content;
+			} else {
+				let mut patterns = &pattern_collection.easy_patterns;
+				if beat.pitch <= hard_threshold {
+					patterns = &pattern_collection.normal_patterns;
+				} else if beat.pitch <= normal_threshold {
+					patterns = &pattern_collection.hard_patterns;
+				}
+				let random_pattern_id = rand::thread_rng().gen_range(0, patterns.len());
 
-			for wall in &pattern.obstacles {
-				let mut beat_next_id = beat_id + wall.wall_time_rel;
-				if beat_next_id >= beats.len() {
-					beat_next_id = beats.len() - 1;
-				}
-				let wall_time_in_beats =
-					(beats[beat_next_id].peak_time_sec / 60.0) * beats_per_minute;
+				//x = rand::thread_rng().gen_range(0, 2);
+				let random_pattern = &patterns[random_pattern_id];
 
-				let mut wall_duration = wall.duration;
-				if wall_duration < 0.0 {
-					wall_duration = last_note_time_in_beats - wall_time_in_beats;
-				}
-				if wall_duration - wall.padding > 0.0 {
-					let wall_json = format!(
-						"{{
-							\"_time\": {},
-							\"_lineIndex\": {},
-							\"_lineLayer\": {},
-							\"_type\": {},
-							\"_duration\": {},
-							\"_width\": {}
-						}},",
-						wall_time_in_beats + wall.padding,
-						wall.x,
-						wall.y,
-						wall.wall_type,
-						wall_duration - wall.padding,
-						wall.width
-					);
-					obstacles_content.push_str(&wall_json);
-				}
+				let pattern = pattern_map.entry(beat.id).or_insert(random_pattern);
+
+				let add_pattern_results: AddPatternResult = add_pattern(
+					pattern,
+					contents,
+					beats,
+					processed_notes,
+					beat_id,
+					beats_per_minute,
+					pattern_end_time,
+					obstacles_content,
+				);
+				contents = add_pattern_results.contents;
+				pattern_end_time = add_pattern_results.pattern_end_time;
+				obstacles_content = add_pattern_results.obstacles_content;
 			}
 		}
 		beat_id += 1;
@@ -431,7 +558,7 @@ fn generate_map(
 			\"_lineLayer\": 3,
 			\"_type\": 1,
 			\"_cutDirection\": 0
-			}}],\"_events\": [],
+			}}],
 			\"_obstacles\": [{}
 			{{
 				\"_time\": 0,
@@ -493,7 +620,7 @@ fn create_zip_archive<T: Seek + Write>(buf: &mut T, song_json: String) -> ZipRes
 	let mut writer = ZipWriter::new(buf);
 	println!("Adding ExpertPlus");
 
-	writer.start_file("ExpertPlus.json", FileOptions::default())?;
+	writer.start_file("ExpertPlus.dat", FileOptions::default())?;
 	writer.write_all(song_json.as_bytes())?;
 
 	println!("Adding cover");
@@ -501,13 +628,16 @@ fn create_zip_archive<T: Seek + Write>(buf: &mut T, song_json: String) -> ZipRes
 	writer.start_file("cover.jpg", FileOptions::default())?;
 	writer.write_all(cover)?;
 	println!("Adding info");
-	let info = include_bytes!("./song/info.json");
-	writer.start_file("info.json", FileOptions::default())?;
+	let info = include_bytes!("./song/info.dat");
+	writer.start_file("info.dat", FileOptions::default())?;
 	writer.write_all(info)?;
 	println!("Adding song");
 	let song = include_bytes!("./song/song.ogg");
 	writer.start_file("song.ogg", FileOptions::default())?;
 	writer.write_all(song)?;
+	let song_egg = include_bytes!("./song/song.egg");
+	writer.start_file("song.egg", FileOptions::default())?;
+	writer.write_all(song_egg)?;
 	println!("Adding done");
 	writer.finish()?;
 	Ok(())
