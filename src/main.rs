@@ -4,6 +4,7 @@ extern crate rand;
 extern crate zip;
 
 use glob::glob;
+use rand::distributions::{Distribution, Uniform};
 use rand::Rng;
 use serde::{Deserialize, Serialize};
 use std::collections::HashMap;
@@ -16,38 +17,88 @@ use std::io::{Seek, Write};
 use zip::result::ZipResult;
 use zip::write::{FileOptions, ZipWriter};
 
-const CHANCE_FOR_DYNAMIC_PATTERN: i64 = 40;
-const CUT_UP: i64 = 0;
-const CUT_DOWN: i64 = 1;
-const CUT_LEFT: i64 = 2;
-const CUT_RIGHT: i64 = 3;
-const CUT_NW: i64 = 4;
-const CUT_NE: i64 = 5;
-const CUT_SW: i64 = 6;
-const CUT_SE: i64 = 7;
-const CUT_OMNI: i64 = 8;
-fn get_opposite_cut(direction: i64) -> i64 {
-	let mut result = CUT_OMNI;
-	if direction == CUT_UP {
-		result = CUT_DOWN;
-	} else if direction == CUT_DOWN {
-		result = CUT_UP;
-	} else if direction == CUT_RIGHT {
-		result = CUT_LEFT;
-	} else if direction == CUT_LEFT {
-		result = CUT_RIGHT;
-	} else if direction == CUT_NW {
-		result = CUT_SE;
-	} else if direction == CUT_NE {
-		result = CUT_SW;
-	} else if direction == CUT_SW {
-		result = CUT_NE;
-	} else if direction == CUT_SE {
-		result = CUT_NW;
+const CHANCE_FOR_DYNAMIC_PATTERN: i64 = 50;
+const MIN_BEAT_SPACING_TIME: f64 = 0.05;
+struct CutDirection {
+	cut_direction: i64,
+	x_dir: i64,
+	y_dir: i64,
+	possible_transitions: [i64; 9],
+}
+const CUT_UP: CutDirection = CutDirection {
+	cut_direction: 0,
+	x_dir: 0,
+	y_dir: 1,
+	possible_transitions: [1, 1, 1, 1, 6, 6, 7, 7, 8],
+};
+const CUT_DOWN: CutDirection = CutDirection {
+	cut_direction: 1,
+	x_dir: 0,
+	y_dir: -1,
+	possible_transitions: [0, 0, 0, 0, 4, 4, 5, 5, 8],
+};
+const CUT_LEFT: CutDirection = CutDirection {
+	cut_direction: 2,
+	x_dir: -1,
+	y_dir: 0,
+	possible_transitions: [3, 3, 3, 3, 5, 5, 7, 7, 8],
+};
+const CUT_RIGHT: CutDirection = CutDirection {
+	cut_direction: 3,
+	x_dir: 1,
+	y_dir: 0,
+	possible_transitions: [2, 2, 2, 2, 4, 4, 6, 6, 8],
+};
+const CUT_NW: CutDirection = CutDirection {
+	cut_direction: 4,
+	x_dir: -1,
+	y_dir: 1,
+	possible_transitions: [7, 7, 7, 7, 7, 1, 1, 8, 8],
+};
+const CUT_NE: CutDirection = CutDirection {
+	cut_direction: 5,
+	x_dir: 1,
+	y_dir: 1,
+	possible_transitions: [6, 6, 6, 6, 6, 1, 1, 8, 8],
+};
+const CUT_SW: CutDirection = CutDirection {
+	cut_direction: 6,
+	x_dir: -1,
+	y_dir: -1,
+	possible_transitions: [5, 5, 5, 5, 5, 0, 0, 8, 8],
+};
+const CUT_SE: CutDirection = CutDirection {
+	cut_direction: 7,
+	x_dir: 1,
+	y_dir: -1,
+	possible_transitions: [4, 4, 4, 4, 4, 0, 0, 8, 8],
+};
+const CUT_OMNI: CutDirection = CutDirection {
+	cut_direction: 8,
+	x_dir: 0,
+	y_dir: 0,
+	possible_transitions: [0, 1, 2, 3, 4, 5, 6, 7, 8],
+};
+const CUT_DIRECTIONS: [CutDirection; 9] = [
+	CUT_UP, CUT_DOWN, CUT_LEFT, CUT_RIGHT, CUT_NW, CUT_NE, CUT_SW, CUT_SE, CUT_OMNI,
+];
+fn get_next_cut(cut_direction: &CutDirection) -> &CutDirection {
+	let random_transition_index = rand::thread_rng().gen_range(0, CUT_DIRECTIONS.len());
+	let mut result: &CutDirection = &CUT_OMNI;
+	//get a random cut direction from the possible transitions of the last CutDirection
+	let direction = cut_direction.possible_transitions[random_transition_index];
+	for cd in CUT_DIRECTIONS.iter() {
+		if direction == cd.cut_direction {
+			result = cd;
+		}
 	}
-
+//	println!(
+//		"{} to {}",
+//		cut_direction.cut_direction, result.cut_direction
+//	);
 	(result)
 }
+
 fn main() -> std::io::Result<()> {
 	println!("Start map creation");
 
@@ -89,6 +140,7 @@ struct Beat {
 	id: usize,
 	pitch: f64,
 }
+
 #[derive(Serialize, Deserialize)]
 struct PatternCollection {
 	easy_patterns: Vec<Pattern>,
@@ -213,8 +265,8 @@ fn create_bsaber_map() -> String {
 	let version = "2.0.0";
 	//get configs from info.dat
 	let beats_per_minute: f64 = config_json._beatsPerMinute;
-	let duration_seconds: f64 = config_json._duration_seconds;
-	let song_duration_beats: f64 = (duration_seconds / 60.0) * beats_per_minute;
+	//let duration_seconds: f64 = config_json._duration_seconds;
+	//let song_duration_beats: f64 = (duration_seconds / 60.0) * beats_per_minute;
 
 	//start of ExperPlus.json
 	let mut contents: String = format!(
@@ -240,6 +292,7 @@ fn create_bsaber_map() -> String {
 	//find the highest and highest pitch while we're at it
 	let mut highest_pitch: f64 = 0.0;
 	let mut lowest_pitch: f64 = 1600.0;
+	let mut prev_peak_time: f64 = 0.0;
 	//iterate over the file line by line
 	for line in peak_times_buffer.lines() {
 		let line = line.unwrap();
@@ -253,20 +306,23 @@ fn create_bsaber_map() -> String {
 		let peak_time_as_float = peak_time.parse::<f64>().unwrap();
 		let peak_id_as_usize = peak_id.parse::<usize>().unwrap();
 		let peak_pitch_as_float = peak_pitch.parse::<f64>().unwrap();
-		let beat = Beat {
-			peak_time_sec: peak_time_as_float,
-			id: peak_id_as_usize,
-			pitch: peak_pitch_as_float,
-		};
-		//store in vector
-		beats.push(beat);
-		//track highest pitch
-		if peak_pitch_as_float > highest_pitch {
-			highest_pitch = peak_pitch_as_float;
+		if peak_time_as_float - prev_peak_time >= MIN_BEAT_SPACING_TIME {
+			let beat = Beat {
+				peak_time_sec: peak_time_as_float,
+				id: peak_id_as_usize,
+				pitch: peak_pitch_as_float,
+			};
+			//store in vector
+			beats.push(beat);
+			//track highest pitch
+			if peak_pitch_as_float > highest_pitch {
+				highest_pitch = peak_pitch_as_float;
+			}
+			if peak_pitch_as_float < lowest_pitch {
+				lowest_pitch = peak_pitch_as_float;
+			}
 		}
-		if peak_pitch_as_float < lowest_pitch {
-			lowest_pitch = peak_pitch_as_float;
-		}
+		prev_peak_time = peak_time_as_float;
 	}
 
 	let mut processed_notes = Vec::new();
@@ -286,62 +342,226 @@ fn create_bsaber_map() -> String {
 	drop(file);
 	(contents)
 }
-fn get_random_x(note_type: i64) -> usize {
-	let mut random_x = rand::thread_rng().gen_range(0, 4);
-	if note_type == 0 {
-		random_x = rand::thread_rng().gen_range(0, 2);
-	} else if note_type == 1 {
-		random_x = rand::thread_rng().gen_range(2, 4);
+fn get_next_x(note_type:usize, direction: &CutDirection, prev_x: usize) -> usize {
+	let mut x_dir: i64 = direction.x_dir;
+	if x_dir == 0 {
+		x_dir = rand::thread_rng().gen_range(-1, 1);
 	}
-	(random_x)
+	let random_change: i64 = x_dir * rand::thread_rng().gen_range(1, 3);
+
+	let mut random_x: i64 = (prev_x as i64) + random_change;
+	if note_type == 0 && random_x > 1 {
+		random_x = 1;
+	}else if note_type == 1 && random_x < 2 {
+		random_x = 2;
+	}
+	if random_x < 0 {
+		random_x = 0;
+	} else if random_x > 3 {
+		random_x = 3;
+	}
+
+	(random_x as usize)
 }
-fn generate_dynamic_pattern() -> Pattern {
+fn get_next_y(direction: &CutDirection, prev_y: usize) -> usize {
+	let mut y_dir: i64 = direction.y_dir;
+	if y_dir == 0 {
+		y_dir = rand::thread_rng().gen_range(-1, 1);
+	}
+	let random_change: i64 = y_dir * rand::thread_rng().gen_range(1, 3);
+
+	let mut random_y: i64 = (prev_y as i64) + random_change;
+	if random_y < 0 {
+		random_y = 0;
+	} else if random_y > 2 {
+		random_y = 2;
+	}
+
+	(random_y as usize)
+}
+
+#[allow(clippy::cyclomatic_complexity)]
+fn generate_dynamic_pattern(
+	left_prev_cut_direction: &CutDirection,
+	left_prev_x: usize,
+	left_prev_y: usize,
+	right_prev_cut_direction: &CutDirection,
+	right_prev_x: usize,
+	right_prev_y: usize,
+) -> Pattern {
 	//placeholder logic
-	let mut notes = Vec::new();
+	let mut notes: Vec<PatternNote> = Vec::new();
 	let mut obstacles = Vec::new();
 	let description = "Dynamic pattern".to_owned();
 
-	let mut prev_x: i64 = 4;
-	let mut prev_y: i64 = 4;
-	let mut prev_cut_direction = i64::from(rand::thread_rng().gen_range(0, 9));
-	let mut cut_direction  = 8;
-	let note_type = i64::from(rand::thread_rng().gen_range(0, 2));
-	let number_of_notes = 2;//really 1
+	//let center = rand::thread_rng().gen_range(1, 3); //X=1 or 2
+
+	let number_of_notes = rand::thread_rng().gen_range(4, 9);
+
+	//LEFT
+
+	let mut l_prev_cut_direction = left_prev_cut_direction;
+	let mut l_prev_x = left_prev_x;
+	let mut l_prev_y = left_prev_y;
+	
+	
+	let mut r_prev_cut_direction = right_prev_cut_direction;
+	let mut r_prev_x = right_prev_x;
+	let mut r_prev_y = right_prev_y;
+
+	let mut left_time_rel = 0;
+	let mut right_time_rel = 0;
 	for i in 0..number_of_notes {
-		cut_direction = get_opposite_cut(prev_cut_direction);
-		let mut x = get_random_x(note_type) as i64;
-		let mut y = i64::from(rand::thread_rng().gen_range(0, 4));
-		
-		let description = format!("{},{}", y, x).to_owned();
-		let beat_time_rel = i;
+		//let direction: CutDirection = get_cut_direction(requested_x, requested_y, prev_cut_direction);
+		let direction: &CutDirection = get_next_cut(l_prev_cut_direction);
+
+		let requested_x = get_next_x(0, direction, l_prev_x);
+		let requested_y = get_next_y(direction, l_prev_y);
+
+		let description = format!("{},{}", requested_x, requested_y).to_owned();
+
 		let note = PatternNote {
-			x: x as i64,
-			y: y as i64,
-			cut_direction,
-			note_type,
+			x: requested_x as i64,
+			y: requested_y as i64,
+			cut_direction: direction.cut_direction,
+			note_type: 0,
 			description,
-			beat_time_rel,
+			beat_time_rel: left_time_rel,
 		};
 
 		notes.push(note);
-		prev_x = x;
-		prev_y = y;
-		prev_cut_direction = cut_direction;
+		l_prev_x = requested_x;
+		l_prev_y = requested_y;
+		l_prev_cut_direction = direction;
+		left_time_rel += 1;
+
+		//RIGHT
+
+		//let direction: CutDirection = get_cut_direction(requested_x, requested_y, prev_cut_direction);
+		let direction: &CutDirection = get_next_cut(r_prev_cut_direction);
+
+		let requested_x = get_next_x(1, direction, r_prev_x);
+		let requested_y = get_next_y(direction, r_prev_y);
+
+		let description = format!("{},{}", requested_x, requested_y).to_owned();
+
+		let note = PatternNote {
+			x: requested_x as i64,
+			y: requested_y as i64,
+			cut_direction: direction.cut_direction,
+			note_type: 1,
+			description,
+			beat_time_rel: right_time_rel,
+		};
+
+		notes.push(note);
+		r_prev_x = requested_x;
+		r_prev_y = requested_y;
+		r_prev_cut_direction = direction;
+		right_time_rel += 1;
 	}
 
+	//compatibility checks
+	let mut l_x = -1;
+	let mut l_y = -1;
+	let mut l_d = 8;
+	let mut l_t = 0;
+	let mut r_x = -1;
+	let mut r_y = -1;
+	let mut r_d = 8;
+	let mut r_t = 0;
+	let mut compatible_notes : Vec<PatternNote> = Vec::new();
+	for note in &mut notes {
+		if note.note_type == 0 {
+			l_x = note.x;
+			l_y = note.y;
+			l_d = note.cut_direction;
+			l_t = note.beat_time_rel;
+		} else if note.note_type == 1 {
+			r_x = note.x;
+			r_y = note.y;
+			r_d = note.cut_direction;
+			r_t = note.beat_time_rel;
+		}
+		let mut occupy_same_coords = l_x == r_x && l_y == r_y && l_t == r_t;
+		while occupy_same_coords {
+			println!("Conflict at {},{} vs {},{}",l_x,l_y,r_x,r_y);
+			let cut_direction: &CutDirection = &CUT_DIRECTIONS[r_d as usize];
+			let mut x_dir: i64 = cut_direction.x_dir;
+			if x_dir == 0 {
+				x_dir = rand::thread_rng().gen_range(-1, 1);
+			}
+			let random_x_change: i64 = x_dir * rand::thread_rng().gen_range(1, 3);
+			let mut new_x = r_x + random_x_change;
+			
+			let mut y_dir: i64 = cut_direction.y_dir;
+			if y_dir == 0 {
+				y_dir = rand::thread_rng().gen_range(-1, 1);
+			}
+			let random_y_change: i64 = y_dir * rand::thread_rng().gen_range(1, 3);
+			let mut new_y = r_y + random_y_change;
+			//if they go off the edge then have them wrap around
+			if new_x < 0 {
+				new_x = 3;
+			} else if new_x > 3 {
+				new_x = 0;
+			}
+			if new_y < 0 {
+				new_y = 2;
+			} else if new_y > 2 {
+				new_y = 0;
+			}
+			println!("Conflict resolved right saber to {},{} -> {},{}",r_x,r_y,new_x,new_y);
+			r_x = new_x;
+			r_y = new_y;
+			note.x = new_x;
+			note.y = new_y;
+			
+			
+			occupy_same_coords = l_x == r_x && l_y == r_y && l_t == r_t;
+		}
+		if note.note_type == 0 {
+			
+			//println!("Left Note at {},{} d={} t={}",l_x,l_y,l_d,l_t);
+			let new_note = PatternNote {
+				x: l_x,
+				y: l_y,
+				cut_direction: l_d,
+				note_type: 0,
+				description:note.description.to_owned(),
+				beat_time_rel:l_t,
+			};
+	
+			compatible_notes.push(new_note);
+			
+		} else if note.note_type == 1 {
+			//println!("Right Note at {},{} d={} t={}",r_x,r_y,r_d,r_t);
+			let new_note = PatternNote {
+				x: r_x,
+				y: r_y,
+				cut_direction: r_d,
+				note_type: 1,
+				description:note.description.to_owned(),
+				beat_time_rel:r_t,
+			};
+	
+			compatible_notes.push(new_note);
+			l_x = -1;
+			l_y = -1;
+			l_d = 8;
+			l_t = 0;
+			r_x = -1;
+			r_y = -1;
+			r_d = 8;
+			r_t = 0;
+		}
+			
 
-	/*PatternNote {
-		x: i64,
-	y: i64,
-			cut_direction: i64,
-	note_type: i64,
-			description: String,
-	beat_time_rel: usize,
-	}*/
+	}
 
 	let pattern: Pattern = Pattern {
 		description,
-		notes,
+		notes:compatible_notes,
 		obstacles,
 	};
 
@@ -364,43 +584,15 @@ fn add_pattern(
 
 	let note_type = rand::thread_rng().gen_range(0, 1);
 	for pattern_note in &pattern.notes {
-		let mut beat_next_id = beat_id + pattern_note.beat_time_rel;
+		let mut beat_next_id = beat_id + pattern_note.beat_time_rel + 1;
 		if beat_next_id >= beats.len() {
 			beat_next_id = beats.len() - 1;
 		}
 		let note_time_in_beats = (beats[beat_next_id].peak_time_sec / 60.0) * beats_per_minute;
 		last_note_time_in_beats = note_time_in_beats;
-		let mut pattern_x = pattern_note.x;
-		if pattern_x < 0 {
-			if note_type == 0 {
-				pattern_x = rand::thread_rng().gen_range(0, 2);
-			} else if note_type == 1 {
-				pattern_x = rand::thread_rng().gen_range(2, 4);
-			} else {
-				pattern_x = rand::thread_rng().gen_range(0, 4);
-			}
-		}
-		let mut pattern_y = pattern_note.y;
-		if pattern_y < 0 {
-			if note_type == 0 {
-				pattern_y = rand::thread_rng().gen_range(0, 2);
-			} else if note_type == 1 {
-				pattern_y = rand::thread_rng().gen_range(2, 4);
-			} else {
-				pattern_y = rand::thread_rng().gen_range(0, 4);
-			}
-		}
+		let pattern_x = pattern_note.x;
+		let pattern_y = pattern_note.y;
 
-		if pattern_x < 0 {
-			pattern_x = 0;
-		} else if pattern_x > 3 {
-			pattern_x = 3;
-		}
-		if pattern_y < 0 {
-			pattern_y = 0;
-		} else if pattern_y > 3 {
-			pattern_y = 3;
-		}
 		let mut pattern_note_type = pattern_note.note_type;
 		if pattern_note_type < 0 {
 			pattern_note_type = note_type;
@@ -447,13 +639,13 @@ fn add_pattern(
 		if wall_duration - wall.padding > 0.0 {
 			let wall_json = format!(
 				"{{
-							\"_time\": {},
-							\"_lineIndex\": {},
-							\"_lineLayer\": {},
-							\"_type\": {},
-							\"_duration\": {},
-							\"_width\": {}
-						}},",
+					\"_time\": {},
+					\"_lineIndex\": {},
+					\"_lineLayer\": {},
+					\"_type\": {},
+					\"_duration\": {},
+					\"_width\": {}
+				}},",
 				wall_time_in_beats + wall.padding,
 				wall.x,
 				wall.y,
@@ -474,8 +666,6 @@ fn add_pattern(
 /*
 * Generate a bsaber map using the information provided
 */
-#[allow(clippy::if_same_then_else)]
-#[allow(clippy::cyclomatic_complexity)]
 fn generate_map(
 	mut contents: String,
 	beats: &[Beat],
@@ -490,19 +680,49 @@ fn generate_map(
 	let mut pattern_map = HashMap::new();
 	let mut pattern_end_time: f64 = 0.0;
 
-	//we'll treat the lowest 15% as nothing
-	let lowest_threshold = lowest_pitch * 1.15;
+	//we'll treat the lowest 10% as nothing
+	let lowest_threshold = lowest_pitch * 1.10;
 
-	let hard_threshold = highest_pitch * 0.20;
-	let normal_threshold = highest_pitch * 0.40;
+	let hard_threshold = highest_pitch * 0.25;
+	let normal_threshold = highest_pitch * 0.65;
 
 	let mut beat_id = 0;
+
+	let mut left_prev_cut_direction: &CutDirection = &CUT_OMNI;
+	let mut left_prev_x = 1;
+	let mut left_prev_y = 2;
+	let mut right_prev_cut_direction: &CutDirection = &CUT_OMNI;
+	let mut right_prev_x = 2;
+	let mut right_prev_y = 2;
+
 	for beat in beats {
+		//println!("peak :{} vs {}",beat.peak_time_sec,pattern_end_time);
 		if beat.pitch > lowest_threshold && beat.peak_time_sec > pattern_end_time {
 			let dynamic_pattern_chance = rand::thread_rng().gen_range(0, 100);
 
 			if dynamic_pattern_chance <= CHANCE_FOR_DYNAMIC_PATTERN {
-				let new_pattern = generate_dynamic_pattern();
+				let new_pattern: Pattern = generate_dynamic_pattern(
+					left_prev_cut_direction,
+					left_prev_x,
+					left_prev_y,
+					right_prev_cut_direction,
+					right_prev_x,
+					right_prev_y,
+				);
+
+				for pattern_note in &new_pattern.notes {
+					if pattern_note.note_type == 0 {
+						left_prev_cut_direction =
+							&CUT_DIRECTIONS[pattern_note.cut_direction as usize];
+						left_prev_x = pattern_note.x as usize;
+						left_prev_y = pattern_note.y as usize;
+					} else if pattern_note.note_type == 1 {
+						right_prev_cut_direction =
+							&CUT_DIRECTIONS[pattern_note.cut_direction as usize];
+						right_prev_x = pattern_note.x as usize;
+						right_prev_y = pattern_note.y as usize;
+					}
+				}
 				let add_pattern_results: AddPatternResult = add_pattern(
 					&new_pattern,
 					contents,
@@ -558,8 +778,8 @@ fn generate_map(
 			\"_lineLayer\": 3,
 			\"_type\": 1,
 			\"_cutDirection\": 0
-			}}],
-			\"_obstacles\": [{}
+		}}],
+		\"_obstacles\": [{}
 			{{
 				\"_time\": 0,
 				\"_lineIndex\": 0,

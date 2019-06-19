@@ -25,7 +25,7 @@ onset_env = librosa.onset.onset_strength(y=y, sr=sr,
                                          aggregate=np.median)
                                #https://librosa.github.io/librosa/generated/librosa.util.peak_pick.html
                                #x, pre_max, post_max, pre_avg, post_avg, delta, wait
-cr = 4;
+cr = 6;
 peaks = librosa.util.peak_pick(onset_env, cr, cr, cr, cr, 0.01, 1)
 
 # Print peaks list to console

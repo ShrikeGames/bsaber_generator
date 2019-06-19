@@ -4,7 +4,7 @@
 		{
 			"x": 2,
 			"y": 2,
-			"beat_time_rel": 2,
+			"beat_time_rel": 0,
 			"note_type": 0,
 			"cut_direction": 0,
 			"description": "N"
@@ -12,7 +12,7 @@
 		{
 			"x": 3,
 			"y": 2,
-			"beat_time_rel": 2,
+			"beat_time_rel": 0,
 			"note_type": 1,
 			"cut_direction": 0,
 			"description": "N"
@@ -20,7 +20,7 @@
 		{
 			"x": 2,
 			"y": 0,
-			"beat_time_rel": 4,
+			"beat_time_rel": 2,
 			"note_type": 0,
 			"cut_direction": 1,
 			"description": "S"
@@ -28,7 +28,7 @@
 		{
 			"x": 3,
 			"y": 0,
-			"beat_time_rel": 4,
+			"beat_time_rel": 2,
 			"note_type": 1,
 			"cut_direction": 1,
 			"description": "S"
@@ -42,7 +42,7 @@
 			"wall_type": 0,
 			"duration": -1,
 			"padding": 1,
-			"width": 1,
+			"width": 2,
 			"description": "N"
 		}
 	]
