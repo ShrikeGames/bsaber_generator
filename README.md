@@ -21,3 +21,7 @@ librosa, numpy, pydub
 * cargo run
 
 * Rust will download its requirements automatically.
+
+Example Map (Play in beat saber!)
+
+* https://bsaber.com/songs/538f/
