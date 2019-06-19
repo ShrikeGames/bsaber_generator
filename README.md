@@ -22,6 +22,17 @@ librosa, numpy, pydub
 
 * Rust will download its requirements automatically.
 
-Example Map (Play in beat saber!)
+Example Map (Play in beat saber! Be warned it's bad)
 
 * https://bsaber.com/songs/538f/
+
+
+TODOs
+
+* Need to boost audio before making a map, apparently in-game it's way too quiet otherwise.
+
+* Need to drastically improve the peak detection / other inputs so they map better to the actual song.
+
+* Make a system to scrape together existing patterns from good maps to use as pre-set patterns.
+
+* Find a better test song that will fit the style better, or has clearer beats.
